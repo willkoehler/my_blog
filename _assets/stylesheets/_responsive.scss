@@ -1,4 +1,4 @@
-@media (max-width: 1000px) {
+@media (max-width: 900px) {
     
     // hide tagline
     .tagline span {
@@ -82,17 +82,17 @@
         }
     }
     
-    // hide nav (blog, product, about links)
+    // narrow nav spacing (blog, product, about links)
     .site-nav {
+        nav {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        
         #navigation {
             a {
-                display:none;
+                margin-right: 1em;
             }
-            
-            // don't hide brand logo
-            .brand {
-                display:inline-block;
-            } 
         }
     }
     
@@ -125,6 +125,14 @@
     }
 }
 
+@media (max-width: 500px) {
+    // hide "learn more" button
+    nav.tagline {
+        display: none;
+    }
+}
+
+
 @media (max-width: 400px) {
     
     article {
@@ -151,18 +159,6 @@
                 margin: .75em .5em 0em 0;
             }
         }
-    }
-    
-    // move brand logo to the left
-    .site-nav {
-        nav {
-          padding-left: 10px;
-        }
-    }
-    
-    // move product link to the right
-    nav.tagline {
-      padding-right: 20px;
     }
     
     // reduce margin of post blocks
