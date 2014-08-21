@@ -123,6 +123,14 @@
             margin: 1.5em 0;
         }
     }
+    
+    // make contact form full width
+    form.contact {
+        width: 100%;
+        input, textarea {
+            font-size: 16px;    // 16px or larger font prevents iOS from zooming in inputs on focus
+        }
+    }
 }
 
 @media (max-width: 500px) {
