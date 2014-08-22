@@ -9,7 +9,7 @@ author:
   name: Will Koehler
   twitter: wckoehler
   bio: Web developer.
-  image: ks.png
+  image: wk.jpg
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam augue libero, tincidunt non massa vel,
