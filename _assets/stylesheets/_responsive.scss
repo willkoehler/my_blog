@@ -106,9 +106,6 @@
     }
     
     .index {
-        // reduce margin of article index
-        margin:0 10%;
-        
         // hide author image
         img {
             display:none;
@@ -163,10 +160,5 @@
                 margin: .75em .5em 0em 0;
             }
         }
-    }
-    
-    // reduce margin of post blocks
-    .index {
-        margin:0 5%;
     }
 }
