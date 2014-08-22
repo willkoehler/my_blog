@@ -32,8 +32,17 @@ layout: base
                 <span class="muted">{{ page.author.bio }}</span>
                 </p>
             </address>
-
         </footer>
+
+        {% if page.previous.url %}
+            {% assign post = page.previous %}
+            <section class="index">
+                <!-- {% if post.author.image %}<img src="/images/{{ post.author.image }}" class="avatar">{% endif %}-->
+                <h3 class="title">Next up: <a href="{{ post.url }}" rel="prefetch">{{ post.title }}</a></h3>
+                <p>{{ post.excerpt }}</p>
+                <hr>
+            </section>
+        {% endif %} 
 
         {% if site.info.disqus.shortname %}
         <section>
