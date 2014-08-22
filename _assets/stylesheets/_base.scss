@@ -44,7 +44,6 @@ h1, h2 {
 a {
     color:$accent;
     text-decoration:none;
-    transition:all 0.2s ease;
     
     &:hover {
         color:darken($accent, 8%);
@@ -138,14 +137,11 @@ a {
             padding:6px 0;
             border-radius:42px;
             margin:1.5em 1em 0em 0;
-            transition:0.2s all ease;
             line-height: 0px;
             text-align:center;
         
             &:hover {
-                transition:0.2s all ease;
                 background:#fff;
-                
                 @include black_icons;
             }
         }
@@ -217,7 +213,6 @@ a {
             padding:6px 0;
             border-radius:42px;
             margin:0 1em 0em 0;
-            transition: 0.2s all ease;
             line-height: 0;
             text-align:center;
             opacity:0.3;
@@ -275,7 +270,6 @@ a {
         border-radius: 4px;
         font-size: 0.8em;
         color:darken($accent, 5%);
-        transition:none;
 
         &:hover {
             border:2px solid darken($accent, 5%);
