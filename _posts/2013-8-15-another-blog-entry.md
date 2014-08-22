@@ -8,7 +8,7 @@ cover_image: story-cover-1.jpg
 author:
   name: Will Koehler
   twitter: wckoehler
-  bio: Web developer.
+  bio: Web application developer.
   image: wk.jpg
 ---
 
