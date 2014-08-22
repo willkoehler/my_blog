@@ -5,15 +5,17 @@ title: Another Blog Entry
 subtitle: "Something creative and inspiring"
 cover_image: story-cover-1.jpg
 
+excerpt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam augue libero, tincidunt non massa vel,
+varius ornare est."
+
 author:
   name: Will Koehler
   twitter: wckoehler
   bio: Web application developer.
   image: wk.jpg
 ---
-
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam augue libero, tincidunt non massa vel,
-varius ornare est. <!-- more --> Vivamus elementum orci in commodo pharetra. Proin lorem lorem, convallis sit amet
+varius ornare est. Vivamus elementum orci in commodo pharetra. Proin lorem lorem, convallis sit amet
 elementum at, rhoncus ac nibh. Nunc elementum ante velit, non pretium elit aliquam sit amet. Sed dapibus,
 augue eu commodo varius, libero dolor varius nunc, vitae vehicula neque nisl sed quam. Aliquam leo nisl,
 vestibulum ut sollicitudin vitae, sodales a mauris. Duis quis massa elementum, tristique urna a, tincidunt
