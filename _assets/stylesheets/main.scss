@@ -11,6 +11,18 @@ $text: #21272d;
 $textmuted: #848484;
 $accent: #2077b2;
 
+@mixin vertical_aligning_container {
+    white-space: nowrap;    // needed to allow wrapping inside vertically centered element
+
+    &:before {
+      content: '';
+      display: inline-block;
+      height: 100%;
+      vertical-align: middle;
+      font-size: 1px;
+      margin-right: -1px; /* Adjusts for spacing */
+    }            
+}
 
 /* IMPORT CSS FILES */
 @import "normalize";

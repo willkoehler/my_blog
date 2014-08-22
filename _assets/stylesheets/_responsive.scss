@@ -60,9 +60,7 @@
         
     .blog-cover {
         // tighten spacing of blog cover text and icons
-        section {
-            padding: 55px 0 0;
-            
+        section .container {
             a {
                 margin: 1em .5em 0em 0;
             }
@@ -148,17 +146,6 @@
           img {
             margin-right: 10px;
           }
-        }
-    }
-    
-    .blog-cover {
-        // move title text up slightly and move social icons up, closer to text
-        section {
-          padding: 50px 0 0;
-          
-            a {
-                margin: .75em .5em 0em 0;
-            }
         }
     }
 }
