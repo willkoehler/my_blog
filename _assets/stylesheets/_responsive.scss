@@ -134,6 +134,15 @@
 
 @media (max-width: 400px) {
     
+    .blog-cover {
+        // hide social icons
+        section .container {
+            a {
+                display: none;
+            }
+        }
+    }
+
     article {
         // reduce margins so article is wider
         .container > header, .container > section, .container > footer {
