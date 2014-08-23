@@ -25,8 +25,8 @@ article {
     .container > footer {
         border-top:1px solid #ddd;
         border-bottom:1px solid #ddd;
-        padding-top:1.5em;
-        padding-bottom:1.5em;
+        padding-top: 1em;
+        padding-bottom: 1em;
         margin-top:1.5em;
         margin-bottom:1.5em;
     }
@@ -49,11 +49,14 @@ article {
     address {
         margin:0;
         font-size:0.9em;
-        max-height:48px;
+        white-space: nowrap;
         
         p {
             margin:0;
-            display:inline-block;
+            white-space: normal;
+            display: inline-block;
+            padding-right: 84px;    // width of img + margin - forces text to wrap correctly
+            vertical-align: middle;
         }
 
         img {
@@ -61,14 +64,8 @@ article {
             width: 64px;
             height: 64px;
             margin: 0 20px 0 0;
-            display: inline-block;
-            margin-top: -28px;
+            vertical-align: middle;
         }       
-        
-        .follow {
-            margin:1em 0 0;
-        }
-
     }
 
     p {
