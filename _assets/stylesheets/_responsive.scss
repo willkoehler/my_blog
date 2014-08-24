@@ -47,9 +47,12 @@
             }
         }
         
-        // reduce h1 font size slightly more
+        // reduce h1 and h2 size slightly more
         h1 {
             font-size: 2em;
+        }
+        h2 {
+            font-size: 1.4em;
         }
     }
     
