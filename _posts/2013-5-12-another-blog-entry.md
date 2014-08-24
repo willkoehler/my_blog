@@ -11,7 +11,7 @@ varius ornare est."
 author:
   name: Will Koehler
   twitter: wckoehler
-  bio: Web application developer.
+  bio: Web developer specializing in full-stack Rails applications.
   image: wk.jpg
 ---
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam augue libero, tincidunt non massa vel,
