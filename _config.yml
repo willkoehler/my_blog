@@ -7,6 +7,8 @@ info:
   subtitle:     "Independent web developer living in Columbus, OH"
   cover_image:  blog-cover.jpg
   cover_image_caption: "Short North, Columbus, OH. Photo: Pineapple XVI"
+  about_image:  about-cover.jpg
+  about_image_caption: "Goodale Park, Columbus, OH. Photo: Dave K."
   logo:         logo.png
   
   # Company information
