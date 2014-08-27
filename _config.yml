@@ -26,7 +26,7 @@ info:
   # Comments
   disqus:
     # Eg. "exampleblog" Set to false to disable comments
-    shortname:  false
+    shortname:  koehlerblog
   
   # Sharing settings
   sharing:
