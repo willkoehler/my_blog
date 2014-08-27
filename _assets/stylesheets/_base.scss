@@ -64,20 +64,9 @@ a {
     background: #eee;
     height: 60%;
     max-height: 480px;
-
-    > div {
-        position: absolute;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        line-height: 0;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center center;
-        
-        img { display: none; }
-    }
+    background-color: #111;
+    background-size: cover;
+    background-position: center center;
 }
 
 .cover-caption {
@@ -109,10 +98,6 @@ a {
 
 .blog-cover {
     height: 320px;
-    background-color:#111;
-    background-size:cover;
-    background-position:center center;
-    z-index:1;
 
     section {
         text-align: center;

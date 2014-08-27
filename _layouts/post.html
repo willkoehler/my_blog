@@ -2,11 +2,7 @@
 layout: base
 ---
 {% if page.cover_image %}
-<div class="article-cover">
-    <div style="background-image:url(/images/{{ page.cover_image }})">
-        <img src="/images/{{ page.cover_image }}">
-    </div>
-</div>
+<div class="article-cover" style="background-image:url(/images/{{ page.cover_image }})"></div>
 {% endif %}
 {% if page.cover_image_caption %}
 <div class='cover-caption'>{{ page.cover_image_caption }}</div>
