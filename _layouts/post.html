@@ -8,7 +8,7 @@ layout: base
 <div class='cover-caption'>{{ page.cover_image_caption }}</div>
 {% endif %}
 
-<article>
+<article {% if page.container_class %}class='{{ page.container_class }}'{% endif %}>
 
     <div class="container">
         <header>
