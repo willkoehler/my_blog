@@ -3,7 +3,7 @@ layout: post
 
 title: Another Blog Entry
 subtitle: "Something creative and inspiring"
-cover_image: story-cover-1.jpg
+cover_image: overbrook-ravine-in-clintonville.jpg
 
 excerpt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam augue libero, tincidunt non massa vel,
 varius ornare est."

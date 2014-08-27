@@ -3,7 +3,7 @@ layout: post
 
 title: "I Can Save You 50 Hours Setting up Your Jekyll Blog"
 subtitle: "Spoiler: Just fork mine."
-cover_image: story-cover-1.jpg
+cover_image: overbrook-ravine-in-clintonville.jpg
 cover_image_caption: "Overbrook ravine in Clintonville. Photo: Will Koehler"
 
 excerpt: "Being a perfectionist I knew that I wouldn't be able to resist tinkering with every detail of my
