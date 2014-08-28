@@ -7,7 +7,7 @@ subtitle: "Front-end devs will hate me for revealing the secret."
 cover_image: horse-farm-on-chapman-rd-delaware-county.jpg
 cover_image_caption: "Horse farm on Chapman Rd, Delaware County. Photo: Will Koehler"
 
-excerpt: "There are 3 hard things in computer science: cache invalidation, naming things,
+excerpt: "There are three hard things in computer science: cache invalidation, naming things,
           and vertically aligning content with CSS."
 
 author:
@@ -111,8 +111,8 @@ Let's try some variations of `vertical-align` and see how it works.
 
 ## Making vertical-align:middle work for you
 
-Instead of applying `vertical-align:middle` to the wrapper, Let's apply `vertical-align:middle` to
-the content. Seems counter-intuitive, but bear with me.
+Going back to the original scenario, instead of applying `vertical-align:middle` to the wrapper,
+let's apply `vertical-align:middle` to the content. Seems counter-intuitive, but bear with me.
 
 {% highlight css %}
 .content {
@@ -310,7 +310,7 @@ Now the text is wrapping like it should.
 
 I've used many tricks over the years to vertically align content. They all have tradeoffs. Some
 add a lot of noise to the CSS. Others (like using `display:table-cell`) have side effects. I've just
-recently discovered this trick, but I think it's going to be my solution going forward. In terms of
+recently discovered this trick, but I think it's going to be my new go-to solution. In terms of
 compatibility, it works on all modern browsers + IE8.
 
 Thanks to Chris Coyler for the [idea](http://css-tricks.com/centering-in-the-unknown/) and

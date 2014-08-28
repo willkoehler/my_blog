@@ -1,7 +1,7 @@
 ---
 layout: post
 
-title: "I Can Save You 50 Hours Setting up Your Jekyll Blog"
+title: "Save 50 Hours Setting up Your Jekyll Blog"
 subtitle: "Spoiler: Just fork mine."
 cover_image: overbrook-ravine-in-clintonville.jpg
 cover_image_caption: "Overbrook ravine in Clintonville. Photo: Will Koehler"
@@ -18,16 +18,16 @@ author:
 When I decided to start blogging, I explored all the major blogging platforms. I quickly came to the conclusion
 that, in order to get exactly what I wanted, I would need to have full control of the design and code.
 
-As a Ruby developer, Jekyll was a natural choice. Jekyll is a static site generator that's "blogging aware".
-"Blogging aware" means that Jekyll has conventions for managing your blog posts. You put all your posts
-in the `_posts/` folder. Jekyll generates pages for them and gives you template variables to index
-through the pages.
+As a Ruby developer, [Jekyll](http://jekyllrb.com) was a natural choice. Jekyll is a static site generator that's
+"blogging aware". "Blogging aware" means that Jekyll has conventions for managing your blog posts. You put all your
+posts in the `_posts/` folder. Jekyll generates pages for them and gives you template variables to index through
+the pages.
 
 In addition to supporting blogs out of the box, Jekyll had everything else I wanted:
 
-- Good themes <http://jekyllthemes.org>
+- Good [themes](http://jekyllthemes.org)
 - Support for source-code highlighting
-- Posts can be written in Markdown
+- Posts can be written in [Markdown](http://daringfireball.net/projects/markdown/syntax)
 - Easy [integration](https://help.github.com/articles/using-jekyll-with-pages) with Github pages (free hosting!)
 - Support for layouts, partials, and other features that make it a pleasure to use.
 - Easy to get your head around the entire site. No magic. Nothing is hidden.
