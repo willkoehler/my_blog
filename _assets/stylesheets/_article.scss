@@ -179,7 +179,7 @@ article {
         pre {
             border: 0;
             padding: 1.5em 1.5em;
-            background: whitesmoke;
+            background: #F5F5F5;
             border: 0;
             border: 1px solid #e0e0e0;
             width:100%;
@@ -190,14 +190,17 @@ article {
             code {
                 font-size:0.8em;
                 border:0;
+                padding: 0;
             }
         }
     }
     
     code {
-        border-bottom:1px solid #ddd;
-        border-radius:2px;
-        color:#222;
+        padding: 0.2em 0.4em;
+        margin: 0;
+        font-size: 85%;
+        background-color: #F5F5F5;
+        border-radius: 3px;
     } 
 
     .rounded img {
