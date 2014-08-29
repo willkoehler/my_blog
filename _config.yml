@@ -1,7 +1,4 @@
 info:
-  # Root URL where the site will be published
-  url:         http://willkoehler.net
-
   # Blog Information
   title:        "Will Koehler"
   subtitle:     "Independent web developer living in Columbus, OH"
@@ -34,6 +31,9 @@ info:
   # google_font: 'Droid+Sans:400,700'
   
   # Setup your fonts, colors etc at _assets/stylesheets/main.scss
+
+# Root URL where the site will be published
+url:         http://willkoehler.net
 
 relative_permalinks:  true
 paginate:             10

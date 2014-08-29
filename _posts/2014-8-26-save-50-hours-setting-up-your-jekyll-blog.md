@@ -195,11 +195,11 @@ it easier to see. This led to some weird rendering behavior and strange css that
 
 Before tweaks. Notice Github icon is small and not immediately recognizable. All social icons are too low.
 
-<img src="{{site.info.url}}/images/social-icons-before-tweaks.png" alt="Social icons before tweaks" style="width:239px;"/>
+<img src="{{site.url}}/images/social-icons-before-tweaks.png" alt="Social icons before tweaks" style="width:239px;"/>
 
 After tweaks.
 
-<img src="{{site.info.url}}/images/social-icons-after-tweaks.png" alt="Social icons after tweaks" style="width:239px;"/>
+<img src="{{site.url}}/images/social-icons-after-tweaks.png" alt="Social icons after tweaks" style="width:239px;"/>
 
 I broke this change into two commits: [Add Github icon](https://github.com/willkoehler/my_blog/commit/f461bd5dec11bfe12c6fbb6cd79eaf12af690219)
 and [Tweak styling](https://github.com/willkoehler/my_blog/commit/9604230187353995e81db3fda21e289c63661023).
