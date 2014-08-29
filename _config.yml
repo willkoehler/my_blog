@@ -35,7 +35,6 @@ info:
 # Root URL where the site will be published
 url:         http://willkoehler.net
 
-relative_permalinks:  true
 paginate:             10
 
 # safe mode must be disabled to use jekyll-assets.
