@@ -37,7 +37,6 @@ url:         http://willkoehler.net
 
 relative_permalinks:  true
 paginate:             10
-excerpt_separator:    "<!-- more -->"
 
 # safe mode must be disabled to use jekyll-assets.
 safe:               false
