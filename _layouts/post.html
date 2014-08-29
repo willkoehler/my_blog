@@ -33,29 +33,27 @@ layout: base
                 <span class="muted">{{ page.author.bio }}</span>
                 </p>
             </address>
+            {% if page.next.url %}
+                {% assign post = page.next %}
+                <section class="index">
+                    <h3 class="title">Next up: <a href="{{ post.url }}" rel="prefetch">{{ post.title }}</a></h3>
+                    <p>{{ post.excerpt }}</p>
+                    <hr>
+                </section>
+            {% endif %} 
+            {% if page.previous.url %}
+                {% assign post = page.previous %}
+                <section class="index">
+                    <h3 class="title">Previous story: <a href="{{ post.url }}" rel="prefetch">{{ post.title }}</a></h3>
+                    <p>{{ post.excerpt }}</p>
+                    <hr>
+                </section>
+            {% endif %} 
+            {% if site.info.disqus.shortname %}
+            <section>
+                {% include _disqus.html %}
+            </section>
+            {% endif %}
         </footer>
-
-        {% if page.next.url %}
-            {% assign post = page.next %}
-            <section class="index">
-                <h3 class="title">Next up: <a href="{{ post.url }}" rel="prefetch">{{ post.title }}</a></h3>
-                <p>{{ post.excerpt }}</p>
-                <hr>
-            </section>
-        {% endif %} 
-        {% if page.previous.url %}
-            {% assign post = page.previous %}
-            <section class="index">
-                <h3 class="title">Previous story: <a href="{{ post.url }}" rel="prefetch">{{ post.title }}</a></h3>
-                <p>{{ post.excerpt }}</p>
-                <hr>
-            </section>
-        {% endif %} 
-
-        {% if site.info.disqus.shortname %}
-        <section>
-            {% include _disqus.html %}
-        </section>
-        {% endif %}
     </div>
 </article>
