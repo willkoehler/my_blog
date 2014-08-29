@@ -1,11 +1,3 @@
-@media (max-width: 900px) {
-    
-    // hide tagline
-    .tagline span {
-        display:none;
-    }
-}
-
 @media (max-width: 720px) {
     
     article {
@@ -79,7 +71,7 @@
         }
     }
     
-    // narrow nav spacing (blog, product, about links)
+    // narrow nav spacing (blog & about links)
     .site-nav {
         nav {
             padding-left: 15px;
