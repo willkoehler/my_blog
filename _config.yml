@@ -11,9 +11,7 @@ info:
   about_image_caption: "Goodale Park, Columbus, OH. Photo: Dave K."
   logo:         logo.png
   
-  # Company information
-  company:      Will Koehler
-  company_url:  /
+  # Social links
   # facebook:     sendtoinc
   twitter:      wckoehler
   github:       willkoehler
