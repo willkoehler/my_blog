@@ -19,6 +19,9 @@ info:
     # Eg. "exampleblog" Set to false to disable comments
     shortname:  koehlerblog
   
+  # Google Analytics tracking ID. Leave blank to disable tracking
+  google-analytics-id: 'UA-54124306-1'
+  
   # Sharing settings
   sharing:
     twitter:    false
