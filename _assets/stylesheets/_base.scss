@@ -176,7 +176,7 @@ a {
     a {
         color:#777;
         border:0;
-        margin:0 0.5em;
+        margin:0 0.3em;
         
         &:hover {
             color:#222;
@@ -193,6 +193,7 @@ a {
     
     nav {
        display:inline-block;
+       margin-left: .5em;
     }
     
     .social {
