@@ -6,6 +6,7 @@
     <title>{% if page.title %}{{ page.title }} &mdash; {{ site.info.title }}{% else %}{{ site.info.title }} &mdash; {{ site.info.subtitle }}{% endif %}</title>
     {% if site.info.google_font %}<link href="https://fonts.googleapis.com/css?family={{ site.info.google_font }}" rel="stylesheet" type="text/css">{% endif %}
     {% stylesheet main %}
+    {% include _scripts.html %}
     <link rel="shortcut icon" href="/favicon.ico?v2" type="image/x-icon" />
     <link href="{{ site_url }}/feed.xml" rel="alternate" type="application/rss+xml" title="{{ site.info.title }}" />
     <meta name="title" content="{% if page.title %}{{ page.title }} {% else %}{{ site.info.title }}{% endif %}">
@@ -58,8 +59,6 @@
         <p>Based on Incorporated theme by <a href="https://sendtoinc.com">Inc</a></p>
     </div>
 </footer>
-
-{% include _scripts.html %}
 
 </body>
 </html>
