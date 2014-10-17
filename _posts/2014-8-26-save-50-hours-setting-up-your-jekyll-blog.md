@@ -230,6 +230,14 @@ In the meantime, I've moved ahead with my blog and have started making non-compa
 the theme for my needs. These include more css fixes and design refinements. If it's something that looks useful,
 feel free to fork the [master branch](https://github.com/willkoehler/my_blog) to get the latest.
 
+## Additional resources
+
+Mike Greiling has some great articles on Jekyll on his blog (PixelCog).
+
+[Jekyll From Scratch - Getting Started](http://pixelcog.com/blog/2013/jekyll-from-scratch-introduction/)<br>
+[Jekyll From Scratch - Core Architecture](http://pixelcog.com/blog/2013/jekyll-from-scratch-core-architecture/)<br>
+[Jekyll From Scratch - Extending Jekyll](http://pixelcog.com/blog/2013/jekyll-from-scratch-extending-jekyll/)
+
 <!-- styles to demo source-code highlighting before fixes -->
 <style>
     .before_syntax_fixes .highlight .lineno {
