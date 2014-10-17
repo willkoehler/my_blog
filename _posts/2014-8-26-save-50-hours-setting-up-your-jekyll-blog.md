@@ -185,7 +185,8 @@ the theme, I decided to keep it and fix it. Most of the fixes were obvious. I us
 [W3C Feed Validation Service](http://validator.w3.org/feed/) to check the feed and Googled the errors
 I couldn't figure out on my own.
 
-Here's [the commit](https://github.com/willkoehler/my_blog/commit/1aa854cea9e856d7c07c58c3e0be5dbfe51b939a)
+Here's [the commit](https://github.com/willkoehler/my_blog/commit/1aa854cea9e856d7c07c58c3e0be5dbfe51b939a).
+Update: I've made [more changes](https://github.com/willkoehler/my_blog/commit/2d8cfb7629cde63dc31a8bbbb11d9e5e62b90d18).
 
 ### Add Github icon
 
