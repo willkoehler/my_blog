@@ -8,7 +8,7 @@
     {% stylesheet main %}
     {% include _scripts.html %}
     <link rel="shortcut icon" href="/favicon.ico?v2" type="image/x-icon" />
-    <link href="{{ site_url }}/feed.xml" rel="alternate" type="application/rss+xml" title="{{ site.info.title }}" />
+    <link rel="alternate" type="application/atom+xml" title="{{ site.info.title }}" href="/atom.xml" />
     <meta name="title" content="{% if page.title %}{{ page.title }} {% else %}{{ site.info.title }}{% endif %}">
     <link rel="canonical" href="{{ site.url }}{{ page.url }}">
     {% if page.site.gplus %}<link rel="publisher" href="https://plus.google.com/{{ site.info.gplus }}">{% endif %} 
