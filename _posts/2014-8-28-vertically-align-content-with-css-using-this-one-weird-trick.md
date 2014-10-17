@@ -1,5 +1,6 @@
 ---
 layout: post
+last-modified: '2014-09-01T00:00:00-04:00'
 container_class: 'vaswc'
 
 title: "Vertically Align Content With CSS Using This One Weird Trick"

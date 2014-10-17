@@ -1,5 +1,6 @@
 ---
 layout: post
+last-modified: '2014-10-17T00:00:00-04:00'
 
 title: "Save 50 Hours Setting up Your Jekyll Blog"
 subtitle: "Spoiler: Just fork mine."
