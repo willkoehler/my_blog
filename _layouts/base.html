@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% if page.title %}{{ page.title }} &mdash; {{ site.info.title }}{% else %}{{ site.info.title }} &mdash; {{ site.info.subtitle }}{% endif %}</title>
     {% if site.info.google_font %}<link href="https://fonts.googleapis.com/css?family={{ site.info.google_font }}" rel="stylesheet" type="text/css">{% endif %}
-    {% stylesheet main %}
+    {% stylesheet app %}
     {% include _scripts.html %}
     <link rel="shortcut icon" href="/favicon.ico?v2" type="image/x-icon" />
     <link rel="alternate" type="application/atom+xml" title="{{ site.info.title }}" href="/atom.xml" />
