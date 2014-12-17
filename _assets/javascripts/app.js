@@ -1,0 +1,1 @@
+//= require zoomable_image
