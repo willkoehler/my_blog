@@ -1,0 +1,21 @@
+.map_container {
+  position: relative;
+  padding-bottom: 89%; // This is the aspect ratio
+  height: 0;
+  overflow: hidden;
+
+  .overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+  }
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+  }
+}

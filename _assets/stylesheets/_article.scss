@@ -222,6 +222,12 @@ article {
     .full {
         margin: 1.5em -3.5em;
 
+        &.shadow {
+          // increase margin when shadow is present to compensate for visual space of shadow
+          margin-top: 2em;
+          margin-bottom: 2em;
+        }
+        
         img {
             max-width:100%;
             margin:0;
