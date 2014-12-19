@@ -6,8 +6,8 @@ title: "Alternate Route Options For The Olentangy Trail"
 cover_image: olentangy-trail/bike-boulevard-on-linworth-road-east.jpg
 cover_image_caption: "Photo: Rick Jordon"
 
-excerpt: "Options for a safe alternate route for trail traffic while the Olentangy Trail is closed
-          under the 315/270 interchange."
+excerpt: "Recommendations to create a safe alternate route for trail traffic while the Olentangy Trail
+          is closed under the 315/270 interchange."
 
 author:
   name: Will Koehler
@@ -27,8 +27,8 @@ state, with a volume of over 700 users per day. Some of this traffic is discreti
 during the trail closure. But for a significant number of cyclists, this section of trail is a vital
 transportation corridor connecting the northern suburbs to Worthington, Clintonville, OSU and downtown.
 
-The purpose of this document is to explore options for a safe alternate route for trail traffic
-while the Olentangy Trail is closed under the 315/270 interchange.
+This document outlines options to create a safe alternate route for trail traffic while the Olentangy Trail
+is closed under the 315/270 interchange.
 
 The routes proposed will not only serve to keep bike traffic flowing safely during this
 construction but will create new connections between neighborhoods and the Olentangy Trail, providing
@@ -48,21 +48,21 @@ Improvements required for this route may be beyond the scope of the project.
   <iframe src="https://mapsengine.google.com/map/u/0/embed?mid=zEAPhiHiDgA8.kJ15f3nMBWE8&z=14"></iframe>
 </div>
 
-## Wilson Bridge Rd
+## Wilson Bridge Road
 
-#### Add new park entrance at bottom of hill
+#### Add new bike and pedestrian park entrance
 
 Build trail spur from south side of skate park to a new bike and pedestrian entrance at the bottom
-of the hill on Wilson Bridge Rd <span class='muted smaller'>('A' on map)</span>. Adding a new
+of the hill on Wilson Bridge Road <span class='muted smaller'>('A' on map)</span>. Adding a new
 entrance has several advantages over using the existing park entrance:
 
-- Reduces distance travelled on Wilson Bridge and eliminates a blind curve.
-- Removes the hill.
+- Reduces distance travelled on Wilson Bridge by half.
 - Eliminates conflict between bike and car traffic at the park entrance.
+- Removes the hill.
 
 #### Add bike lanes
 
-Reduce lane width on Wilson Bridge Rd from 12' to 11', making room for 4' bike lanes. Add green
+Reduce lane width on Wilson Bridge Road from 12' to 11', making room for 4' bike lanes. Add green
 paint to bike lanes along the curved sections to increase visibility and discourage cars from
 drifting into the bike lane (taking the "racing line").
 
@@ -70,7 +70,7 @@ Ring up utility covers, bringing them up to even hight with the road.
 
 Add bike-friendly grids to the
 [drainage grates](https://www.flickr.com/photos/108988395@N05/15989372446/in/set-72157647422248523)
-on the bridge over 315, bringing them up to even height with the road.
+on the bridge over 315, bringing them up to even height with the road. <span class='muted smaller'>('G' on map)</span>
 
 
 #### Cut vegetation to improve sight lines
@@ -78,35 +78,49 @@ on the bridge over 315, bringing them up to even height with the road.
 Cut back honeysuckle along inside of curve to improve sight lines. This will help eastbound cars
 see bikes turning into the lower park entrance. <span class='muted smaller'>('B' on map)</span>
 
-#### Add signs and road markings at park entrance
+#### Add treatments for left turn at park entrance
 
-Add treatments to help bikes merge into traffic and make the left turn into the park
-<span class='muted smaller'>('A' on map)</span>. Suggested treatments are signs marking the park
-entrance and sharrows showing the left-turn movement. One possibility is shown below.
+Add treatments to help bikes merge into the travel lane and make the left turn into the park
+<span class='muted smaller'>('A' on map)</span>. Suggested treatments are sharrows showing the
+left-turn movement and a sign along the eastbound lane indicating cars should yield to left-turning
+bikes. See image below.
 
-<div class="full rounded shadow"><img src="/images/olentangy-trail/sharrow-left-turn-wison-bridge.jpg"></div>
+Because of the high volume of traffic on Wilson Bridge, merging into the lane to turn left may be
+challenging, even with the above treatments. A left-turn refuge box should be added to give
+bikes a safe spot to wait if they are unable to make the turn.
+
+<div class="full rounded shadow"><img src="/images/olentangy-trail/sharrow-left-turn-wilson-bridge.jpg"></div>
 
 ## Linworth Road
 
-#### Add bike lanes to Linworth Rd. north of Bluffway Dr
+#### Add bike lanes to Linworth Road north of Bluffway Dr
 
-Pave shoulder and add bike lanes between Bluffway Dr. and Hard Rd. New pavement should be smooth
+Pave shoulder and add bike lanes between Bluffway Dr. and Hard Road New pavement should be smooth
 with minimal seam between new and existing pavement.
 
-#### Add bike boxes at Hard Rd. intersection
+#### Add bike boxes at Hard Road intersection
 
-Bike boxes allow cyclists to move up to the front of stopped traffic during the red light cycle and
-get a head start into the intersection when the light turns green. This reduces right hooks and other
-conflicts that occur when bikes and cars are mixed going into an intersection. See image below.
-<span class='muted smaller'>('C' on map)</span>
+[Bike boxes](http://urbanmilwaukee.com/2014/10/24/bike-czar-tosa-installs-first-bike-box-in-metro-area/)
+allow bikes to move up to the front of stopped traffic during the red light cycle and get a head start
+into the intersection when the light turns green. <span class='muted smaller'>('C' on map)</span>
+This reduces right hooks and other conflicts that occur when bikes and cars are mixed going into an
+intersection.
 
-<div class="full rounded shadow"><img src="/images/olentangy-trail/hard-road-bike-boxes.jpg"></div>
+There is also a ongoing problem with cars passing and cutting off bikes to turn right on Hard Road from
+Linworth Road. Adding a 50ft section of green paint in the Linworth bike lane approaching the intersection
+may help highlight the presence of bikes. See image below.
 
-#### Add treatments for left turn onto Linworth Rd E.
+Since bike boxes are fairly new in Columbus, an education campaign is recommended to teach cyclists and
+drivers [how to use the bike boxes](https://www.portlandoregon.gov/transportation/article/185112).
 
-Add treatments to help bikes merge into traffic and make the left turn onto Linworth Rd. E. <span class='muted smaller'>('D' on map)</span>
-One possibility is sharrows showing the left-turn movement. See image below. Another possibility
-is to add a 4-way stop at the intersection.
+<div class="full rounded shadow"><img src="/images/olentangy-trail/linworth-road-bike-boxes.jpg"></div>
+
+#### Add treatments for left turn onto Linworth Road E.
+
+Add treatments to help bikes merge into the travel lane and make the left turn onto Linworth Road E.
+<span class='muted smaller'>('D' on map)</span> One possibility is to add sharrows showing the
+left-turn movement and a sign along the southbound lane indicating cars should yield to left-turning
+bikes. See image below. Another possibility is to add a 4-way stop at the intersection.
 
 <div class="full rounded shadow"><img src="/images/olentangy-trail/sharrow-left-turn-linworth.jpg"></div>
 
@@ -125,14 +139,14 @@ future project. For completeness the findings are documented below.
 ## Olentangy River Road
 
 There is a multi-use trail along the south half of Olentangy River Road. The trail ends just
-south of Snouffer Rd. The northern section of Olentangy River Road is narrow with no shoulder and
-limited sight lines. Widening Olentangy River Road would require a major reconstruction. Extending
-the multi-use trail is equally challenging.
+south of Snouffer Road The northern section of Olentangy River Road is narrow with no shoulder and
+limited sight lines. <span class='muted smaller'>('H' on map)</span> Widening Olentangy River Road
+would require a major reconstruction. Extending the multi-use trail is equally challenging.
 
 Adding sharrows to this section would probably not achieve a sufficient level of safety.
 There are limited places to pass along this section of road. Even if the speed limit
 were reduced from 45 mph to 35 mph, there would still be a significant speed difference
-between cars and bikes, creating pressure for cars to pass bikes.
+between cars and bikes, creating pressure for cars to pass bikes where it's not safe.
 
 ## State Route 161
 
@@ -162,9 +176,11 @@ visibility and no safety zone to wait for a safe opportunity to cross. See photo
 
 <div class="full rounded shadow"><img src="/images/olentangy-trail/315-northbound-entrance.jpg"></div>
 
-The recommended solution is to add a bike-only signal phase with diagonal crossing. See image below.
-A lighted "Caution bikes / No turn on red" sign would also be needed for the 315 southbound exit ramp.
-This sign would be lit during the bike-only signal phase.
+The recommended solution is to add a bike-only signal phase with diagonal crossing. The signal phase
+would be activated by cyclists, either with a button or in-ground detectors. During the bike-only
+signal phase, bikes would have a green signal. All other directions would have a red signal, allowing
+bikes to cross diagonally. See image below. A lighted "Caution bikes / No turn on red" sign would also
+be needed for the 315 southbound exit ramp. This sign would be lit during the bike-only signal phase.
 
 [Similar designs](https://www.google.com/maps/@45.5285205,-122.6657424,3a,75y,340.97h,73.06t/data=!3m4!1e1!3m2!1sq47qxmXLP7pKCH7bdCtmnQ!2e0!5m1!1e3?hl=en)
 are used in other cities.
@@ -177,7 +193,14 @@ Differential settling has [created seams](https://www.flickr.com/photos/10898839
 along the line of travel. Sections of the sidewalk should be replaced to fix the seams.
 
 Ideally a concrete safety wall should be added similar to the wall on the Olentangy Trail at
-[Henderson Rd.](https://www.google.com/maps/@40.051834,-83.030313,3a,75y,266.81h,82.94t/data=!3m4!1e1!3m2!1sqKjCx_ut2DXOukymzJCERg!2e0!5m1!1e3?hl=en)
+[Henderson Road](https://www.google.com/maps/@40.051834,-83.030313,3a,75y,266.81h,82.94t/data=!3m4!1e1!3m2!1sqKjCx_ut2DXOukymzJCERg!2e0!5m1!1e3?hl=en).
+
+## Wayfinding Signage
+
+Add wayfinding signage along route. Follow Columbus's current bike route sign standards. Refer to signs
+between Henderson Road side path and Olentangy trail for an example.
+
+<div class="full rounded shadow"><img src="/images/olentangy-trail/bike-route-wayfinding-sign.jpg"></div>
 
 ## Bike lane maintenance
 
@@ -188,9 +211,9 @@ Bi-weekly sweeping is recommended to keep the bike lanes free of debris.
 
 ## Credits
 
-The recommendations in this document are the results of a reconnaissance ride and meeting on Dec 13, 2014,
-attended by ODOT representatives and cycling advocates. Rick Jordon compiled a collection of
-[photos from the ride](https://www.flickr.com/photos/108988395@N05/sets/72157647422248523/).
+The recommendations in this document are the results of a reconnaissance ride and meeting on Dec 13, 2014
+attended by ODOT representatives and cycling advocates. Thank you, ODOT, for helping us review the route
+options. Thank you, Rick Jordon, for taking [photos of the ride](https://www.flickr.com/photos/108988395@N05/sets/72157647422248523/).
 
 Will Koehler <span class='muted'>- Cycling advocate</span><br>
 Chris Fischer <span class='muted'>- Cycling advocate</span><br>
