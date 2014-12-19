@@ -24,10 +24,10 @@ info:
   
   # Sharing settings
   sharing:
-    twitter:    false
-    facebook:   false
-    gplus:      false
-    hn:         false
+    twitter:    true
+    facebook:   true
+    gplus:      true
+    hn:         true
     
   # Google Fonts
   # eg. 'Droid+Sans:400,700|Droid+Serif:400,700'
