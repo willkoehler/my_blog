@@ -3,7 +3,7 @@ layout: post
 date: '2014-12-17T12:00:00-04:00'
 
 title: "Alternate Route Options For The Olentangy Trail"
-cover_image: olentangy_trail/bike-boulevard-on-linworth-road-east.jpg
+cover_image: olentangy-trail/bike-boulevard-on-linworth-road-east.jpg
 cover_image_caption: "Photo: Rick Jordon"
 
 excerpt: "Options for a safe alternate route for trail traffic while the Olentangy Trail is closed
@@ -84,7 +84,7 @@ Add treatments to help bikes merge into traffic and make the left turn into the 
 <span class='muted smaller'>('A' on map)</span>. Suggested treatments are signs marking the park
 entrance and sharrows showing the left-turn movement. One possibility is shown below.
 
-<div class="full rounded shadow"><img src="/images/olentangy_trail/sharrow-left-turn-wison-bridge.jpg"></div>
+<div class="full rounded shadow"><img src="/images/olentangy-trail/sharrow-left-turn-wison-bridge.jpg"></div>
 
 ## Linworth Road
 
@@ -100,7 +100,7 @@ get a head start into the intersection when the light turns green. This reduces 
 conflicts that occur when bikes and cars are mixed going into an intersection. See image below.
 <span class='muted smaller'>('C' on map)</span>
 
-<div class="full rounded shadow"><img src="/images/olentangy_trail/hard-road-bike-boxes.jpg"></div>
+<div class="full rounded shadow"><img src="/images/olentangy-trail/hard-road-bike-boxes.jpg"></div>
 
 #### Add treatments for left turn onto Linworth Rd E.
 
@@ -108,7 +108,7 @@ Add treatments to help bikes merge into traffic and make the left turn onto Linw
 One possibility is sharrows showing the left-turn movement. See image below. Another possibility
 is to add a 4-way stop at the intersection.
 
-<div class="full rounded shadow"><img src="/images/olentangy_trail/sharrow-left-turn-linworth.jpg"></div>
+<div class="full rounded shadow"><img src="/images/olentangy-trail/sharrow-left-turn-linworth.jpg"></div>
 
 ## Neighborhood Roads
 
@@ -143,14 +143,14 @@ looking left for other cars and are not expecting bikes, especially contraflow b
 right. As a result, even with the walk light, it's unsafe to cross this exit ramp while cars are present
 in the right-only lane. See photo below. <span class='muted smaller'> ('E' on map)</span>
 
-<div class="full rounded shadow"><img src="/images/olentangy_trail/315-southbound-exit.jpg"></div>
+<div class="full rounded shadow"><img src="/images/olentangy-trail/315-southbound-exit.jpg"></div>
 
 Adding "No right on red" would help significantly, but seems heavy-handed given current levels of bike
 traffic. Another possibility is to install a lighted "Caution bikes / No turn on red" sign that's
 activated by the pedestrian crossing button. This sign could be supplemented with crossing treatment
 to raise awareness of the bike crossing. See image below for one possibility.
 
-<div class="full rounded shadow"><img src="/images/olentangy_trail/315-southbound-exit-treatment.jpg"></div>
+<div class="full rounded shadow"><img src="/images/olentangy-trail/315-southbound-exit-treatment.jpg"></div>
 
 #### 315 northbound entrance ramp
 
@@ -160,7 +160,7 @@ movement of other cars and often do not see bikes, especially contraflow bike tr
 In addition the exit of the bike underpass is located partway down the entrance ramp with poor
 visibility and no safety zone to wait for a safe opportunity to cross. See photo below. <span class='muted smaller'>('F' on map)</span>
 
-<div class="full rounded shadow"><img src="/images/olentangy_trail/315-northbound-entrance.jpg"></div>
+<div class="full rounded shadow"><img src="/images/olentangy-trail/315-northbound-entrance.jpg"></div>
 
 The recommended solution is to add a bike-only signal phase with diagonal crossing. See image below.
 A lighted "Caution bikes / No turn on red" sign would also be needed for the 315 southbound exit ramp.
@@ -169,7 +169,7 @@ This sign would be lit during the bike-only signal phase.
 [Similar designs](https://www.google.com/maps/@45.5285205,-122.6657424,3a,75y,340.97h,73.06t/data=!3m4!1e1!3m2!1sq47qxmXLP7pKCH7bdCtmnQ!2e0!5m1!1e3?hl=en)
 are used in other cities.
 
-<div class="full rounded shadow"><img src="/images/olentangy_trail/161-diagonal-crossing.jpg"></div>
+<div class="full rounded shadow"><img src="/images/olentangy-trail/161-diagonal-crossing.jpg"></div>
 
 #### Sidewalk between 315 entrance ramps
 

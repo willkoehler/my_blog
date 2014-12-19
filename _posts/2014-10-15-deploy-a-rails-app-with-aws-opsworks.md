@@ -91,7 +91,7 @@ Javascript runtime.
 [these steps](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html)
 to create a new keypair and then select that keypair here.
 
-<div class="full shadow rounded"><img src="/images/ops_works/stack.png"></div>
+<div class="full shadow rounded"><img src="/images/ops-works/stack.png"></div>
 
 Click "Add Stack" to create the stack.
 
@@ -105,14 +105,14 @@ same instance, which creates a single server running the Rails app and a MySQL d
 Click "Add a layer" and choose `Rails App Server` as the layer type. Choose `Nginx and Unicorn`
 as the rails stack. Leave all other settings at their default.
 
-<div class="full shadow rounded"><img src="/images/ops_works/create_rails_app_layer.png"></div>
+<div class="full shadow rounded"><img src="/images/ops-works/create_rails_app_layer.png"></div>
 
 Click "Add Layer" to create the layer.
 
 After creating the layer, we need to edit it to add the nodejs package. Click "Recipes" to
 show the layer's recipes. Then click "Edit". Add the `nodejs` package under "OS Packages".
 
-<div class="full shadow rounded"><img src="/images/ops_works/edit_rails_app_layer.png"></div>
+<div class="full shadow rounded"><img src="/images/ops-works/edit_rails_app_layer.png"></div>
 
 Click "Save" to save your changes.
 
@@ -123,7 +123,7 @@ and choose `MySQL` as the layer type. Leave all settings as their default. You d
 remember the MySQL root user password. OpsWorks will manage everything for you, including
 creating your `database.yml` file.
 
-<div class="full shadow rounded"><img src="/images/ops_works/create_mysql_layer.png"></div>
+<div class="full shadow rounded"><img src="/images/ops-works/create_mysql_layer.png"></div>
 
 ## 5. Create an instance
 
@@ -132,7 +132,7 @@ itself, which is the server that will run our application. Use the Navigation me
 the Instances page. Click "Add an instance" under "Rails App Server". Leave all the settings
 at their defaults.
 
-<div class="full shadow rounded"><img src="/images/ops_works/create_instance.png"></div>
+<div class="full shadow rounded"><img src="/images/ops-works/create_instance.png"></div>
 
 Click "Add Instance" to create the instance.
 
@@ -141,7 +141,7 @@ Rails app and MySQL will run on the same instance. Click "Add an instance"
 under "MySQL". Choose the "Existing" tab and check the box next to your instance (`rails-app1`
 in this case).
 
-<div class="full shadow rounded"><img src="/images/ops_works/add_mysql_to_instance.png"></div>
+<div class="full shadow rounded"><img src="/images/ops-works/add_mysql_to_instance.png"></div>
 
 Click "Add Instance" to assign the MySQL layer to the Rails app instance.
 
@@ -166,7 +166,7 @@ variables are [one solution](http://12factor.net/config) for managing Rails app 
 
 - **Domain name:** You can leave this blank since we only have one app in the stack.
 
-<div class="full shadow rounded"><img src="/images/ops_works/create_app.png"></div>
+<div class="full shadow rounded"><img src="/images/ops-works/create_app.png"></div>
 
 Click "Add App" to create the application.
 
@@ -183,7 +183,7 @@ a custom cookbook. Use the Navigation menu to go to the Stack page. Click "Stack
 "Edit". Under "Configuration Management", turn on "Use custom Chef cookbooks"
 and point it to my custom OpsWorks cookbook <https://github.com/willkoehler/opsworks-cookbooks.git>
 
-<div class="full shadow rounded"><img src="/images/ops_works/custom_cookbook.png"></div>
+<div class="full shadow rounded"><img src="/images/ops-works/custom_cookbook.png"></div>
 
 This cookbook also disables `delete_cached_copy` so that a cached copy of the app code is kept
 between deploys, speeding up deployment.
@@ -198,7 +198,7 @@ boot it, and install all the software needed to run our app.
 Use the Navigation menu to go to the Instances page. Click "Start All Instances". It will take ~5
 minutes to boot and configure the server.
 
-<div class="full shadow rounded"><img src="/images/ops_works/start_instance.png"></div>
+<div class="full shadow rounded"><img src="/images/ops-works/start_instance.png"></div>
 
 ## 9. Deploy the app
 
@@ -206,7 +206,7 @@ Once the instance is online, we can deploy the app. Use the Navigation menu to g
 page. Click "Deploy" under Actions for your app. Enable "Migrate database" so OpsWorks sets
 up the database structure during the deployment.
 
-<div class="full shadow rounded"><img src="/images/ops_works/deploy.png"></div>
+<div class="full shadow rounded"><img src="/images/ops-works/deploy.png"></div>
 
 Click "Deploy" to start the deployment.
 
