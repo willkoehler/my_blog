@@ -14,15 +14,9 @@
     <link rel="canonical" href="{{ site.url }}{{ page.url }}">
     {% if page.site.gplus %}<link rel="publisher" href="https://plus.google.com/{{ site.info.gplus }}">{% endif %} 
     {% if page.author.gplus %}<link rel="author" href="https://plus.google.com/{{ page.author.gplus }}">{% endif %}       
-    <meta property="og:title" content="{% if page.title %}{{ page.title }} {% else %}{{ site.info.title }}{% endif %}"/>
+    <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.info.title }}{% endif %}"/>
     <meta property="og:url" content="{{ site.url }}{{ page.url }}"/>
-    {% if page.cover_image %}
-    <meta property="og:image" content="{{ site.url }}/images/{{ page.cover_image }}"/>
-    {% if page.main_image %}
-    <meta property="og:image" content="{{ site.url }}/images/{{ page.main_image }}"/>  
-    {% endif %}
-    <meta property="og:image" content="{{ site.url }}/images/{{ site.info.logo }}"/>   
-    {% endif %}
+    {% if page.cover_image %}<meta property="og:image" content="{{ site.url }}/images/{{ page.cover_image }}"/>{% endif %}
     {% if page.excerpt %}
     <meta property="og:description" content="{{ page.excerpt }}"/>
     <meta name="description" content="{{ page.excerpt }}"/>
