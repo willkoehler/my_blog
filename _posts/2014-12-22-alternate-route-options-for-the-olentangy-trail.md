@@ -1,6 +1,5 @@
 ---
 layout: post
-date: '2014-12-17T12:00:00-04:00'
 
 title: "Alternate Route Options For The Olentangy Trail"
 cover_image: olentangy-trail/bike-boulevard-on-linworth-road-east.jpg
@@ -14,8 +13,6 @@ author:
   twitter: wckoehler
   bio: Cycling advocate and web developer.
   image: wk.jpg
-
-published: 0
 
 ---
 The Olentangy trail will be closed under the 315/270 interchange for approximately 12 months while
