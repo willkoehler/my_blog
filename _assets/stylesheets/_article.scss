@@ -15,6 +15,10 @@ article {
             display:inline-block;
             width: 100px;
             
+            img { vertical-align: baseline; margin: 0; }
+            
+            &.reddit { position: relative; top: -1px; }
+            
             &.google { width: 85px; }
             
             // vertically align facebook like button with other sharing icons
