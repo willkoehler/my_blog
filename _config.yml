@@ -26,8 +26,8 @@ info:
   sharing:
     twitter:    true
     facebook:   true
-    gplus:      true
-    hn:         true
+    gplus:      false
+    hn:         false
     reddit:     true
     
   # Google Fonts
