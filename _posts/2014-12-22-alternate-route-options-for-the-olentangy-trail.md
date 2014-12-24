@@ -3,7 +3,7 @@ layout: post
 
 title: "Alternate Route Options For The Olentangy Trail"
 cover_image: olentangy-trail/bike-boulevard-on-linworth-road-east.jpg
-cover_image_caption: "Photo: Rick Jordon"
+cover_image_caption: "Bike boulevard on Linworth Road E. Photo: Rick Jordon"
 
 excerpt: "Recommendations to create a safe alternate route for trail traffic while the Olentangy Trail
           is closed under the 315/270 interchange."
@@ -63,7 +63,7 @@ Reduce lane width on Wilson Bridge Road from 12' to 11', making room for 4' bike
 paint to bike lanes along the curved sections to increase visibility and discourage cars from
 drifting into the bike lane (taking the "racing line").
 
-Ring up utility covers, bringing them up to even hight with the road.
+Ring up utility covers, bringing them up to even height with the road.
 
 Add bike-friendly grids to the
 [drainage grates](https://www.flickr.com/photos/108988395@N05/15989372446/in/set-72157647422248523)
@@ -103,7 +103,7 @@ into the intersection when the light turns green. <span class='muted smaller'>('
 This reduces right hooks and other conflicts that occur when bikes and cars are mixed going into an
 intersection.
 
-There is also a ongoing problem with cars passing and cutting off bikes to turn right on Hard Road from
+There is also an ongoing problem with cars passing and cutting off bikes to turn right on Hard Road from
 Linworth Road. Adding a 50ft section of green paint in the Linworth bike lane approaching the intersection
 may help highlight the presence of bikes. See image below.
 
