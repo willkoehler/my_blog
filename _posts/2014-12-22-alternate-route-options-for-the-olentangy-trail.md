@@ -1,5 +1,6 @@
 ---
 layout: post
+last-modified: '2015-01-05T12:00:00-04:00'
 
 title: "Alternate Route Options For The Olentangy Trail"
 cover_image: olentangy-trail/bike-boulevard-on-linworth-road-east.jpg
@@ -218,3 +219,12 @@ Paul Dorothy <span class='muted'>- Worthington Bike/Ped Committee</span><br>
 Rachael Dorothy <span class='muted'>- Worthington City Council</span><br>
 Rick Jordon <span class='muted'>- Photographer</span><br>
 Kris Anderson <span class='muted'>- RIDEHome Bike Shop</span> 
+
+## Feedback
+
+ODOT is accepting public feedback on the trail closure through January 9th. If you like the
+recommendations in this document, or you have ideas of your own, contact Brian Davidson at ODOT: 
+<a href='mailto:brian.davidson@dot.state.oh.us?subject=Olentangy Trail Closure'>brian.davidson@dot.state.oh.us</a>
+
+You can read more about the Olentangy Trail closure and the North Side Fix on
+<a href='http://www.dot.state.oh.us/projects/I-270/Pages/WhatWeAreDoing.aspx#315'>ODOT's site</a>
