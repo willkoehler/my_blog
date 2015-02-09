@@ -3,7 +3,7 @@ layout: post
 last-modified: '2015-02-08T12:00:00-04:00'
 
 title: "Deploy a Rails App with AWS OpsWorks"
-subtitle: "Follow these 10 (fairly) easy steps."
+subtitle: "Follow these 11 (fairly) easy steps."
 cover_image: olentangy-bike-trail-in-clintonville.jpg
 cover_image_caption: "Olentangy Bike Trail in Clintonville. Photo: Will Koehler"
 
@@ -181,11 +181,37 @@ variables are [one solution](http://12factor.net/config) for managing Rails app 
 
 Click "Add App" to create the application.
 
-## 7. Use custom cookbook
+## 7. Adjust innodb_buffer_pool_size
 
-Everything's ready to go. You could spin up the servers and launch your app at this point. However,
-for best performance, it's recommended to set "far future" headers on your assets. This essentially
-instructs the browser to cache the assets forever. Unfortunately OpsWorks doesn't do this out of the
+The MySQL recipe in OpsWorks is optimized to run MySQL on a dedicated server. Out of the box a
+majority of the server memory will be allocated to MySQL. Depending on the instance size, the
+combination of Rails workers and MySQL may exhaust memory and the instance will fail to start.
+
+To fix this, we need to reduce `innodb_buffer_pool_size`. Use the Navigation menu to go to the
+Stack page. Click "Stack Settings" and then "Edit". Under "Configuration Management" add the
+following Custom JSON
+
+{% highlight json %}
+{
+  "mysql": {
+    "tunable": {
+      "innodb_buffer_pool_size": "100M"
+    } 
+  }
+}
+{% endhighlight %}
+
+The specific size of `innodb_buffer_pool_size` depends on your application and instance size.
+For a small, single-server application 100 megabytes should be plenty.
+
+<div class="full shadow rounded"><img src="/images/ops-works/stack_configuration_1.png"></div>
+
+Click "Save" to save your changes.
+
+## 8. Enable far-future cache headers
+
+For best performance, it's recommended to set "far-future" headers on your assets, effectively
+instructing the browser to cache the assets forever. Unfortunately OpsWorks doesn't do this out of the
 box and there's no clean way to add it. The only solution I've found is to create a custom cookbook,
 copy `nginx_unicorn_web_app.erb` from the AWS cookbook and customize it to add the correct asset headers.
 
@@ -194,24 +220,24 @@ a custom cookbook. Use the Navigation menu to go to the Stack page. Click "Stack
 "Edit". Under "Configuration Management", turn on "Use custom Chef cookbooks"
 and point it to my custom OpsWorks cookbook <https://github.com/willkoehler/opsworks-cookbooks.git>
 
-<div class="full shadow rounded"><img src="/images/ops-works/custom_cookbook.png"></div>
-
 This cookbook also disables `delete_cached_copy` so that a cached copy of the app code is kept
 between deploys, speeding up deployment.
 
+<div class="full shadow rounded"><img src="/images/ops-works/stack_configuration_2.png"></div>
+
 Click "Save" to save your changes.
 
-## 8. Start the instance
+## 9. Start the instance
 
-Now everything is *really* ready to go. Let's start our instance. This will provision the server,
-boot it, and install all the software needed to run our app.
+Now everything is ready to go. Let's start our instance. This will provision the server, boot it,
+and install all the software needed to run our app.
 
-Use the Navigation menu to go to the Instances page. Click "Start All Instances". It will take ~5
+Use the Navigation menu to go to the Instances page. Click "Start All Instances". It will take ~10
 minutes to boot and configure the server.
 
 <div class="full shadow rounded"><img src="/images/ops-works/start_instance.png"></div>
 
-## 9. Deploy the app
+## 10. Deploy the app
 
 Once the instance is online, we can deploy the app. Use the Navigation menu to go to the Apps
 page. Click "Deploy" under Actions for your app. Enable "Migrate database" so OpsWorks sets
@@ -221,7 +247,7 @@ up the database structure during the deployment.
 
 Click "Deploy" to start the deployment.
 
-## 10. Login via SSH
+## 11. Login via SSH
 
 We're almost done. But, depending on your app, there may be a few steps that need to
 be done by hand via SSH after the first deploy.
