@@ -1,5 +1,6 @@
 ---
 layout: post
+last-modified: '2015-02-08T12:00:00-04:00'
 
 title: "Deploy a Rails App with AWS OpsWorks"
 subtitle: "Follow these 10 (fairly) easy steps."
@@ -116,6 +117,14 @@ show the layer's recipes. Then click "Edit". Add the `nodejs` package under "OS 
 
 Click "Save" to save your changes.
 
+If your stack is running in a Virtual Private Cloud, you will need to configure the layer to
+allocate a public IP address. By default, instances created in a VPC don't get a public IP.
+Click "Network", then click "Edit" and enable "Elastic IP addresses".
+
+<div class="full shadow rounded"><img src="/images/ops-works/edit_rails_app_layer_2.png"></div>
+
+Click "Save" to save your changes.
+
 ## 4. Create a MySQL layer
 
 Use the Navigation menu to go back to the Layers page. Add a new layer by clicking "+ Layer"
@@ -124,6 +133,8 @@ remember the MySQL root user password. OpsWorks will manage everything for you, 
 creating your `database.yml` file.
 
 <div class="full shadow rounded"><img src="/images/ops-works/create_mysql_layer.png"></div>
+
+Click "Add Layer" to create the layer.
 
 ## 5. Create an instance
 
