@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Save 50 Hours Setting up Your Jekyll Blog &mdash; Will Koehler</title>
+    <!--[if lt IE 9]><script src='https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js'></script><![endif]-->
+    
+    <link rel="stylesheet" href="/assets/app.css">
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+<script src="/assets/app.js"></script>
+
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-54124306-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+    <link rel="shortcut icon" href="/favicon.ico?v2" type="image/x-icon" />
+    <link rel="alternate" type="application/atom+xml" title="Will Koehler" href="/atom.xml" />
+    <meta name="title" content="Save 50 Hours Setting up Your Jekyll Blog ">
+    <link rel="canonical" href="http://willkoehler.net/2014/08/26/save-50-hours-setting-up-your-jekyll-blog.html">
+     
+           
+    <meta property="og:title" content="Save 50 Hours Setting up Your Jekyll Blog"/>
+    <meta property="og:url" content="http://willkoehler.net/2014/08/26/save-50-hours-setting-up-your-jekyll-blog.html"/>
+    <meta property="og:image" content="http://willkoehler.net/images/overbrook-ravine-in-clintonville.jpg"/>
+    
+    <meta property="og:description" content="Being a perfectionist I knew that I wouldn't be able to resist tinkering with every detail of my new Jekyll blog. I spent 50 hours perfecting my blog, so you don't have to."/>
+    <meta name="description" content="Being a perfectionist I knew that I wouldn't be able to resist tinkering with every detail of my new Jekyll blog. I spent 50 hours perfecting my blog, so you don't have to."/>
+    
+    <meta property="og:site_name" content="Will Koehler">     
+</head>
+<body>
+    
+<section class="site-nav">
+    <header>
+        <nav id="navigation">
+            <a class="brand" href="/">
+                <img src="/images/logo.png" alt="Inc">
+            </a>
+            <a href="/">Blog</a>
+            <a href="/about.html">About</a>
+        </nav>
+    </header>
+</section>
+
+
+<div class="article-cover" style="background-image:url(/images/overbrook-ravine-in-clintonville.jpg)"></div>
+
+
+<div class='cover-caption'>Overbrook ravine in Clintonville. Photo: Will Koehler</div>
+
+
+<article >
+
+    <div class="container">
+        <header>
+            <div class="meta">
+                By <address><a rel="author" href="" title="Will Koehler" target="_blank">Will Koehler</a></address> &mdash;
+                <time pubdate datetime="2014-26-August" title="Aug 26, 2014">Aug 26, 2014</time> &mdash;
+                
+9 min read
+            </div>
+            <h1 class="title">Save 50 Hours Setting up Your Jekyll Blog</h1>
+            <h2 class="subtitle">Spoiler: Just fork mine.</h2>
+        </header>
+
+        <section>
+            <p>When I decided to start blogging, I explored all the major blogging platforms. I quickly came to the conclusion
+that, in order to get exactly what I wanted, I would need to have full control of the design and code.</p>
+
+<p>As a Ruby developer, <a href="http://jekyllrb.com">Jekyll</a> was a natural choice. Jekyll is a static site generator that’s
+“blogging aware”. “Blogging aware” means that Jekyll has conventions for managing your blog posts. You put all your
+posts in the <code>_posts/</code> folder. Jekyll generates pages for them and gives you template variables to index through
+the pages.</p>
+
+<p>In addition to supporting blogs out of the box, Jekyll had everything else I wanted:</p>
+
+<ul>
+  <li>Good <a href="http://jekyllthemes.org">themes</a></li>
+  <li>Support for source-code highlighting</li>
+  <li>Posts can be written in <a href="http://daringfireball.net/projects/markdown/syntax">Markdown</a></li>
+  <li>Easy <a href="https://help.github.com/articles/using-jekyll-with-pages">integration</a> with Github pages (free hosting!)</li>
+  <li>Support for layouts, partials, and other features that make it a pleasure to use.</li>
+  <li>Easy to get your head around the entire site. No magic. Nothing is hidden.</li>
+</ul>
+
+<h2 id="jekyll-incorporated-theme">Jekyll Incorporated Theme</h2>
+
+<p>The next thing I needed was a theme. I quickly settled on <a href="http://incorporated.sendtoinc.com">Jekyll Incorporated</a>.
+It’s clean, simple, and very “Medium-like”. Thanks <a href="https://sendtoinc.com/">Kippt, Inc.</a> for sharing this awesome theme
+with the community.</p>
+
+<p>Jekyll Incorporated was built to be easily customized via <code>config.yml</code> and <code>main.css</code>. So I thought I would
+just fork the theme and customize it for my needs. It would be easy, right?</p>
+
+<p>In theory that was probably right. But I noticed a few minor problems with the responsive design of the
+theme. The blog cover images weren’t resizing nicely as they were in the demo site. I realized that this was
+because Kippt had made improvements to their blog after open-sourcing the theme.</p>
+
+<h2 id="improving-on-jekyll-incorporated-theme">Improving on Jekyll Incorporated Theme</h2>
+
+<p>I figured I would fix the cover images and then start writing posts. But that one fix revealed other
+issues in the code. One change led to another. I ended up making 40 commits in all. To make this harder
+on myself, I didn’t just tear into the code. I made all the changes in a way that could be merged back
+upstream, preserving the design and original intent of the theme.</p>
+
+<p>None of this is to take away from the original work Kippt, Inc put into the theme. They created an awesome
+foundation for me to build on. There’s no way I could have done this on my own.</p>
+
+<h3 id="remove-bootstrapcss">Remove Bootstrap.css</h3>
+
+<p>I noticed that the theme included <code>bootstrap.scss</code>, containing all of Twitter Bootstrap. But none of the
+Bootstrap features like the grid, forms, or typography were being used. <code>bootstrap.scss</code> was only
+providing a CSS reset (a cross-browser foundation to build the rest of the css on top of) and a few scattered,
+random styles.</p>
+
+<p>To fix this, I pulled in my favorite css reset: <a href="http://necolas.github.io/normalize.css/">normalize.css</a>. I
+then methodically went through bootstrap.scss, commenting out chunks, and looking for rules that were
+still being used by comparing the before and after pages in two browser tabs.</p>
+
+<p>When I was done, I removed <code>bootstrap.scss</code> and moved the rules that were still being using into into <code>base.scss</code>.
+Below are the rules I needed to save</p>
+
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="o">//</span> <span class="nt">Use</span> <span class="nt">border-box</span> <span class="nt">sizing</span> <span class="nt">for</span> <span class="nt">everything</span><span class="o">.</span>
+<span class="o">*,</span>
+<span class="o">*</span><span class="nd">:before</span><span class="o">,</span>
+<span class="o">*</span><span class="nd">:after</span> <span class="p">{</span>
+  <span class="o">-</span><span class="n">webkit</span><span class="o">-</span><span class="n">box</span><span class="o">-</span><span class="n">sizing</span><span class="o">:</span> <span class="k">border</span><span class="o">-</span><span class="n">box</span><span class="p">;</span>
+  <span class="o">-</span><span class="n">moz</span><span class="o">-</span><span class="n">box</span><span class="o">-</span><span class="n">sizing</span><span class="o">:</span> <span class="k">border</span><span class="o">-</span><span class="n">box</span><span class="p">;</span>
+  <span class="n">box</span><span class="o">-</span><span class="n">sizing</span><span class="o">:</span> <span class="k">border</span><span class="o">-</span><span class="n">box</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">body</span> <span class="p">{</span>
+  <span class="o">...</span> <span class="p">(</span><span class="n">other</span> <span class="n">stuff</span> <span class="n">that</span> <span class="n">was</span> <span class="n">already</span> <span class="n">in</span> <span class="n">base</span><span class="o">.</span><span class="n">scss</span><span class="p">)</span>
+  <span class="k">line-height</span><span class="o">:</span> <span class="m">1</span><span class="o">.</span><span class="m">428571429</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">img</span> <span class="p">{</span>
+  <span class="k">vertical-align</span><span class="o">:</span> <span class="k">middle</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">p</span> <span class="p">{</span>
+  <span class="k">margin</span><span class="o">:</span> <span class="m">0</span> <span class="m">0</span> <span class="m">10px</span><span class="p">;</span>
+<span class="p">}</span>
+
+ <span class="nt">h1</span><span class="o">,</span> <span class="nt">h2</span><span class="o">,</span> <span class="nt">h3</span><span class="o">,</span> <span class="nt">h4</span><span class="o">,</span> <span class="nt">h5</span> <span class="p">{</span>
+  <span class="o">...</span> <span class="p">(</span><span class="n">other</span> <span class="n">stuff</span> <span class="n">that</span> <span class="n">was</span> <span class="n">already</span> <span class="n">in</span> <span class="n">base</span><span class="o">.</span><span class="n">scss</span><span class="p">)</span>
+  <span class="k">line-height</span><span class="o">:</span> <span class="m">1</span><span class="o">.</span><span class="m">1</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div>
+
+<p>The net change was 1647 lines of css removed. Here’s <a href="https://github.com/willkoehler/my_blog/commit/460ca42a011c075d0fc2d63f86cc6940dac3d4ca#diff-1003e390ef395b0f33d4f1a90fb9e6c6R42">the commit</a></p>
+
+<h3 id="improve-source-code-highlighting">Improve source-code highlighting</h3>
+
+<p>Out of the box, Jekyll supports source-code highlighting using <a href="http://pygments.org">pygments</a>.
+You don’t need to know anything about pygments. Wrap your source code in <code>highlight</code> tags and
+it “just works”.</p>
+
+<div class="highlight"><pre><code class="language-liquid" data-lang="liquid"><span class="p">{%</span><span class="w"> </span><span class="nt">highlight</span><span class="w"> </span>ruby<span class="w"> </span>linenos<span class="w"> </span><span class="p">%}</span>
+class User &lt; ActiveRecord::Base
+  # Wow this Ruby source code highlighting looks great!
+  has_many :user_assignments, :dependent =&gt; :destroy
+  has_many :hospitals, :through =&gt; :user_assignments
+end
+<span class="p">{%</span><span class="w"> </span><span class="nt">endhighlight</span><span class="w"> </span><span class="p">%}</span></code></pre></div>
+
+<p>Is rendered as</p>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="lineno">1</span> <span class="k">class</span> <span class="nc">User</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span>
+<span class="lineno">2</span>   <span class="c1"># Wow this Ruby source code highlighting looks great!</span>
+<span class="lineno">3</span>   <span class="n">has_many</span> <span class="ss">:user_assignments</span><span class="p">,</span> <span class="ss">:dependent</span> <span class="o">=&gt;</span> <span class="ss">:destroy</span>
+<span class="lineno">4</span>   <span class="n">has_many</span> <span class="ss">:hospitals</span><span class="p">,</span> <span class="ss">:through</span> <span class="o">=&gt;</span> <span class="ss">:user_assignments</span>
+<span class="lineno">5</span> <span class="k">end</span></code></pre></div>
+
+<p>The theme already included Github’s syntax highlighting stylesheet:
+<a href="http://jekyllrb.com/docs/templates/#stylesheets-for-syntax-highlighting">syntax.css</a>.
+I added a few rules to clean up the look and prevent long lines from wrapping.</p>
+
+<p>Before improvements</p>
+
+<div class="before_syntax_fixes">
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="lineno">1</span> <span class="k">class</span> <span class="nc">User</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span>
+<span class="lineno">2</span>   <span class="n">has_many</span> <span class="ss">:user_assignments</span><span class="p">,</span> <span class="ss">:dependent</span> <span class="o">=&gt;</span> <span class="ss">:destroy</span>
+<span class="lineno">3</span>   <span class="n">has_many</span> <span class="ss">:hospitals</span><span class="p">,</span> <span class="ss">:through</span> <span class="o">=&gt;</span> <span class="ss">:user_assignments</span>
+<span class="lineno">4</span>  
+<span class="lineno">5</span>   <span class="c1"># Ugly, but 5x faster than op2 and op3</span>
+<span class="lineno">6</span>   <span class="c1"># Takes 2ms</span>
+<span class="lineno">7</span>   <span class="n">scope</span> <span class="ss">:grid_fields</span><span class="p">,</span> <span class="o">-&gt;</span> <span class="p">{</span> <span class="n">joins</span><span class="p">(</span><span class="s1">&#39;LEFT JOIN user_assignments ON user_id = users.id LEFT JOIN hospitals ON hospitals.id = hospital_id&#39;</span><span class="p">)</span><span class="o">.</span>
+<span class="lineno">8</span>                            <span class="n">group</span><span class="p">(</span><span class="s1">&#39;users.id&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="o">[</span><span class="ss">:id</span><span class="p">,</span> <span class="ss">:name</span><span class="p">,</span> <span class="ss">:email</span><span class="p">,</span> <span class="ss">:role</span><span class="p">,</span> <span class="s1">&#39;min(hospitals.name) as first_hospital_name&#39;</span><span class="o">]</span><span class="p">)</span> <span class="p">}</span>
+<span class="lineno">9</span> <span class="k">end</span></code></pre></div>
+
+</div>
+
+<p>After improvements</p>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="lineno">1</span> <span class="k">class</span> <span class="nc">User</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span>
+<span class="lineno">2</span>   <span class="n">has_many</span> <span class="ss">:user_assignments</span><span class="p">,</span> <span class="ss">:dependent</span> <span class="o">=&gt;</span> <span class="ss">:destroy</span>
+<span class="lineno">3</span>   <span class="n">has_many</span> <span class="ss">:hospitals</span><span class="p">,</span> <span class="ss">:through</span> <span class="o">=&gt;</span> <span class="ss">:user_assignments</span>
+<span class="lineno">4</span>  
+<span class="lineno">5</span>   <span class="c1"># Ugly, but 5x faster than op2 and op3</span>
+<span class="lineno">6</span>   <span class="c1"># Takes 2ms</span>
+<span class="lineno">7</span>   <span class="n">scope</span> <span class="ss">:grid_fields</span><span class="p">,</span> <span class="o">-&gt;</span> <span class="p">{</span> <span class="n">joins</span><span class="p">(</span><span class="s1">&#39;LEFT JOIN user_assignments ON user_id = users.id LEFT JOIN hospitals ON hospitals.id = hospital_id&#39;</span><span class="p">)</span><span class="o">.</span>
+<span class="lineno">8</span>                            <span class="n">group</span><span class="p">(</span><span class="s1">&#39;users.id&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="o">[</span><span class="ss">:id</span><span class="p">,</span> <span class="ss">:name</span><span class="p">,</span> <span class="ss">:email</span><span class="p">,</span> <span class="ss">:role</span><span class="p">,</span> <span class="s1">&#39;min(hospitals.name) as first_hospital_name&#39;</span><span class="o">]</span><span class="p">)</span> <span class="p">}</span>
+<span class="lineno">9</span> <span class="k">end</span></code></pre></div>
+
+<p>Thanks <a href="http://demisx.github.io/jekyll/2014/01/13/improve-code-highlighting-in-jekyll.html">Dmitri Moore</a>
+for the ideas. Here’s <a href="https://github.com/willkoehler/my_blog/commit/198b31ea605fdc959ba23114f9292bddc939b9a7">the commit</a></p>
+
+<h3 id="clean-up-configyml">Clean up config.yml</h3>
+
+<p>My philosophy on code and config is: the less the better. I went through config.yml line by line, referencing
+the Jekyll documentation and Googling information as needed. Almost everything could go. Most of the config
+items were simply re-stating Jekyll’s defaults. I also removed references to alternative markdown parsers,
+such as rdiscount, maruku, and redcarpet. Jekyll defaults to Kramdown for parsing markdown. Unless you’re
+doing something really specialized, there’s no need to deviate from this default.</p>
+
+<p>The net change was 56 lines of config removed (the remaining config was almost all theme-specific)</p>
+
+<p>Here’s <a href="https://github.com/willkoehler/my_blog/commit/f7ea94058a797b969724dd35bb0a75ce829fcc7e">the commit</a></p>
+
+<h3 id="fix-feedxml">Fix feed.xml</h3>
+
+<p>I don’t know much about RSS. I don’t even know if anyone will use it. But since RSS was already in
+the theme, I decided to keep it and fix it. Most of the fixes were obvious. I used the
+<a href="http://validator.w3.org/feed/">W3C Feed Validation Service</a> to check the feed and Googled the errors
+I couldn’t figure out on my own.</p>
+
+<p>Here’s <a href="https://github.com/willkoehler/my_blog/commit/1aa854cea9e856d7c07c58c3e0be5dbfe51b939a">the commit</a>.
+Update: I’ve made <a href="https://github.com/willkoehler/my_blog/commit/2d8cfb7629cde63dc31a8bbbb11d9e5e62b90d18">more changes</a>.</p>
+
+<h3 id="add-github-icon">Add Github icon</h3>
+
+<p>I wanted to have a link to my Github profile in the social icons. The hard work was already done for me
+by <a href="https://github.com/kippt/jekyll-incorporated/pull/17">@vdragsic</a>. I tweaked the icon size to make
+it easier to see. This led to some weird rendering behavior and strange css that had to be cleaned up.</p>
+
+<p>Before tweaks. Notice Github icon is small and not immediately recognizable. All social icons are too low.</p>
+
+<p><img src="http://willkoehler.net/images/social-icons-before-tweaks.png" alt="Social icons before tweaks" style="width:239px;" /></p>
+
+<p>After tweaks.</p>
+
+<p><img src="http://willkoehler.net/images/social-icons-after-tweaks.png" alt="Social icons after tweaks" style="width:239px;" /></p>
+
+<p>I broke this change into two commits: <a href="https://github.com/willkoehler/my_blog/commit/f461bd5dec11bfe12c6fbb6cd79eaf12af690219">Add Github icon</a>
+and <a href="https://github.com/willkoehler/my_blog/commit/9604230187353995e81db3fda21e289c63661023">Tweak styling</a>.</p>
+
+<h3 id="remove-unused-css-rules">Remove unused css rules</h3>
+
+<p>I went through and cleaned up all the unused css rules. Unused rules add to page weight and, more importantly,
+add to the cognitive load reading the css.</p>
+
+<p>Tracking down the unused rules wasn’t hard. Since I wanted a better understanding of the css,
+I did it by hand. I searched for each rule in the css, deleted the ones that weren’t used in the HTML,
+making sure I didn’t break anything along the way.</p>
+
+<p>These changes are in two commits:
+<a href="https://github.com/willkoehler/my_blog/commit/00ff93d79cffd6b8291de335b8a850cf65bbcd3e">Commit 1</a> and
+<a href="https://github.com/willkoehler/my_blog/commit/86e17a527661910e6a52924df9c620bd1b2a3b7b">Commit 2</a></p>
+
+<h3 id="much-more">Much more…</h3>
+
+<p>There are a lot more fixes and refinements. You can see all the detail in the <a href="https://github.com/willkoehler/my_blog/commits/open_source">open_source branch</a>.
+Feel free to use this as a starting point for your blog. Maybe the changes will be merged back into
+Jekyll Incorporated. I submitted a <a href="https://github.com/kippt/jekyll-incorporated/pull/24">pull request</a>. But it’s a lot of
+changes to merge back upstream.</p>
+
+<h2 id="development-continues">Development continues</h2>
+
+<p>In the meantime, I’ve moved ahead with my blog and have started making non-compatible changes to customize
+the theme for my needs. These include more css fixes and design refinements. If it’s something that looks useful,
+feel free to fork the <a href="https://github.com/willkoehler/my_blog">master branch</a> to get the latest.</p>
+
+<h2 id="additional-resources">Additional resources</h2>
+
+<p>Mike Greiling has some great articles on Jekyll on his blog (PixelCog).</p>
+
+<p><a href="http://pixelcog.com/blog/2013/jekyll-from-scratch-introduction/">Jekyll From Scratch - Getting Started</a><br />
+<a href="http://pixelcog.com/blog/2013/jekyll-from-scratch-core-architecture/">Jekyll From Scratch - Core Architecture</a><br />
+<a href="http://pixelcog.com/blog/2013/jekyll-from-scratch-extending-jekyll/">Jekyll From Scratch - Extending Jekyll</a></p>
+
+<!-- styles to demo source-code highlighting before fixes -->
+<style>
+    .before_syntax_fixes .highlight .lineno {
+        color: #000;
+        display: inline;
+        padding: none;
+        border: none
+    }
+    .before_syntax_fixes .highlight pre code {
+        font-family: monospace, monospace;
+        white-space: pre-wrap;
+    }
+</style>
+
+
+            
+<div class="social">
+    
+    <div class='twitter'>
+        <a href="https://twitter.com/share" class="twitter-share-button"  data-text="Save 50 Hours Setting up Your Jekyll Blog" data-related="wckoehler">Tweet</a>
+    </div>
+    
+
+    
+    <div class='facebook'>
+        <div class="fb-share-button" data-layout="button_count"></div>
+    </div>
+    
+
+    
+    
+    
+
+    
+    <div class='reddit'>
+        <a href="//www.reddit.com/submit" onclick="window.open('//www.reddit.com/submit?url=http://willkoehler.net/2014/08/26/save-50-hours-setting-up-your-jekyll-blog.html&title=Save+50+Hours+Setting+up+Your+Jekyll+Blog'); return false"> <img src="//www.redditstatic.com/spreddit7.gif" alt="submit to reddit" border="0" /> </a>
+    </div>
+    
+</div>
+
+        </section>
+
+        <footer>
+            <address>
+               <img src="/images/wk.jpg">
+                <p>Written by <strong><a rel="author" href="https://twitter.com/wckoehler" title="" target="_blank">Will Koehler</a></strong><br>
+                <span class="muted">Web developer specializing in full-stack Rails applications.</span>
+                </p>
+            </address>
+            
+                
+                <section class="index">
+                    <h3 class="title">Next up: <a href="/2014/08/28/vertically-align-content-with-css-using-this-one-weird-trick.html" rel="prefetch">Vertically Align Content With CSS Using This One Weird Trick</a></h3>
+                    <p>There are three hard things in computer science: cache invalidation, naming things, and vertically aligning content with CSS.</p>
+                    <hr>
+                </section>
+             
+             
+            
+            <section>
+                <div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'koehlerblog'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+            </section>
+            
+        </footer>
+    </div>
+</article>
+
+
+<footer class="site-footer">
+    <div class="container">
+        &copy; 2015 Will Koehler
+        
+        <nav>
+            <a href="/">Blog</a> &middot;
+            <a href="/about.html">About</a>
+        </nav>
+        
+        <nav class="social">
+            
+<a href="https://twitter.com/wckoehler" title="Follow on Twitter" target="_blank"><i class="icon icon-twitter"></i></a>
+
+
+<a href="https://github.com/willkoehler" title="Watch on Github" target="_blank"><i class="icon icon-github"></i></a>
+
+
+<a href="/atom.xml" title="RSS Feed">
+    <i class="icon icon-rss"></i>
+</a>
+
+        </nav>
+        <p>Based on Incorporated theme by <a href="https://sendtoinc.com">Inc</a></p>
+    </div>
+</footer>
+
+</body>
+</html>
