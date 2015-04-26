@@ -5,7 +5,7 @@
 
 ## Publish to Github Pages
 
-    bundle exec rake site:publish
+    JEKYLL_ENV=production bundle exec rake site:publish
 
 ## Thanks
 
