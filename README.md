@@ -1,7 +1,7 @@
 ## Installation & Usage
 
     bundle install
-    bundle exec jekyll serve --watch
+    bundle exec jekyll serve
 
 ## Publish to Github Pages
 
