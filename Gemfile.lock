@@ -93,5 +93,4 @@ DEPENDENCIES
   jekyll
   jekyll-assets
   rake
-  sass
   uglifier
