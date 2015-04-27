@@ -1,59 +1,59 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% if page.title %}{{ page.title }} &mdash; {{ site.info.title }}{% else %}{{ site.info.title }} &mdash; {{ site.info.subtitle }}{% endif %}</title>
-    <!--[if lt IE 9]><script src='https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js'></script><![endif]-->
-    {% if site.info.google_font %}<link href="https://fonts.googleapis.com/css?family={{ site.info.google_font }}" rel="stylesheet" type="text/css">{% endif %}
-    {% stylesheet app %}
-    {% include _scripts.html %}
-    <link rel="shortcut icon" href="/favicon.ico?v2" type="image/x-icon" />
-    <link rel="alternate" type="application/atom+xml" title="{{ site.info.title }}" href="/atom.xml" />
-    <meta name="title" content="{% if page.title %}{{ page.title }} {% else %}{{ site.info.title }}{% endif %}">
-    <link rel="canonical" href="{{ site.url }}{{ page.url }}">
-    {% if page.site.gplus %}<link rel="publisher" href="https://plus.google.com/{{ site.info.gplus }}">{% endif %} 
-    {% if page.author.gplus %}<link rel="author" href="https://plus.google.com/{{ page.author.gplus }}">{% endif %}       
-    <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.info.title }}{% endif %}"/>
-    <meta property="og:url" content="{{ site.url }}{{ page.url }}"/>
-    {% if page.cover_image %}<meta property="og:image" content="{{ site.url }}/images/{{ page.cover_image }}"/>{% endif %}
-    {% if page.excerpt %}
-    <meta property="og:description" content="{{ page.excerpt }}"/>
-    <meta name="description" content="{{ page.excerpt }}"/>
-    {% endif %}
-    <meta property="og:site_name" content="{{ site.info.title }}">     
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% if page.title %}{{ page.title }} &mdash; {{ site.info.title }}{% else %}{{ site.info.title }} &mdash; {{ site.info.subtitle }}{% endif %}</title>
+  <!--[if lt IE 9]><script src='https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js'></script><![endif]-->
+  {% if site.info.google_font %}<link href="https://fonts.googleapis.com/css?family={{ site.info.google_font }}" rel="stylesheet" type="text/css">{% endif %}
+  {% stylesheet app %}
+  {% include _scripts.html %}
+  <link rel="shortcut icon" href="/favicon.ico?v2" type="image/x-icon" />
+  <link rel="alternate" type="application/atom+xml" title="{{ site.info.title }}" href="/atom.xml" />
+  <meta name="title" content="{% if page.title %}{{ page.title }} {% else %}{{ site.info.title }}{% endif %}">
+  <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+  {% if page.site.gplus %}<link rel="publisher" href="https://plus.google.com/{{ site.info.gplus }}">{% endif %} 
+  {% if page.author.gplus %}<link rel="author" href="https://plus.google.com/{{ page.author.gplus }}">{% endif %}       
+  <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.info.title }}{% endif %}"/>
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}"/>
+  {% if page.cover_image %}<meta property="og:image" content="{{ site.url }}/images/{{ page.cover_image }}"/>{% endif %}
+  {% if page.excerpt %}
+  <meta property="og:description" content="{{ page.excerpt }}"/>
+  <meta name="description" content="{{ page.excerpt }}"/>
+  {% endif %}
+  <meta property="og:site_name" content="{{ site.info.title }}">     
 </head>
 <body>
     
-<section class="site-nav">
+  <section class="site-nav">
     <header>
-        <nav id="navigation">
-            <a class="brand" href="/">
-                <img src="/images/{{ site.info.logo }}" alt="Inc">
-            </a>
-            <a href="/">Blog</a>
-            <a href="/about.html">About</a>
-        </nav>
+      <nav id="navigation">
+        <a class="brand" href="/">
+          <img src="/images/{{ site.info.logo }}" alt="Inc">
+        </a>
+        <a href="/">Blog</a>
+        <a href="/about.html">About</a>
+      </nav>
     </header>
-</section>
+  </section>
 
-{{ content }}
+  {{ content }}
 
-<footer class="site-footer">
+  <footer class="site-footer">
     <div class="container">
-        &copy; {{ site.time | date: "%Y" }} Will Koehler
+      &copy; {{ site.time | date: "%Y" }} Will Koehler
         
-        <nav>
-            <a href="/">Blog</a> &middot;
-            <a href="/about.html">About</a>
-        </nav>
+      <nav>
+        <a href="/">Blog</a> &middot;
+        <a href="/about.html">About</a>
+      </nav>
         
-        <nav class="social">
-            {% include _social-links.html %}
-        </nav>
-        <p>Based on Incorporated theme by <a href="https://sendtoinc.com">Inc</a></p>
+      <nav class="social">
+        {% include _social-links.html %}
+      </nav>
+      <p>Based on Incorporated theme by <a href="https://sendtoinc.com">Inc</a></p>
     </div>
-</footer>
+  </footer>
 
 </body>
 </html>

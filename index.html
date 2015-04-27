@@ -2,44 +2,44 @@
 layout: base
 ---
 <div class="blog-cover" style="background-image:url(/images/{{ site.info.cover_image }});">
-    <section>
-        <div class="container">
-            <h1>{{ site.info.title }}</h1>
-            {% if site.info.subtitle %}<h3>{{ site.info.subtitle }}</h3>{% endif %}
-            {% include _social-links.html %}
-        </div>
-    </section>
+  <section>
+    <div class="container">
+      <h1>{{ site.info.title }}</h1>
+      {% if site.info.subtitle %}<h3>{{ site.info.subtitle }}</h3>{% endif %}
+      {% include _social-links.html %}
+    </div>
+  </section>
 </div>
 <div class='cover-caption'>{{ site.info.cover_image_caption }}</div>
 
 <article>
-    <div class="container">
-        {% for post in paginator.posts %}
-        <section class="index">
-            <!-- {% if post.author.image %}<img src="/images/{{ post.author.image }}" class="avatar">{% endif %}-->
-            <div>
-                <h2 class="title"><a href="{{ post.url }}" rel="prefetch">{{ post.title }}</a></h2>
-                <p>{{ post.excerpt }}</p>
-                <div class="meta">
-                    <address>{{ post.author.name }}</address> &mdash;
-                    <time pubdate datetime="{{ post.date | date: "%Y-%d-%B" }}" title="{{ post.date | date: "%b %d, %Y" }}">{{ post.date | date: "%b %d, %Y" }}</time> &mdash;
-                    {% include _read-time-estimate.html content=post.content %}
-                </div>
-            </div>
-            <hr>
-        </section>
-        {% endfor %}
-        <section class="pagination" style="text-align:center">
-          {% if paginator.previous_page %}
-            {% if paginator.previous_page == 1 %}
-            <a href="/" class="btn outline">‹ Newer</a>
-            {% else %}
-            <a href="/page{{ paginator.previous_page }}" class="btn outline">‹ Newer</a>
-            {% endif %}
-          {% endif %}
-          {% if paginator.next_page %}
-            <a href="/page{{ paginator.next_page }}" class="btn outline">Older ›</a>
-          {% endif %}
-        </section>
-    </div>
+  <div class="container">
+    {% for post in paginator.posts %}
+    <section class="index">
+      <!-- {% if post.author.image %}<img src="/images/{{ post.author.image }}" class="avatar">{% endif %}-->
+      <div>
+        <h2 class="title"><a href="{{ post.url }}" rel="prefetch">{{ post.title }}</a></h2>
+        <p>{{ post.excerpt }}</p>
+        <div class="meta">
+          <address>{{ post.author.name }}</address> &mdash;
+          <time pubdate datetime="{{ post.date | date: "%Y-%d-%B" }}" title="{{ post.date | date: "%b %d, %Y" }}">{{ post.date | date: "%b %d, %Y" }}</time> &mdash;
+          {% include _read-time-estimate.html content=post.content %}
+        </div>
+      </div>
+      <hr>
+    </section>
+    {% endfor %}
+    <section class="pagination" style="text-align:center">
+      {% if paginator.previous_page %}
+      {% if paginator.previous_page == 1 %}
+      <a href="/" class="btn outline">‹ Newer</a>
+      {% else %}
+      <a href="/page{{ paginator.previous_page }}" class="btn outline">‹ Newer</a>
+      {% endif %}
+      {% endif %}
+      {% if paginator.next_page %}
+      <a href="/page{{ paginator.next_page }}" class="btn outline">Older ›</a>
+      {% endif %}
+    </section>
+  </div>
 </article>

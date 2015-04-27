@@ -10,50 +10,50 @@ layout: base
 
 <article {% if page.container_class %}class='{{ page.container_class }}'{% endif %}>
 
-    <div class="container">
-        <header>
-            <div class="meta">
-                By <address><a rel="author" href="{{ page.author.link }}" title="{{ page.author.name }}" target="_blank">{{ page.author.name }}</a></address> &mdash;
-                <time pubdate datetime="{{ page.date | date: "%Y-%d-%B" }}" title="{{ page.date | date: "%b %d, %Y" }}">{{ page.date | date: "%b %d, %Y" }}</time> &mdash;
-                {% include _read-time-estimate.html content=content %}
-            </div>
-            <h1 class="title">{{ page.title }}</h1>
-            {% if page.subtitle %}<h2 class="subtitle">{{ page.subtitle }}</h2>{% endif %}
-        </header>
+  <div class="container">
+    <header>
+      <div class="meta">
+        By <address><a rel="author" href="{{ page.author.link }}" title="{{ page.author.name }}" target="_blank">{{ page.author.name }}</a></address> &mdash;
+        <time pubdate datetime="{{ page.date | date: "%Y-%d-%B" }}" title="{{ page.date | date: "%b %d, %Y" }}">{{ page.date | date: "%b %d, %Y" }}</time> &mdash;
+        {% include _read-time-estimate.html content=content %}
+      </div>
+      <h1 class="title">{{ page.title }}</h1>
+      {% if page.subtitle %}<h2 class="subtitle">{{ page.subtitle }}</h2>{% endif %}
+    </header>
 
-        <section>
-            {{ content }}
-            {% include _social-sharing.html %}
-        </section>
+    <section>
+      {{ content }}
+      {% include _social-sharing.html %}
+    </section>
 
-        <footer>
-            <address>
-               {% if page.author.image %}<img src="/images/{{ page.author.image }}">{% endif %}
-                <p>Written by <strong><a rel="author" href="https://twitter.com/{{ page.author.twitter }}" title="{{ page.author_name }}" target="_blank">{{ page.author.name }}</a></strong><br>
-                <span class="muted">{{ page.author.bio }}</span>
-                </p>
-            </address>
-            {% if page.next.url %}
-                {% assign post = page.next %}
-                <section class="index">
-                    <h3 class="title">Next up: <a href="{{ post.url }}" rel="prefetch">{{ post.title }}</a></h3>
-                    <p>{{ post.excerpt }}</p>
-                    <hr>
-                </section>
-            {% endif %} 
-            {% if page.previous.url %}
-                {% assign post = page.previous %}
-                <section class="index">
-                    <h3 class="title">Previous story: <a href="{{ post.url }}" rel="prefetch">{{ post.title }}</a></h3>
-                    <p>{{ post.excerpt }}</p>
-                    <hr>
-                </section>
-            {% endif %} 
-            {% if site.info.disqus.shortname %}
-            <section>
-                {% include _disqus.html %}
-            </section>
-            {% endif %}
-        </footer>
-    </div>
+    <footer>
+      <address>
+        {% if page.author.image %}<img src="/images/{{ page.author.image }}">{% endif %}
+        <p>Written by <strong><a rel="author" href="https://twitter.com/{{ page.author.twitter }}" title="{{ page.author_name }}" target="_blank">{{ page.author.name }}</a></strong><br>
+          <span class="muted">{{ page.author.bio }}</span>
+        </p>
+      </address>
+      {% if page.next.url %}
+      {% assign post = page.next %}
+      <section class="index">
+        <h3 class="title">Next up: <a href="{{ post.url }}" rel="prefetch">{{ post.title }}</a></h3>
+        <p>{{ post.excerpt }}</p>
+        <hr>
+      </section>
+      {% endif %} 
+      {% if page.previous.url %}
+      {% assign post = page.previous %}
+      <section class="index">
+        <h3 class="title">Previous story: <a href="{{ post.url }}" rel="prefetch">{{ post.title }}</a></h3>
+        <p>{{ post.excerpt }}</p>
+        <hr>
+      </section>
+      {% endif %} 
+      {% if site.info.disqus.shortname %}
+      <section>
+        {% include _disqus.html %}
+      </section>
+      {% endif %}
+    </footer>
+  </div>
 </article>

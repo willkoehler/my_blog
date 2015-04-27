@@ -242,14 +242,14 @@ Mike Greiling has some great articles on Jekyll on his blog (PixelCog).
 
 <!-- styles to demo source-code highlighting before fixes -->
 <style>
-    .before_syntax_fixes .highlight .lineno {
-        color: #000;
-        display: inline;
-        padding: none;
-        border: none
-    }
-    .before_syntax_fixes .highlight pre code {
-        font-family: monospace, monospace;
-        white-space: pre-wrap;
-    }
+  .before_syntax_fixes .highlight .lineno {
+    color: #000;
+    display: inline;
+    padding: none;
+    border: none
+  }
+  .before_syntax_fixes .highlight pre code {
+    font-family: monospace, monospace;
+    white-space: pre-wrap;
+  }
 </style>

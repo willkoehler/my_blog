@@ -1,26 +1,26 @@
 form.contact {
-    width: 65%;
-    margin: 0 auto;
+  width: 65%;
+  margin: 0 auto;
 
-    input, textarea {
-        width: 100%;
-        font-size: 14px;
-        padding: 10px;
-        margin-bottom: 15px;
-        border-radius: 5px;
-        outline: none;
-        border: 1px solid #ccc;
-        -webkit-appearance: none;
+  input, textarea {
+    width: 100%;
+    font-size: 14px;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid #ccc;
+    -webkit-appearance: none;
         
-        &:focus {
-            border-color: $accent;
-            background-color: #F8FCFE;
-        };
-    }
+    &:focus {
+      border-color: $accent;
+      background-color: #F8FCFE;
+    };
+  }
     
-    input[type=submit] {
-        background-color: $accent;
-        color: #fff;
-        height: 50px;
-    }
+  input[type=submit] {
+    background-color: $accent;
+    color: #fff;
+    height: 50px;
+  }
 }
