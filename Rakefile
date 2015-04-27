@@ -29,6 +29,7 @@ namespace :site do
       system "git commit -am #{message.shellescape}"
       system "git push origin gh-pages --force"
       system "git checkout master"
+      puts "Site published successfully."
     end
   end
 end
