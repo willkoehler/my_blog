@@ -4,7 +4,7 @@
  <title>Will Koehler</title>
  <link href="http://willkoehler.net/atom.xml" rel="self"/>
  <link href="http://willkoehler.net"/>
- <updated>2015-04-27T16:13:21-04:00</updated>
+ <updated>2015-04-27T16:26:40-04:00</updated>
  <id>http://willkoehler.net/atom.xml</id>
  <author>
    <name>Will Koehler</name>
@@ -221,7 +221,7 @@ Chris Fischer &lt;span class=&quot;muted&quot;&gt;- Cycling advocate&lt;/span&gt
 Paul Dorothy &lt;span class=&quot;muted&quot;&gt;- Worthington Bike/Ped Committee&lt;/span&gt;&lt;br /&gt;
 Rachael Dorothy &lt;span class=&quot;muted&quot;&gt;- Worthington City Council&lt;/span&gt;&lt;br /&gt;
 Rick Jordon &lt;span class=&quot;muted&quot;&gt;- Photographer&lt;/span&gt;&lt;br /&gt;
-Kris Anderson &lt;span class=&quot;muted&quot;&gt;- RIDEHome Bike Shop&lt;/span&gt; &lt;/p&gt;
+Kris Anderson &lt;span class=&quot;muted&quot;&gt;- RIDEHome Bike Shop&lt;/span&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;feedback&quot;&gt;Feedback&lt;/h2&gt;
 
@@ -322,7 +322,7 @@ must be included separately.&lt;/p&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;http://code.highcharts.com/modules/exporting.js&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;The exporting module adds the function &lt;a href=&quot;http://api.highcharts.com/highcharts#Chart.getSVG&quot;&gt;getSVG&lt;/a&gt;
-which extracts the chart’s SVG code and sanitizes it for export. &lt;/p&gt;
+which extracts the chart’s SVG code and sanitizes it for export.&lt;/p&gt;
 
 &lt;p&gt;NOTE: Because we don’t specify a hard-coded chart width in our css, we need to specify sourceWidth and
 sourceHeight in the call to &lt;code&gt;getSVG&lt;/code&gt;. This seems like a bug to me. &lt;code&gt;getSVG&lt;/code&gt; should be able to calculate
@@ -682,7 +682,7 @@ You can also use Subversion, HTTP, or S3.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;&lt;strong&gt;Environment Variables:&lt;/strong&gt; Add any environment variables needed by your app here. Environment
-variables are &lt;a href=&quot;http://12factor.net/config&quot;&gt;one solution&lt;/a&gt; for managing Rails app secrets. &lt;/p&gt;
+variables are &lt;a href=&quot;http://12factor.net/config&quot;&gt;one solution&lt;/a&gt; for managing Rails app secrets.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;&lt;strong&gt;Domain name:&lt;/strong&gt; You can leave this blank since we only have one app in the stack.&lt;/p&gt;
@@ -783,7 +783,7 @@ RAILS_ENV=production bundle exec rake db:seed&lt;/code&gt;&lt;/pre&gt;&lt;/div&g
 &lt;h2 id=&quot;ready-to-go&quot;&gt;Ready to go&lt;/h2&gt;
 
 &lt;p&gt;That’s everything. Point your browser to the public IP and your app should be live. If you have
-problems, check the production log: &lt;code&gt;/srv/www/your_app_name/shared/log/production.log&lt;/code&gt; &lt;/p&gt;
+problems, check the production log: &lt;code&gt;/srv/www/your_app_name/shared/log/production.log&lt;/code&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;future-deployments&quot;&gt;Future deployments&lt;/h2&gt;
 
