@@ -4,7 +4,7 @@
  <title>Will Koehler</title>
  <link href="http://willkoehler.net/atom.xml" rel="self"/>
  <link href="http://willkoehler.net"/>
- <updated>2015-04-26T00:06:08-04:00</updated>
+ <updated>2015-04-27T16:06:16-04:00</updated>
  <id>http://willkoehler.net/atom.xml</id>
  <author>
    <name>Will Koehler</name>
@@ -1356,16 +1356,16 @@ feel free to fork the &lt;a href=&quot;https://github.com/willkoehler/my_blog&qu
 
 &lt;!-- styles to demo source-code highlighting before fixes --&gt;
 &lt;style&gt;
-    .before_syntax_fixes .highlight .lineno {
-        color: #000;
-        display: inline;
-        padding: none;
-        border: none
-    }
-    .before_syntax_fixes .highlight pre code {
-        font-family: monospace, monospace;
-        white-space: pre-wrap;
-    }
+  .before_syntax_fixes .highlight .lineno {
+    color: #000;
+    display: inline;
+    padding: none;
+    border: none
+  }
+  .before_syntax_fixes .highlight pre code {
+    font-family: monospace, monospace;
+    white-space: pre-wrap;
+  }
 &lt;/style&gt;
 
 </content>

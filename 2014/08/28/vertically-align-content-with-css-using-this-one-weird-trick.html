@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vertically Align Content With CSS Using This One Weird Trick &mdash; Will Koehler</title>
-    <!--[if lt IE 9]><script src='https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js'></script><![endif]-->
-    
-    <link rel="stylesheet" href="/assets/app.css">
-    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vertically Align Content With CSS Using This One Weird Trick &mdash; Will Koehler</title>
+  <!--[if lt IE 9]><script src='https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js'></script><![endif]-->
+  
+  <link rel="stylesheet" href="/assets/app.css">
+  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
 <script src="/assets/app.js"></script>
 
@@ -35,40 +35,39 @@
 
   ga('create', 'UA-54124306-1', 'auto');
   ga('send', 'pageview');
-
 </script>
 
 
-    <link rel="shortcut icon" href="/favicon.ico?v2" type="image/x-icon" />
-    <link rel="alternate" type="application/atom+xml" title="Will Koehler" href="/atom.xml" />
-    <meta name="title" content="Vertically Align Content With CSS Using This One Weird Trick ">
-    <link rel="canonical" href="http://willkoehler.net/2014/08/28/vertically-align-content-with-css-using-this-one-weird-trick.html">
-     
-           
-    <meta property="og:title" content="Vertically Align Content With CSS Using This One Weird Trick"/>
-    <meta property="og:url" content="http://willkoehler.net/2014/08/28/vertically-align-content-with-css-using-this-one-weird-trick.html"/>
-    <meta property="og:image" content="http://willkoehler.net/images/horse-farm-on-chapman-rd-delaware-county.jpg"/>
-    
-    <meta property="og:description" content="There are three hard things in computer science: cache invalidation, naming things, and vertically aligning content with CSS."/>
-    <meta name="description" content="There are three hard things in computer science: cache invalidation, naming things, and vertically aligning content with CSS."/>
-    
-    <meta property="og:site_name" content="Will Koehler">     
+  <link rel="shortcut icon" href="/favicon.ico?v2" type="image/x-icon" />
+  <link rel="alternate" type="application/atom+xml" title="Will Koehler" href="/atom.xml" />
+  <meta name="title" content="Vertically Align Content With CSS Using This One Weird Trick ">
+  <link rel="canonical" href="http://willkoehler.net/2014/08/28/vertically-align-content-with-css-using-this-one-weird-trick.html">
+   
+         
+  <meta property="og:title" content="Vertically Align Content With CSS Using This One Weird Trick"/>
+  <meta property="og:url" content="http://willkoehler.net/2014/08/28/vertically-align-content-with-css-using-this-one-weird-trick.html"/>
+  <meta property="og:image" content="http://willkoehler.net/images/horse-farm-on-chapman-rd-delaware-county.jpg"/>
+  
+  <meta property="og:description" content="There are three hard things in computer science: cache invalidation, naming things, and vertically aligning content with CSS."/>
+  <meta name="description" content="There are three hard things in computer science: cache invalidation, naming things, and vertically aligning content with CSS."/>
+  
+  <meta property="og:site_name" content="Will Koehler">     
 </head>
 <body>
     
-<section class="site-nav">
+  <section class="site-nav">
     <header>
-        <nav id="navigation">
-            <a class="brand" href="/">
-                <img src="/images/logo.png" alt="Inc">
-            </a>
-            <a href="/">Blog</a>
-            <a href="/about.html">About</a>
-        </nav>
+      <nav id="navigation">
+        <a class="brand" href="/">
+          <img src="/images/logo.png" alt="Inc">
+        </a>
+        <a href="/">Blog</a>
+        <a href="/about.html">About</a>
+      </nav>
     </header>
-</section>
+  </section>
 
-
+  
 <div class="article-cover" style="background-image:url(/images/horse-farm-on-chapman-rd-delaware-county.jpg)"></div>
 
 
@@ -77,20 +76,20 @@
 
 <article class='vaswc'>
 
-    <div class="container">
-        <header>
-            <div class="meta">
-                By <address><a rel="author" href="" title="Will Koehler" target="_blank">Will Koehler</a></address> &mdash;
-                <time pubdate datetime="2014-28-August" title="Aug 28, 2014">Aug 28, 2014</time> &mdash;
-                
+  <div class="container">
+    <header>
+      <div class="meta">
+        By <address><a rel="author" href="" title="Will Koehler" target="_blank">Will Koehler</a></address> &mdash;
+        <time pubdate datetime="2014-28-August" title="Aug 28, 2014">Aug 28, 2014</time> &mdash;
+        
 7 min read
-            </div>
-            <h1 class="title">Vertically Align Content With CSS Using This One Weird Trick</h1>
-            <h2 class="subtitle">Front-end devs will hate me for revealing the secret.</h2>
-        </header>
+      </div>
+      <h1 class="title">Vertically Align Content With CSS Using This One Weird Trick</h1>
+      <h2 class="subtitle">Front-end devs will hate me for revealing the secret.</h2>
+    </header>
 
-        <section>
-            <p>Phil Karlton famously said “there are only two hard things in computer science: cache invalidation
+    <section>
+      <p>Phil Karlton famously said “there are only two hard things in computer science: cache invalidation
 and naming things”. I would add a third: vertically aligning content with CSS.</p>
 
 <h2 id="the-scenario">The scenario</h2>
@@ -413,88 +412,86 @@ Gary Turner for the <a href="http://gtwebdev.com/workshop/vcenter/vcenter-inline
 </style>
 
 
-            
+      
 <div class="social">
-    
-    <div class='twitter'>
-        <a href="https://twitter.com/share" class="twitter-share-button"  data-text="Vertically Align Content With CSS Using This One Weird Trick" data-related="wckoehler">Tweet</a>
-    </div>
-    
+  
+  <div class='twitter'>
+    <a href="https://twitter.com/share" class="twitter-share-button"  data-text="Vertically Align Content With CSS Using This One Weird Trick" data-related="wckoehler">Tweet</a>
+  </div>
+  
 
-    
-    <div class='facebook'>
-        <div class="fb-share-button" data-layout="button_count"></div>
-    </div>
-    
+  
+  <div class='facebook'>
+    <div class="fb-share-button" data-layout="button_count"></div>
+  </div>
+  
 
+  
     
-    
-    
+  
 
-    
-    <div class='reddit'>
-        <a href="//www.reddit.com/submit" onclick="window.open('//www.reddit.com/submit?url=http://willkoehler.net/2014/08/28/vertically-align-content-with-css-using-this-one-weird-trick.html&title=Vertically+Align+Content+With+CSS+Using+This+One+Weird+Trick'); return false"> <img src="//www.redditstatic.com/spreddit7.gif" alt="submit to reddit" border="0" /> </a>
-    </div>
-    
+  
+  <div class='reddit'>
+    <a href="//www.reddit.com/submit" onclick="window.open('//www.reddit.com/submit?url=http://willkoehler.net/2014/08/28/vertically-align-content-with-css-using-this-one-weird-trick.html&title=Vertically+Align+Content+With+CSS+Using+This+One+Weird+Trick'); return false"> <img src="//www.redditstatic.com/spreddit7.gif" alt="submit to reddit" border="0" /> </a>
+  </div>
+  
 </div>
 
-        </section>
+    </section>
 
-        <footer>
-            <address>
-               <img src="/images/wk.jpg">
-                <p>Written by <strong><a rel="author" href="https://twitter.com/wckoehler" title="" target="_blank">Will Koehler</a></strong><br>
-                <span class="muted">Web developer specializing in full-stack Rails applications.</span>
-                </p>
-            </address>
-            
-                
-                <section class="index">
-                    <h3 class="title">Next up: <a href="/2014/10/15/deploy-a-rails-app-with-aws-opsworks.html" rel="prefetch">Deploy a Rails App with AWS OpsWorks</a></h3>
-                    <p>AWS OpsWorks hits a sweet spot, providing a turnkey deployment solution, almost as simple as Heroku, while allowing unlimited customization to your production stack with the power and flexibility of Chef.</p>
-                    <hr>
-                </section>
-             
-            
-                
-                <section class="index">
-                    <h3 class="title">Previous story: <a href="/2014/08/26/save-50-hours-setting-up-your-jekyll-blog.html" rel="prefetch">Save 50 Hours Setting up Your Jekyll Blog</a></h3>
-                    <p>Being a perfectionist I knew that I wouldn't be able to resist tinkering with every detail of my new Jekyll blog. I spent 50 hours perfecting my blog, so you don't have to.</p>
-                    <hr>
-                </section>
-             
-            
-            <section>
-                <div id="disqus_thread"></div>
+    <footer>
+      <address>
+        <img src="/images/wk.jpg">
+        <p>Written by <strong><a rel="author" href="https://twitter.com/wckoehler" title="" target="_blank">Will Koehler</a></strong><br>
+          <span class="muted">Web developer specializing in full-stack Rails applications.</span>
+        </p>
+      </address>
+      
+      
+      <section class="index">
+        <h3 class="title">Next up: <a href="/2014/10/15/deploy-a-rails-app-with-aws-opsworks.html" rel="prefetch">Deploy a Rails App with AWS OpsWorks</a></h3>
+        <p>AWS OpsWorks hits a sweet spot, providing a turnkey deployment solution, almost as simple as Heroku, while allowing unlimited customization to your production stack with the power and flexibility of Chef.</p>
+        <hr>
+      </section>
+       
+      
+      
+      <section class="index">
+        <h3 class="title">Previous story: <a href="/2014/08/26/save-50-hours-setting-up-your-jekyll-blog.html" rel="prefetch">Save 50 Hours Setting up Your Jekyll Blog</a></h3>
+        <p>Being a perfectionist I knew that I wouldn't be able to resist tinkering with every detail of my new Jekyll blog. I spent 50 hours perfecting my blog, so you don't have to.</p>
+        <hr>
+      </section>
+       
+      
+      <section>
+        <div id="disqus_thread"></div>
 <script type="text/javascript">
-    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-    var disqus_shortname = 'koehlerblog'; // required: replace example with your forum shortname
+  var disqus_shortname = 'koehlerblog';
 
-    /* * * DON'T EDIT BELOW THIS LINE * * */
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
+  (function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
 </script>
-            </section>
-            
-        </footer>
-    </div>
+      </section>
+      
+    </footer>
+  </div>
 </article>
 
 
-<footer class="site-footer">
+  <footer class="site-footer">
     <div class="container">
-        &copy; 2015 Will Koehler
+      &copy; 2015 Will Koehler
         
-        <nav>
-            <a href="/">Blog</a> &middot;
-            <a href="/about.html">About</a>
-        </nav>
+      <nav>
+        <a href="/">Blog</a> &middot;
+        <a href="/about.html">About</a>
+      </nav>
         
-        <nav class="social">
-            
+      <nav class="social">
+        
 <a href="https://twitter.com/wckoehler" title="Follow on Twitter" target="_blank"><i class="icon icon-twitter"></i></a>
 
 
@@ -502,13 +499,13 @@ Gary Turner for the <a href="http://gtwebdev.com/workshop/vcenter/vcenter-inline
 
 
 <a href="/atom.xml" title="RSS Feed">
-    <i class="icon icon-rss"></i>
+  <i class="icon icon-rss"></i>
 </a>
 
-        </nav>
-        <p>Based on Incorporated theme by <a href="https://sendtoinc.com">Inc</a></p>
+      </nav>
+      <p>Based on Incorporated theme by <a href="https://sendtoinc.com">Inc</a></p>
     </div>
-</footer>
+  </footer>
 
 </body>
 </html>
