@@ -26,16 +26,16 @@ layout: base
       <hr>
     </section>
     {% endfor %}
-    <section class="pagination" style="text-align:center">
+    <section class='pagination'>
+      {% if paginator.next_page %}
+      <a href="/page{{ paginator.next_page }}" class="button outline older">‹ Older</a>
+      {% endif %}
       {% if paginator.previous_page %}
       {% if paginator.previous_page == 1 %}
-      <a href="/" class="button outline">‹ Newer</a>
+      <a href="/" class="button outline newer">Newer ›</a>
       {% else %}
-      <a href="/page{{ paginator.previous_page }}" class="button outline">‹ Newer</a>
+      <a href="/page{{ paginator.previous_page }}" class="button outline newer">Newer ›</a>
       {% endif %}
-      {% endif %}
-      {% if paginator.next_page %}
-      <a href="/page{{ paginator.next_page }}" class="button outline">Older ›</a>
       {% endif %}
     </section>
   </div>
