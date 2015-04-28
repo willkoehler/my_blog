@@ -1,0 +1,60 @@
+@import "globals.scss";
+
+.site-footer {
+  padding: 5em 1em;
+  margin:4em 0 0 0;
+  background: #F5F5F5;
+  color:#aaa;
+  font-size:0.8em;
+    
+  a {
+    color:#777;
+    border:0;
+    margin:0 0.3em;
+        
+    &:hover {
+      color:#222;
+    }
+  }
+    
+  p {
+    color:#999;
+    a {
+      margin:0;
+      color:#999;
+    }
+  }
+    
+  nav {
+    display:inline-block;
+    margin-left: .5em;
+  }
+    
+  .social {
+    float:right;
+        
+    a:last-child {
+      margin-right: 0;
+    }
+    a {
+      color:#000;
+      border:0;
+      width:36px;
+      height:36px;
+      border:2px solid rgba(0,0,0,1);
+      display:inline-block;
+      padding:6px 0;
+      border-radius:42px;
+      margin:0 1em 0em 0;
+      line-height: 0;
+      text-align:center;
+      opacity:0.3;
+
+      @include black_icons;
+
+      &:hover {
+        opacity:0.9;
+      }
+    }
+  }
+}
