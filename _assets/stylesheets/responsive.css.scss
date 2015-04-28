@@ -46,6 +46,9 @@
     h2 {
       font-size: 1.4em;
     }
+
+    // reduce hr spacing slightly more
+    hr { margin: 1.5em 0; }
   }
     
   .blog-cover, .article-cover {
@@ -89,13 +92,6 @@
         float:none !important;
         margin: 1.2em 0;
       }
-    }
-  }
-    
-  .index {
-    // reduce spacing between articles in index
-    hr {
-      margin: 1.5em 0;
     }
   }
     

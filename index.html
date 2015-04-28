@@ -16,14 +16,12 @@ layout: base
   <div class="container">
     {% for post in paginator.posts %}
     <section class="index">
-      <div>
-        <h2 class="title"><a href="{{ post.url }}" rel="prefetch">{{ post.title }}</a></h2>
-        <p>{{ post.excerpt }}</p>
-        <div class="meta">
-          <address>{{ post.author.name }}</address> &mdash;
-          <time pubdate datetime="{{ post.date | date: "%Y-%d-%B" }}" title="{{ post.date | date: "%b %d, %Y" }}">{{ post.date | date: "%b %d, %Y" }}</time> &mdash;
-          {% include read_time_estimate.html content=post.content %}
-        </div>
+      <h2 class="title"><a href="{{ post.url }}" rel="prefetch">{{ post.title }}</a></h2>
+      <p>{{ post.excerpt }}</p>
+      <div class="meta">
+        <address>{{ post.author.name }}</address> &mdash;
+        <time pubdate datetime="{{ post.date | date: "%Y-%d-%B" }}" title="{{ post.date | date: "%b %d, %Y" }}">{{ post.date | date: "%b %d, %Y" }}</time> &mdash;
+        {% include read_time_estimate.html content=post.content %}
       </div>
       <hr>
     </section>
