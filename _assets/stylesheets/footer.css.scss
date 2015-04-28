@@ -7,26 +7,18 @@
   font-size:0.8em;
     
   a {
-    color:#777;
-    border:0;
-    margin:0 0.3em;
-        
-    &:hover {
-      color:#222;
-    }
-  }
-    
-  p {
     color:#999;
-    a {
-      margin:0;
-      color:#999;
-    }
+    &:hover { color:#222; }
   }
     
   nav {
     display:inline-block;
     margin-left: .5em;
+    
+    a {
+      color:#777;
+      margin:0 0.3em;
+    }
   }
     
   .social {
