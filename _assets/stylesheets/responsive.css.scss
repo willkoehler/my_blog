@@ -54,20 +54,12 @@
   }
         
   .blog-cover {
-    // tighten spacing of blog cover text and icons
-    section .container {
-      a {
-        margin: 1em .5em 0em 0;
-      }
-    }
-        
-    // reduce size of blog cover text
-    h1 {
-      font-size:1.5em;
-    }
-        
-    h3 {
-      font-size:1em;
+    .cover_overlay .content {
+      // reduce size of blog cover text
+      h1 { font-size:1.5em; }
+      h3 { font-size:1em; }
+      // tighten spacing of blog cover text and icons
+      a { margin: 1em .5em 0em 0; }
     }
   }
     
@@ -131,10 +123,8 @@
     
   .blog-cover {
     // hide social icons
-    section .container {
-      a {
-        display: none;
-      }
+    .cover_overlay .content {
+      a { display: none; }
     }
   }
 

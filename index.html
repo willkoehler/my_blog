@@ -2,13 +2,13 @@
 layout: base
 ---
 <div class="blog-cover" style="background-image:url(/images/{{ site.info.cover_image }});">
-  <section>
-    <div class="container">
+  <div class='cover_overlay'>
+    <div class="content">
       <h1>{{ site.info.title }}</h1>
       {% if site.info.subtitle %}<h3>{{ site.info.subtitle }}</h3>{% endif %}
       {% include social_links.html %}
     </div>
-  </section>
+  </div>
 </div>
 <div class='cover-caption'>{{ site.info.cover_image_caption }}</div>
 

@@ -1,9 +1,30 @@
 @import "globals.scss";
 
+.blog-cover, .article-cover {
+  max-width: 100%;
+  margin-top: 0;
+  position: relative;
+  overflow: hidden;
+  background: #eee;
+  height: 60%;
+  max-height: 480px;
+  background-color: #111;
+  background-size: cover;
+  background-position: center center;
+}
+
+.cover-caption {
+  text-align: right;
+  font-size: .7em;
+  font-style: italic;
+  color: #BAB8B3;
+  margin-right: .5em;
+}
+
 .blog-cover {
   height: 320px;
 
-  section {
+  .cover_overlay {
     text-align: center;
     position: absolute;
     left: 0;
@@ -20,11 +41,26 @@
         
     @include vertical_aligning_container;
         
-    .container {
+    .content {
       display: inline-block;
       vertical-align: middle;
       padding: 0 1em;
-            
+
+      h1 {
+        font-size:2.7em;
+        line-height:1.4em;
+      }
+    
+      h3 {
+        font-size:1.3em;
+      }
+    
+      h1, h3 {
+        color:#fff;
+        margin:0;
+        font-weight:600;
+      }
+
       a:last-child {
         margin-right: 0;
       }
@@ -47,20 +83,5 @@
         }
       }
     }
-  }
-    
-  h1 {
-    font-size:2.7em;
-    line-height:1.4em;
-  }
-    
-  h3 {
-    font-size:1.3em;
-  }
-    
-  h1, h3 {
-    color:#fff;
-    margin:0;
-    font-weight:600;
   }
 }
