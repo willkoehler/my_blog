@@ -35,7 +35,7 @@ layout: base
       </address>
       {% if page.next.url %}
       {% assign post = page.next %}
-      <section class="index">
+      <section class="post_summary">
         <h3 class="title">Next up: <a href="{{ post.url }}" rel="prefetch">{{ post.title }}</a></h3>
         <p>{{ post.excerpt }}</p>
         <hr>
@@ -43,7 +43,7 @@ layout: base
       {% endif %} 
       {% if page.previous.url %}
       {% assign post = page.previous %}
-      <section class="index">
+      <section class="post_summary">
         <h3 class="title">Previous story: <a href="{{ post.url }}" rel="prefetch">{{ post.title }}</a></h3>
         <p>{{ post.excerpt }}</p>
         <hr>

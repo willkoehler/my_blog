@@ -15,7 +15,7 @@ layout: base
 <article>
   <div class="container">
     {% for post in paginator.posts %}
-    <section class="index">
+    <section class="post_summary">
       <h2 class="title"><a href="{{ post.url }}" rel="prefetch">{{ post.title }}</a></h2>
       <p>{{ post.excerpt }}</p>
       <div class="meta">
