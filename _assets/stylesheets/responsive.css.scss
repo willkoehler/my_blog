@@ -54,12 +54,12 @@
   }
     
   // narrow nav spacing (blog & about links)
-  .site-nav {
+  .site-header {
     nav {
       padding-left: 15px;
       padding-right: 15px;
+      > a { margin-right: 1em; }
     }
-    #navigation a { margin-right: 1em; }
   }
     
   // reconfigure page footer with nav links centered above social links
