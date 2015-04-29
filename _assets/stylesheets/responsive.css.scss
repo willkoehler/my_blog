@@ -7,7 +7,6 @@
   h2 { font-size: 1.4em; }
     
   article {
-        
     // reduce padding between image and article
     padding-top: 50px;
         
@@ -21,11 +20,8 @@
     .highlight {
       margin-left: 0em;
       margin-right: 0em;
-            
       // reduce padding of code blocks
-      pre {
-        padding: 1em;
-      }
+      pre { padding: 1em; }
     }
         
     // display full-width images inline with text (instead of shifted-left)
@@ -37,20 +33,15 @@
     // Reduce font size and don't extend blockquotes past right margin
     blockquote {
       margin-right: 0;
-            
-      p {
-        font-size: 1.2em;
-      }
+      p { font-size: 1.2em; }
     }
         
     // reduce hr spacing slightly more
     hr { margin: 1.5em 0; }
   }
-    
-  .blog-cover, .article-cover {
-    // reduce height of cover image
-    height:200px;
-  }
+
+  // reduce height of cover image
+  .blog-cover, .article-cover { height:200px; }
         
   .blog-cover {
     .cover_overlay .content {
@@ -68,12 +59,7 @@
       padding-left: 15px;
       padding-right: 15px;
     }
-        
-    #navigation {
-      a {
-        margin-right: 1em;
-      }
-    }
+    #navigation a { margin-right: 1em; }
   }
     
   // reconfigure page footer with nav links centered above social links
@@ -94,17 +80,14 @@
   // make contact form full width
   form.contact {
     width: 100%;
-    input, textarea {
-      font-size: 16px;    // 16px or larger font prevents iOS from zooming in inputs on focus
-    }
+    // 16px or larger font prevents iOS from zooming in inputs on focus
+    input, textarea { font-size: 16px; }
   }
 }
 
 @media (max-width: 500px) {
   // hide "learn more" button
-  nav.tagline {
-    display: none;
-  }
+  nav.tagline { display: none; }
 }
 
 
@@ -112,9 +95,7 @@
     
   .blog-cover {
     // hide social icons
-    .cover_overlay .content {
-      a { display: none; }
-    }
+    .cover_overlay .content a { display: none; }
   }
 
   article {
@@ -126,9 +107,7 @@
         
     // move author name closer to author image
     .container footer address {
-      img {
-        margin-right: 10px;
-      }
+      img { margin-right: 10px; }
     }
   }
 }
