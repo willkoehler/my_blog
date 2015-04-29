@@ -3,7 +3,6 @@
 article {
   background:#fff;
   padding:60px 0;
-  font-size:18px;
 
   .container {
     max-width:820px;
@@ -122,30 +121,6 @@ article {
       color:$accent;
       font-weight:600;
     }
-  }
-
-  h1 {
-    font-weight:600;
-    font-size:2.1em;
-    margin:0.5em 0 1em;
-  }
-
-  h2 {
-    font-size:1.5em;
-    margin:0.5em 0 1em;
-    font-weight:600;
-  }
-
-  h3 {
-    font-size:1.3em;
-    margin:0.5em 0 1.1em;
-    font-weight:600;
-  }
-
-  h4 {
-    font-size:1.2em;
-    margin:0.5em 0 1.2em;
-    font-weight:600;
   }
 
   hr {

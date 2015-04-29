@@ -1,8 +1,12 @@
 @media (max-width: 720px) {
+
+  // Reduce the font size. This will effect all derived 'em' font sizes, margins, and padding
+  body { font-size: 16px; }
+  // reduce h1 and h2 size slightly more
+  h1 { font-size: 2em; }
+  h2 { font-size: 1.4em; }
     
   article {
-    // Reduce the font size. This will effect all derived 'em' font sizes, margins, and padding
-    font-size: 16px;
         
     // reduce padding between image and article
     padding-top: 50px;
@@ -39,14 +43,6 @@
       }
     }
         
-    // reduce h1 and h2 size slightly more
-    h1 {
-      font-size: 2em;
-    }
-    h2 {
-      font-size: 1.4em;
-    }
-
     // reduce hr spacing slightly more
     hr { margin: 1.5em 0; }
   }
@@ -59,8 +55,8 @@
   .blog-cover {
     .cover_overlay .content {
       // reduce size of blog cover text
-      h1 { font-size:1.5em; }
-      h3 { font-size:1em; }
+      h1 { font-size: 25px; }
+      h3 { font-size: 17px; }
       // tighten spacing of blog cover text and icons
       a { margin: 1em .5em 0em 0; }
     }
