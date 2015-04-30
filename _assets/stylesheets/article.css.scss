@@ -160,42 +160,26 @@ article {
     }
   }
     
-  .rounded img {
-    border-radius:6px;
-  }
-    
-  .border img {
-    border:1px solid #ddd;
-  }
-
-  .shadow img {
-    box-shadow: 0px 0px 20px #888;
-  }
 
   .full {
     margin: 1.5em -3.5em;
 
-    &.shadow {
-      // increase margin when shadow is present to compensate for visual space of shadow
-      margin-top: 2em;
-      margin-bottom: 2em;
-    }
-        
     img {
       max-width:100%;
       margin:0;
       transition:0.5s all ease;
     }
 
-    &.zoomable {
-      img {
-        cursor: -webkit-zoom-in;
-      }
+    &.shadow {
+      img { box-shadow: 0px 0px 20px #888; }
+      // increase margin when shadow is present to compensate for visual space of shadow
+      margin-top: 2em;
+      margin-bottom: 2em;
     }
-
-    &.zoomable img.zoom {
-      cursor: -webkit-zoom-out;
-    }
+    &.rounded img { border-radius:6px; }
+    &.border img { border:1px solid #ddd; }
+    &.zoomable img { cursor: -webkit-zoom-in; }
+    &.zoomable img.zoom { cursor: -webkit-zoom-out; }
 
     &.zoomable img.zoom {
       -webkit-transform:scale(1.2);
