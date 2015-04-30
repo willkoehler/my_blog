@@ -10,7 +10,8 @@ article {
   }
 
   .container > header, .container > section, .container > footer {
-    margin: 0 3.5em;
+    margin-left: 3.5em;
+    margin-right: 3.5em;
   }
 
   .social {
@@ -45,8 +46,8 @@ article {
     }
   }
 
-  .container > footer {
-    margin-top:1.5em;
+  footer {
+    margin-top: 1.5em;
         
     address {
       font-size: 0.9em;
