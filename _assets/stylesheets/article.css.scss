@@ -159,7 +159,6 @@ article {
       }
     }
   }
-    
 
   .full {
     margin: 1.5em -3.5em;
@@ -180,11 +179,16 @@ article {
     &.border img { border:1px solid #ddd; }
     &.zoomable img { cursor: -webkit-zoom-in; }
     &.zoomable img.zoom { cursor: -webkit-zoom-out; }
-
     &.zoomable img.zoom {
       -webkit-transform:scale(1.2);
       transition:0.4s all ease;
       box-shadow:0 2px 5px rgba(0,0,0,0.5);
     }
+  }
+
+  // Add a extra margin so spacing between images matches spacing between text blocks.
+  // Text blocks have extra spacing because of the line height.
+  p > img, .full > img {
+    margin: .4em 0;
   }
 }
