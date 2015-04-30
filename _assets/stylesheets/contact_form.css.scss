@@ -26,3 +26,8 @@ form.contact {
     height: 50px;
   }
 }
+
+// lighten color of placeholder text
+::-webkit-input-placeholder { color: #AAA; }
+::-moz-placeholder { color: darken(#AAA,20%); }   // Firefox placeholders render lighter for some reason
+:-ms-input-placeholder { color: #AAA !important; }
