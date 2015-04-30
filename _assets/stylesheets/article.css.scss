@@ -22,11 +22,8 @@ article {
       width: 100px;
             
       img { vertical-align: baseline; margin: 0; }
-            
       &.reddit { position: relative; top: -1px; }
-            
       &.google { width: 85px; }
-            
       // vertically align facebook like button with other sharing icons
       .fb-like > span { vertical-align: baseline !important; }
       .fb-share-button > span { vertical-align: baseline !important; }
@@ -35,6 +32,20 @@ article {
 
   .post_summary {
     .title { margin: 0em 0 0.6em; }
+  }
+
+  header {
+    margin-top:2em;
+    margin-bottom:2em;
+
+    &::after {
+      content:" ";
+      display:block;
+      width:1.5em;
+      height:0.2em;
+      background:#ddd;
+      margin:1em 0;
+    }
   }
 
   .container > footer {
@@ -67,18 +78,14 @@ article {
     }
   }
 
-  header {
-    margin-top:2em;
-    margin-bottom:2em;
+  .meta {
+    color:$textmuted;
+    font-size:13px;
+    text-transform:uppercase;
+    letter-spacing:1px;
 
-    &::after {
-      content:" ";
-      display:block;
-      width:1.5em;
-      height:0.2em;
-      background:#ddd;
-      margin:1em 0;
-    }
+    time, address { display:inline; }
+    a { color:$textmuted; }
   }
 
   p {
@@ -88,7 +95,6 @@ article {
     font-weight:400;
     margin:0 0 1.5em;
   }
-    
     
   ol, ul {
     font-weight: 600;
@@ -122,21 +128,10 @@ article {
     margin:2em 0;
   }
 
-  .meta {
-    color:$textmuted;
-    font-size:13px;
-    text-transform:uppercase;
-    letter-spacing:1px;
-
-    time, address { display:inline; }
-    a { color:$textmuted; }
-  }
-
   img {
     max-width:100%;
     margin:0 0 1.5em;
   }
-
 
   .title {
     margin:0.2em 0;
@@ -147,14 +142,12 @@ article {
     }
   }
 
-
   .subtitle {
     font-size: 1.4em;
     margin: 0.2em 0;
     color: $textmuted;
     font-weight: 300;
   }
-
 
   .highlight {
     margin: 1.5em -3.5em 1.5em 0;
@@ -212,7 +205,6 @@ article {
       margin:0;
       transition:0.5s all ease;
     }
-
 
     &.zoomable {
       img {
