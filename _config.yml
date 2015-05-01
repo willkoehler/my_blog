@@ -39,6 +39,9 @@ info:
 # Root URL where the site will be published
 url:         http://willkoehler.net
 
+# host 0.0.0.0 allows us to access site via sapphire.local or localhost or 127.0.0.1
+host: 0.0.0.0
+
 paginate:             10
 
 # safe mode must be disabled to use jekyll-assets.
