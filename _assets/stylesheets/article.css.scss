@@ -46,7 +46,7 @@ article {
       color: $textmuted;
       font-weight: 300;
     }
-    &::after {
+    &:after {
       content:" ";
       display:block;
       width:1.5em;
