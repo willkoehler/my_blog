@@ -182,11 +182,12 @@ article {
       transition:0.4s all ease;
       box-shadow:0 2px 5px rgba(0,0,0,0.5);
     }
+    &.map_container { margin-bottom: 2em; }   // needed because iframe floats in map_container
   }
 
-  // Add a extra margin so spacing between images matches spacing between text blocks.
-  // Text blocks have extra spacing because of the line height.
-  p > img, .full > img {
+  // Add a extra margin so spacing between iframes and images and text matches spacing
+  // between text blocks. Text blocks have extra spacing because of the line height.
+  p > img, .full > img, .full > iframe {
     margin: .4em 0;
   }
 }
