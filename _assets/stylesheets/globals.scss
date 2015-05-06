@@ -8,6 +8,7 @@ $fontheadings: Helvetica, Arial, sans-serif;
 $text: #21272d;
 $textmuted: #848484;
 $accent: #2077b2;
+$border_color: #DDD;
 
 @mixin vertical_aligning_container {
   &:before {

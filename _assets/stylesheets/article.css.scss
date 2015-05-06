@@ -51,7 +51,7 @@ article {
       display:block;
       width:1.5em;
       height:0.2em;
-      background:#ddd;
+      background: $border_color;
       margin:1em 0;
     }
   }
@@ -61,8 +61,8 @@ article {
         
     address {
       font-size: 0.9em;
-      border-top:1px solid #ddd;
-      border-bottom:1px solid #ddd;
+      border-top:1px solid $border_color;
+      border-bottom:1px solid $border_color;
       padding: 1em 0;
       white-space: nowrap;
       overflow: hidden;
@@ -134,6 +134,8 @@ article {
 
   hr {
     margin:2em 0;
+    border: 0 none;
+    border-top: 1px solid $border_color;
   }
 
   .highlight {
@@ -174,7 +176,7 @@ article {
       margin-bottom: 2em;
     }
     &.rounded img { border-radius:6px; }
-    &.border img { border:1px solid #ddd; }
+    &.border img { border:1px solid $border_color; }
     &.zoomable img { cursor: -webkit-zoom-in; }
     &.zoomable img.zoom { cursor: -webkit-zoom-out; }
     &.zoomable img.zoom {
