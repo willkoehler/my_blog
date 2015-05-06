@@ -52,21 +52,19 @@
 </head>
 <body>
     
-  <section class="site-nav">
-    <header>
-      <nav id="navigation">
-        <a class="brand" href="/">
-          <img src="/images/logo.png" alt="Inc">
-        </a>
-        <a href="/">Blog</a>
-        <a href="/about.html">About</a>
-      </nav>
-    </header>
-  </section>
+  <header class="site-header">
+    <nav>
+      <a class="brand" href="/">
+        <img src="/images/logo.png" alt="Inc">
+      </a>
+      <a href="/">Blog</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </header>
 
   <div class="blog-cover" style="background-image:url(/images/goodale-park-columbus-oh.jpg);">
-  <section>
-    <div class="container">
+  <div class='cover_overlay'>
+    <div class="content">
       <h1>Will Koehler</h1>
       <h3>About me</h3>
       
@@ -81,9 +79,9 @@
 </a>
 
     </div>
-  </section>
+  </div>
 </div>
-<div class='cover-caption'>Goodale Park, Columbus, OH. Photo: Dave K.</div>
+<div class='cover-caption'><a href='/about.html#pictures'>Goodale Park, Columbus, OH. Photo: Dave K.</a></div>
 
 <article>
   <div class="container">
@@ -117,6 +115,7 @@
         <li>Web-based demos and product prototypes in Javascript</li>
       </ul>
             
+      <a id='pictures'></a>
       <h2>Pictures</h2>
       <p>
         The pictures in this blog are scenes from my neighborhood, city, and surrounding
@@ -171,7 +170,7 @@
 </a>
 
       </nav>
-      <p>Based on Incorporated theme by <a href="https://sendtoinc.com">Inc</a></p>
+      <div>Based on Incorporated theme by <a href="https://sendtoinc.com">Inc</a></div>
     </div>
   </footer>
 

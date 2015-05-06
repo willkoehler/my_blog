@@ -4,7 +4,7 @@
  <title>Will Koehler</title>
  <link href="http://willkoehler.net/atom.xml" rel="self"/>
  <link href="http://willkoehler.net"/>
- <updated>2015-04-27T17:03:56-04:00</updated>
+ <updated>2015-05-06T16:17:31-04:00</updated>
  <id>http://willkoehler.net/atom.xml</id>
  <author>
    <name>Will Koehler</name>
@@ -806,7 +806,7 @@ to cover. I have two more posts coming up:&lt;/p&gt;
    <title>Vertically Align Content With CSS Using This One Weird Trick</title>
    <link href="http://willkoehler.net/2014/08/28/vertically-align-content-with-css-using-this-one-weird-trick.html"/>
    <published>2014-08-28T00:00:00-04:00</published>
-   <updated>2014-09-01T00:00:00-04:00</updated>
+   <updated>2014-09-01T12:00:00-04:00</updated>
    <id>http://willkoehler.net/2014/08/28/vertically-align-content-with-css-using-this-one-weird-trick</id>
    <content type="html">&lt;p&gt;Phil Karlton famously said “there are only two hard things in computer science: cache invalidation
 and naming things”. I would add a third: vertically aligning content with CSS.&lt;/p&gt;
@@ -1137,7 +1137,7 @@ Gary Turner for the &lt;a href=&quot;http://gtwebdev.com/workshop/vcenter/vcente
    <title>Save 50 Hours Setting up Your Jekyll Blog</title>
    <link href="http://willkoehler.net/2014/08/26/save-50-hours-setting-up-your-jekyll-blog.html"/>
    <published>2014-08-26T00:00:00-04:00</published>
-   <updated>2014-10-17T00:00:00-04:00</updated>
+   <updated>2014-10-17T12:00:00-04:00</updated>
    <id>http://willkoehler.net/2014/08/26/save-50-hours-setting-up-your-jekyll-blog</id>
    <content type="html">&lt;p&gt;When I decided to start blogging, I explored all the major blogging platforms. I quickly came to the conclusion
 that, in order to get exactly what I wanted, I would need to have full control of the design and code.&lt;/p&gt;
