@@ -1,5 +1,6 @@
 ---
 layout: post
+last-modified: '2016-01-29T12:00:00-04:00'
 
 title: "Client-Side Solution For Downloading Highcharts Charts as Images"
 subtitle: "It even works in IE"
@@ -15,6 +16,7 @@ author:
   twitter: wckoehler
   bio: Web developer specializing in full-stack Rails applications.
   image: wk.jpg
+
 ---
 [Highcharts](http://www.highcharts.com) is an excellent web-based charting package. But, because it's a
 client-side solution, downloading charts as images is tricky. The default solution is to use
@@ -229,7 +231,7 @@ reference local content, or they are not concerned about this vulnerability.
 
 ## IE work-around #1: use canvg
 
-We can work-around the canvas tainting issue with the [canvg library](https://code.google.com/p/canvg/).
+We can work-around the canvas tainting issue with the [canvg library](https://github.com/gabelerner/canvg).
 canvg is a full SVG parser and renderer. It can render SVG onto a canvas element with all of the features
 of the browser's built-in SVG render. It's an impressive piece of code, and works flawlessly. But it's
 also 2800 lines of javascript that are entirely unnecessary in any modern browser, because the browser
