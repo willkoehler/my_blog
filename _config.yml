@@ -17,7 +17,7 @@ info:
   # Comments
   disqus:
     # Eg. "exampleblog" Set to false to disable comments
-    shortname:  lintonye
+    shortname:  linton-react-native-diary
 
   # Google Analytics tracking ID. Leave blank to disable tracking
   google-analytics-id:
