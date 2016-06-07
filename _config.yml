@@ -1,43 +1,43 @@
 info:
   # Blog Information
-  title:        "Will Koehler"
-  subtitle:     "Independent web developer living in Columbus, OH"
-  cover_image:  short-north-columbus-oh.jpg
-  cover_image_caption: "Short North, Columbus, OH. Photo: Pineapple XVI"
-  about_image:  goodale-park-columbus-oh.jpg
-  about_image_caption: "Goodale Park, Columbus, OH. Photo: Dave K."
+  title:        "Linton's React Native Diary"
+  subtitle:     "One app per month, sharing everything I'll learn"
+  cover_image:  cover-diary-react.png
+  cover_image_caption: "React Native banner"
+  about_image:  react-native-logo.png
+  about_image_caption: "React Native Logo"
   logo:         logo.png
-  
+
   # Social links
   # facebook:     sendtoinc
-  twitter:      wckoehler
-  github:       willkoehler
-  # gplus:        '101183822199340201470'
-  
+  twitter:      lintonye
+  github:       lintonye
+  gplus:        'LintonYe'
+
   # Comments
   disqus:
     # Eg. "exampleblog" Set to false to disable comments
-    shortname:  koehlerblog
-  
+    shortname:  lintonye
+
   # Google Analytics tracking ID. Leave blank to disable tracking
-  google-analytics-id: 'UA-54124306-1'
-  
+  google-analytics-id:
+
   # Sharing settings
   sharing:
     twitter:    true
     facebook:   true
-    gplus:      false
+    gplus:      true
     hn:         false
     reddit:     true
-    
+
   # Google Fonts
   # eg. 'Droid+Sans:400,700|Droid+Serif:400,700'
   # google_font: 'Droid+Sans:400,700'
-  
+
   # Setup your fonts, colors etc at _assets/stylesheets/main.scss
 
 # Root URL where the site will be published
-url:         http://willkoehler.net
+url:         http://lintonye.github.io
 
 # host 0.0.0.0 allows us to access site via sapphire.local or localhost or 127.0.0.1
 host: 0.0.0.0
