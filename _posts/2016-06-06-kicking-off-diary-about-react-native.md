@@ -4,7 +4,6 @@ last-modified: '2016-06-06'
 
 title: "Kicking it off: My React Native Diary"
 cover_image: kickoff.jpg
-cover_image_caption: "Overbrook ravine in Clintonville. Photo: Will Koehler"
 
 excerpt: "Kicking off my diary about React Native"
 
