@@ -48,7 +48,7 @@ h4 { font-size: 1.2em; margin: 0.5em 0 1.2em; }
 a {
   color:$accent;
   text-decoration:none;
-    
+
   &:hover {
     color:darken($accent, 8%);
     text-decoration:none;
@@ -65,3 +65,8 @@ iframe { border: none; }
   font-size: 70%;
 }
 
+.avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 60px;
+}

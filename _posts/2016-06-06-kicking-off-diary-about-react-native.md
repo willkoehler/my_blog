@@ -14,11 +14,11 @@ author:
   bio: Founder of jimu Labs.
   image: linton.jpg
 ---
-It's hard to ignore the success that React Native has achieved in [a short year](https://code.facebook.com/posts/597378980427792/). With the neck-breaking development in its ecosystem, React Native is looking increasingly promising. Is it mature enough for production use? How does its mantra "learn once, write everywhere" affect developer productivity? How does it compare with other solutions (such as Xamarin)? To answer questions like these, I decided to try it with my own hands and share whatever I'll learn in the journey.
+It's hard to ignore the success that React Native has achieved in [a short year](https://code.facebook.com/posts/597378980427792/). With the neck-breaking development in its ecosystem, React Native is looking increasingly promising. Is it mature enough for production use? How does its mantra "learn once, write everywhere" affect developer productivity in real life? How does it compare to other cross-platform solutions (such as Xamarin)? To answer questions like these, I decided to try it with my own hands and share whatever I'll learn in the journey.
 
 I'll try to build a new app with React Native every one or two months (~ 1-2 hours per day), and write a post every week: silly mistakes, road blocks, gotchas and pitfalls, tips and tricks, cool tools, third-party components, useful resources and of course the full source code.
 
-My background is primarily in Android (built a [tool](http://jimulabs.com/), wrote a Treehouse [course](https://teamtreehouse.com/library/animations-and-transitions)) but I've used JavaScript and React in a couple of recent projects (CSS is the part I hate the most in web development). Whether you have similar experience or not, I'm hoping you could learn one thing or two by watching me stumbling through the process.
+My background is primarily in Android (built a [tool](http://jimulabs.com/), wrote a Treehouse [course](https://teamtreehouse.com/library/animations-and-transitions)) and I've used JavaScript and React in a couple of recent projects.  Whether you have similar experience or not, I hope you could learn one thing or two by watching me stumbling through the process.
 
 ## Todo Wonder
 Let's get started with building a todo list app that I've always wanted. I know, there are a million todo list apps already, but trust me it's very valuable for learning with UI paradigms that almost every app uses, sending and retrieving data to/from a server, user accounts etc. So bear with me.
@@ -33,15 +33,15 @@ On the completion of this app, we should be able to cover the following:
 - Firebase integration
 - Android first, iOS next
 
-[Here](TODO) are some wireframes of how I imagine the app would look like.
+![Wireframe](/images/kickoff/todo-wireframe1.png)
 
-[TODO one wireframe]
+Check out [this PDF](/images/kickoff/todos-wireframes.pdf) if you want to see the full wireframes.
 
 ## Schedule & Deliverables
 I'm going to treat this as a formal project, so I'm sharing my schedules and deliverables here. :) You are my client and I'll be responsible for the time you've invested in reading this far. I'll try my best to follow the schedule and write about useful things.
 
 ### May - June 6
-- Project setup (and accumulate enough motivation to write this post). Here are some highlights from my notes so far: TODO.
+- Project setup (and accumulate enough motivation to write this post). Here are some highlights from my notes so far: [#project-setup-tips](#project-setup-tips).
 
 ### June 6 - Jun 12
 - Hi-fi Prototype (with only mock data)
@@ -62,6 +62,8 @@ I'm going to treat this as a formal project, so I'm sharing my schedules and del
 ### June 27 - June 30
 - iOS
 - Google / FB sign in
+
+<a name="project-setup-tips">
 
 ## Tips from what I've done so far
 Here are some highlights from my notes since I started working on this project in May. If you are really curious, feel free to check out the [raw notes](https://www.evernote.com/l/AFutRbAf2hBI6bdfDtTwn3TkcDacSH8OHGE) (I'm updating it live every day).
