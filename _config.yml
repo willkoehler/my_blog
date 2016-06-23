@@ -8,6 +8,8 @@ info:
   about_image_caption: "A piece of paradise"
   logo:         logo.png
 
+  linton_bio: Founder of jimu Labs. Full-stack developer, toolsmith, UI designer, entrepreneur and lifelong learner.
+  
   # Social links
   # facebook:     sendtoinc
   twitter:      lintonye
@@ -46,6 +48,7 @@ paginate:             10
 
 # safe mode must be disabled to use jekyll-assets.
 safe:               false
+highlighter: rouge
 
 #
 # jekyll-assets: see more at https://github.com/ixti/jekyll-assets
