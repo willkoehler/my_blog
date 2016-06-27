@@ -9,7 +9,7 @@ info:
   logo:         logo.png
 
   linton_bio: Founder of jimu Labs. Full-stack developer, toolsmith, UI designer, entrepreneur and lifelong learner.
-  
+
   # Social links
   # facebook:     sendtoinc
   twitter:      lintonye
@@ -22,7 +22,7 @@ info:
     shortname:  linton-react-native-diary
 
   # Google Analytics tracking ID. Leave blank to disable tracking
-  google-analytics-id:
+  google-analytics-id: UA-79925561-1
 
   # Sharing settings
   sharing:
