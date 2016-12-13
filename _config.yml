@@ -44,11 +44,17 @@ url:         http://lintonye.github.io
 # host 0.0.0.0 allows us to access site via sapphire.local or localhost or 127.0.0.1
 host: 0.0.0.0
 
-paginate:             10
+#paginate:             10
 
 # safe mode must be disabled to use jekyll-assets.
 safe:               false
 highlighter: rouge
+markdown: kramdown
+
+kramdown:
+  input: GFM
+  hard_wrap: false
+  syntax_highlighter: rouge
 
 #
 # jekyll-assets: see more at https://github.com/ixti/jekyll-assets
