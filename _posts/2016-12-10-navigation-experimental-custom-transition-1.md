@@ -41,27 +41,27 @@ Let's unfold the whole process one step at a time.
 # A premier on `Animated`
 `Animated` is a powerful animation library. As mentioned in the [official document](TODO), it "focuses on declarative relationship between inputs and outputs", like so:
 
-```javascript
+{% highlight javascript %}
 const rotate = progress.interpolate({
     inputRange: [0, 1],
     outputRange: ['0deg', '360deg']
 });
-```
+{% endhighlight %}
 
 Here, `progress` is an "`Animated.Value`" that represents a generic, high-level state that changes over time. We can then map (interpolate) this value to an actual visual style property (such as `rotate`).
 
-Whenever the original value changes, the visual style is updated accordingly. You just need to "wire" the animated values together (defining the mapping), and the rest is taken care of automatically. The interesting idea here is that all this happens without going through the standard, setState-diff-render cycle in React. This removes a lot of overhead and ensures the performance of our animations.
+Whenever the original value changes, the visual style is updated accordingly. You just need to "wire" the animated values together (defining the mapping), and the rest is taken care of automatically. All this happens without going through the standard, setState-diff-render cycle in React. This removes a lot of overhead and ensures the performance of our animations.
 
 `Animated` can be typically used this way:
 
-1. Create an `Animated.Value` and start the animation when appropriate. This code typically lives in upstream where we only know a generic state and want to delegate the actual rendering to downstream. `NavigationTransitioner` is a good example of this and we'll come back to it later.
+- Create an `Animated.Value` and start the animation when appropriate. This code typically lives in upstream where we only know a generic state and want to delegate the actual rendering to downstream. `NavigationTransitioner` is a good example of this and we'll come back to it later.
 
    {% highlight javascript %}
    const progress = new Animated.Value(0);
    Animated.timing({ progress, { toValue: 1 }}).start();
    {% endhighlight %}
 
-2. Map the value created above to desired visual style properties, by calling `interpolate()`:
+- Map the value created above to desired visual style properties, by calling `interpolate()`:
 
    {% highlight javascript %}
    const rotate = progress.interpolate({
@@ -69,7 +69,7 @@ Whenever the original value changes, the visual style is updated accordingly. Yo
        outputRange: ['0deg', '360deg']
    });
    {% endhighlight %}
-3. Use the visual style properties created above in a `Animated.View` (or its siblings) to render the component:
+- Use the visual style properties created above in a `Animated.View` (or its siblings) to render the component:
 
    {% highlight jsx %}
    const style = { transform: [{ rotate }]};

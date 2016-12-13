@@ -1,7 +1,8 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    addressable (2.3.8)
+    addressable (2.5.0)
+      public_suffix (~> 2.0, >= 2.0.2)
     blankslate (2.1.2.4)
     classifier-reborn (2.0.4)
       fast-stemmer (~> 1.0)
@@ -101,6 +102,7 @@ GEM
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
       slop (~> 3.4)
+    public_suffix (2.0.4)
     pygments.rb (0.6.3)
       posix-spawn (~> 0.3.6)
       yajl-ruby (~> 1.2.0)
