@@ -3,7 +3,7 @@ layout: post
 last-modified: '2016-12-10'
 
 title: "NavigationExperimental: Custom Transitions (1)"
-cover_image: "github-custom-domain/github-cover.JPG"
+cover_image: "navigation-custom-transition/transit.jpg"
 
 excerpt: "A series of posts about creating custom transitions using NavigationExperimental"
 

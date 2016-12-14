@@ -1,7 +1,7 @@
 info:
   # Blog Information
   title:        "Linton's React Native Diary"
-  subtitle:     "One app per month, sharing everything I'll learn"
+  subtitle:     "Sharing everything I'll learn"
   cover_image:  cover-diary-react.png
   cover_image_caption: "React Native banner"
   about_image:  about-victoria.jpg
@@ -44,7 +44,7 @@ url:         http://lintonye.github.io
 # host 0.0.0.0 allows us to access site via sapphire.local or localhost or 127.0.0.1
 host: 0.0.0.0
 
-#paginate:             10
+paginate:             10
 
 # safe mode must be disabled to use jekyll-assets.
 safe:               false
