@@ -1,6 +1,6 @@
 ---
 layout: post
-last-modified: '2016-12-10'
+last-modified: '2016-12-20'
 
 title: "NavigationExperimental: Custom Transitions (1)"
 #cover_image: "navigation-custom-transition/ski-lift.jpg"
@@ -14,21 +14,34 @@ author:
   image: linton.jpg
 ---
 
-[NavigationExperimental](https://facebook.github.io/react-native/docs/navigation.html#navigationexperimental) provides great support for custom transition animations. Do you want to know how to create transitions like the following? This series of posts is for you!
+[NavigationExperimental](https://facebook.github.io/react-native/docs/navigation.html#navigationexperimental) provides great support for custom transition animations. Do you want to create transitions like the following? This series of posts is for you!
 
-[TODO: video for fading transition]
-[TODO: video for rotation transition]
-[TODO: video for shared element transition]
+<div style="display:flex; flex-direction:row;">
+  <!-- crossFade -->
+  <div class="fivecol" style="float:none; margin-bottom:20px; ">
+  <iframe width="282" height="500" src="//www.youtube.com/embed/6_BGrOQQlko?controls=0&amp;rel=0&amp;showinfo=0;" frameborder="0" allowfullscreen></iframe>
+  </div>
+
+  <!-- androidDefault -->
+  <div class="fivecol" style="float:none; margin-bottom:20px; margin-left:10px;">
+  <iframe width="282" height="500" src="//www.youtube.com/embed/oVwq1QDcnOw?controls=0&amp;rel=0&amp;showinfo=0;" frameborder="0" allowfullscreen></iframe>
+  </div>
+
+  <!-- materialSharedElement -->
+  <div class="fivecol" style="float:none; margin-bottom:20px; margin-left:10px;">
+  <iframe width="282" height="500" src="//www.youtube.com/embed/efPFJkxa-BQ?controls=0&amp;rel=0&amp;showinfo=0;" frameborder="0" allowfullscreen></iframe>
+  </div>
+</div>
 
 
-Before getting our hands dirty though, let's first study the built-in container `NavigationCardStack` and see how its transition is implemented. If you are not familiar with `NavigationCardStack`, see [my previous post](TODO) for a simple tutorial on how to use it.
+Before jumping into it though, let's first study the built-in container `NavigationCardStack` and see how its transition is implemented. If you are not familiar with `NavigationCardStack`, see [my previous post](/2016/06/23/navigation-examples-1.html) for a simple tutorial on how to use it.
 
 # `NavigationCardStack` in a nutshell
 
 With `NavigationCardStack`, screens are arranged in a virtual stack of cards. When a new card is brought into the scene, it slides in from either the right or bottom edge of the screen. When it leaves the scene, it slides back to its origin.
 
 <div class="fivecol" style="float:none; margin-bottom:20px;">
-<iframe width="282" height="500" src="//www.youtube.com/embed/enkPGpBBkFE?controls=0&amp;rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+<iframe width="282" height="500" src="//www.youtube.com/embed/0e8Irs4gi3M?controls=0&amp;rel=0&amp;showinfo=0;" frameborder="0" allowfullscreen></iframe>
 </div>
 
  How does it work? I dug into its source code and here's what I've found in a nutshell:
@@ -41,7 +54,7 @@ With `NavigationCardStack`, screens are arranged in a virtual stack of cards. Wh
 Let's unfold the whole process one step at a time.
 
 # A premier on `Animated`
-`Animated` is a powerful animation library. As mentioned in the [official document](TODO), it "focuses on declarative relationship between inputs and outputs", like so:
+`Animated` is a powerful animation library. As mentioned in the [official document](https://facebook.github.io/react-native/docs/animated.html), it "focuses on declarative relationship between inputs and outputs", like so:
 
 {% highlight javascript %}
 const rotate = progress.interpolate({
@@ -52,7 +65,7 @@ const rotate = progress.interpolate({
 
 Here, `progress` is an "`Animated.Value`" that represents a generic, high-level state that changes over time. We can then map (interpolate) this value to an actual visual style property (such as `rotate`).
 
-Whenever the original value changes, the visual style is updated accordingly. You just need to "wire" the animated values together (defining the mapping), and the rest is taken care of automatically. All this happens without going through the standard, setState-diff-render cycle in React. This removes a lot of overhead and ensures the performance of our animations.
+Whenever the original value changes, the visual style is updated accordingly. You just need to "wire" the animated values together (defining the mapping), and the rest is taken care of automatically. All this happens without going through the standard, setState-diff-render cycle in React. This removes a lot of overhead to ensure the smoothness of our animations.
 
 `Animated` can be typically used this way:
 
@@ -71,21 +84,21 @@ const rotate = progress.interpolate({
    outputRange: ['0deg', '360deg']
 });
    {% endhighlight %}
-- Use the visual style properties created above in a `Animated.View` (or its siblings) to render the component:
+- Use the visual style properties created above in a `Animated.View` (or `Animated.Text`, `Animated.Image` etc.) to render the component:
 
    {% highlight jsx %}
 const style = { transform: [{ rotate }]};
 return <Animated.View style={ style }> ... </Animated.View>;
    {% endhighlight %}
 
-The above code will create a view that spins for 500 milliseconds (the default duration).
+The code above will create a view that spins for 500 milliseconds (the default duration).
 
-Of course, I've only scratched the surface of `Animated` here. For more details, I'd recommend you to watch [this talk](TODO) to see what's possible, read through the [official document](TODO), and check out [this tutorial](https://medium.com/react-native-training/react-native-animations-using-the-animated-api-ebe8e0669fae#.p1ngzm78r).
+Of course, I've only scratched the surface of `Animated` here. For more details, I'd recommend you to watch [this talk](https://www.youtube.com/watch?v=xDlfrcM6YBk&t=1333s) to see what's possible, read through the [official document](https://facebook.github.io/react-native/docs/animated.html), and check out [this tutorial](https://medium.com/react-native-training/react-native-animations-using-the-animated-api-ebe8e0669fae#.p1ngzm78r).
 
 # `CardStack` and `Transitioner`
-Now that we know `Animated`, it's time to check out the source code of `NavigationCardStack` to figure out the truth of transition animations!
+Now that we know `Animated`, it's time to dig into the source code of `NavigationCardStack`!
 
-There will be more code than talking from now on. My goal is to provide a guided tour in the source code to make it easier and faster to understand a topic. Only relevant code is shown and the rest are "`....`". It'd perhaps be useful to open the full source on another screen when reading this post.
+There will be more code than talking from now on. My goal is to provide a guided tour for the source code to make it easier to understand. Only relevant code is shown and the rest are "`....`". It'd perhaps be useful to open the full source on another screen when reading this post.
 
 {% highlight jsx %}
 class NavigationCardStack extends React.Component<DefaultProps, Props, void> {
@@ -193,7 +206,7 @@ function buildTransitionProps(
 }
 {% endhighlight %}
 
-Why do we pass `position` and `progress` to the `props.render` method? Ask the implementor of `props.render` to create the actual animations!
+Why do we pass `position` and `progress` to the `props.render` method? Let the implementor of `props.render` create the actual animations!
 
 # Interpolating `position`
 
@@ -288,3 +301,13 @@ function forHorizontal(props: NavigationSceneRendererProps): Object {
 We can see that `opacity`, `scale` and `translateX` are all interpolations of `position` -- they'll change as `position` changes. This effectively creates the sliding card animation that we've seen earlier.
 
 You probably have questions about how the input/output ranges are set up in this function, but let's leave them to the next post, where we'll also start creating our own transitions soon!
+
+# Summary
+Just to repeat a few key points on how the transition animation works in the built-in `NavigationCardStack`:
+
+- The `Animated` library is the backbone of transition animations.
+- `NavigationCardStack` is backed by `NavigationTransitioner`.
+- `NavigationTransitioner` creates and passes along two `Animated.Value`'s that describe the transition state: `position` and `progress`.
+- `NavigationCardStack` converts these values to `translateX`, `opacity` and `scale` properties of the incoming and outgoing screens.
+
+Feel free to ask me questions in the comments below, or suggest topics that you'd like me to write about in future posts. Have a great day!
