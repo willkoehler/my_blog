@@ -5,7 +5,7 @@ last-modified: '2016-12-20'
 title: "NavigationExperimental: Custom Transitions (1)"
 #cover_image: "navigation-custom-transition/ski-lift.jpg"
 
-excerpt: "A series of posts about creating custom transitions using NavigationExperimental"
+excerpt: "Blog series: creating custom transitions using NavigationExperimental. This post covers an overview of NavigationCardStack."
 
 author:
   name: Linton Ye
@@ -300,7 +300,7 @@ function forHorizontal(props: NavigationSceneRendererProps): Object {
 
 We can see that `opacity`, `scale` and `translateX` are all interpolations of `position` -- they'll change as `position` changes. This effectively creates the sliding card animation that we've seen earlier.
 
-You probably have questions about how the input/output ranges are set up in this function, but let's leave them to the next post, where we'll also start creating our own transitions soon!
+You probably have questions about how the input/output ranges are set up in this function, but let's leave them to the [next post](/2016/12/22/navigation-experimental-custom-transition-2.html), where we'll also start creating our own transitions soon!
 
 # Summary
 Just to repeat a few key points on how the transition animation works in the built-in `NavigationCardStack`:
