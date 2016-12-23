@@ -155,7 +155,18 @@ The point for the `0.99` is that it's **very close** to `1`. Using them as the i
 
 ![opacity code](/images/navigation-custom-transition/cliff-diagram.png)
 
-Sounds useful, right? Let's recap what we've learned about the `NavigationCardStack` so far:
+The cliff, in the card stack transition in particular, is an important performance tuning. Because composing translucent scenes is expensive, we should always try to minimize the number of translucent layers. Here when the photo grid scene is completely covered, we want to set its opacity to `0` to avoid unnecessary composition.
+
+In comparison, the code below suffers from composition overhead because it leaves the opacity of photo grid non-zero even when it's off screen:
+
+{% highlight jsx %}
+const opacity = position.interpolate({
+  inputRange:  [index - 1, index, index + 1],
+  outputRange: [1,         1,     0.3      ],
+});
+{% endhighlight %}
+
+Let's recap what we've learned about the `NavigationCardStack` so far:
 
 - `inputRange: [index - 1, index, index + 1]`: with this single input range, we are able to express concisely both photo grid and photo detail scenes. If it's rendering the photo grid scene, the range `[index, index + 1]` is effective; if it's rendering the photo detail scene, the range `[index - 1, index]` is effective.
 - `0.99`-cliff: useful to create output range that "suddenly" changes at some point. **Question:** what if we want to create a cliff just to the left of `index`? Shall we use `index - 0.99`? Or something else?
@@ -164,7 +175,7 @@ Sounds useful, right? Let's recap what we've learned about the `NavigationCardSt
 Once we've learned about the above, it's almost trivial to create the transitions I listed at the beginning of this post. I'll just list the interpolation code below for your viewing pleasure. You can also check out the complete code on github ([this](https://github.com/lintonye/react-native-diary/blob/master/transitions/app/CrossFadeTransitioner.js) and [this](https://github.com/lintonye/react-native-diary/blob/master/transitions/app/AndroidDefaultTransitioner.js)).
 
 <!-- crossFade -->
-<div style="display: flex; flex-direction: row">
+<div style="display: flex; flex-direction: row; align-items: center;">
   <div class="fivecol" style="float:none; margin-right:20px; ">
   <iframe width="225" height="400" src="//www.youtube.com/embed/6_BGrOQQlko?controls=0&amp;rel=0&amp;showinfo=0;" frameborder="0" allowfullscreen></iframe>
   </div>
@@ -179,7 +190,7 @@ Once we've learned about the above, it's almost trivial to create the transition
 </div>
 
 <!-- androidDefault -->
-<div style="display: flex; flex-direction: row">
+<div style="display: flex; flex-direction: row; align-items: center;">
   <div class="fivecol" style="float:none; margin-bottom:20px; margin-right:20px;">
   <iframe width="225" height="400" src="//www.youtube.com/embed/oVwq1QDcnOw?controls=0&amp;rel=0&amp;showinfo=0;" frameborder="0" allowfullscreen></iframe>
   </div>
@@ -202,3 +213,5 @@ Once we've learned about the above, it's almost trivial to create the transition
 Now that we've learned about how to concisely declare input and output ranges for all scenes and the "`0.99`" trick to create cliffs in the output range. We also created a couple of custom transitions without even breaking a sweat.
 
 In the next post, we'll start working on something a bit more challenging, the [shared element transition](https://www.youtube.com/embed/efPFJkxa-BQ)! Feel free to ask me questions in the comments below, or suggest topics that you'd like me to write about in future posts. Have a great day!
+
+_Special thanks to [Eric Vlad Vicenti](https://www.facebook.com/eric.v.vicenti) who reviewed this post and provided invaluable feedback!_
