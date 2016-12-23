@@ -196,14 +196,13 @@ Once we've learned about the above, it's almost trivial to create the transition
   </div>
 
   {% highlight jsx %}
-  const inputRange = [index-1, index, index+1];
   const opacity = position.interpolate({
-      inputRange,
-      outputRange: [ 0, 1, 1],
+      inputRange: [index-1, index, index+0.999, index+1],
+      outputRange: [ 0, 1, 1, 0],
   });
 
   const translateY = position.interpolate({
-      inputRange,
+      inputRange: [index-1, index, index+1],
       outputRange: [150, 0, 0],
   })
   {% endhighlight %}
