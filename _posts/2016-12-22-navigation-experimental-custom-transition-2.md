@@ -15,6 +15,15 @@ author:
   image: linton.jpg
 ---
 
+*This is a series of posts about how to create custom transition "views" using the `Transitioner` in [React Navigation](https://reactnavigation.org/) (based on “NavigationExperiemental”):*
+
+- *[An overview of Transitioner and CardStack](/2016/12/20/navigation-experimental-custom-transition-1.html)*
+- *Simple transitions: cross fade and Android default (this post)*
+- *[Shared element transition 1/2](/2017/01/23/react-navigation-shared-element-transition-1.html)*
+- *Shared element transition 2/2 (coming soon)*
+
+---
+
 In the [previous post](/2016/12/20/navigation-experimental-custom-transition-1.html), we covered how the transition animations in `NavigationCardStack` work: the `NavigationTransitioner` creates two `AnimatedValue`s, `position` and `progress`, which are then passed to `CardStack` and "interpolated" into style properties such as `scaleX`, `translateX` and `opacity`.
 
 In this post, we'll take a closer look at how the `inputRange` and `outputRange` are set up in `CardStack` when interpolating the `AnimatedValue`s. We'll also apply what we learn to create a couple of simple transitions:
@@ -147,7 +156,9 @@ function forHorizontal(props: NavigationSceneRendererProps): Object {
 
 I know. What is that "`index + 0.99`" doing there? Let me explain.
 
-# The trick of the "`0.99`-cliff"
+<a name="0.99-cliff">
+
+# The "`0.99`-cliff" trick
 
 ![opacity code](/images/navigation-custom-transition/099-trick.png)
 

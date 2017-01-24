@@ -1,12 +1,12 @@
 ---
 layout: post
-last-modified: '2017-01-18'
+last-modified: '2017-01-25'
 
-title: "React Navigation: Shared Element Transition"
+title: "React Navigation: Shared Element Transition 2/2"
 #subtitle: "A series of posts about creating custom transitions using NavigationExperimental."
 #cover_image: "navigation-custom-transition/transit.jpg"
 
-excerpt: "Blog series: creating custom transitions using NavigationExperimental. This post covers inputRange and a couple of simple custom transitions."
+excerpt: "Blog series: creating custom transitions using NavigationExperimental. This post covers key challenges in the implementation."
 
 author:
   name: Linton Ye
@@ -15,11 +15,12 @@ author:
   image: linton.jpg
 ---
 
-*Series TOC*:
+*This is a series of posts about how to create custom transition "views" using the `Transitioner` in [React Navigation](https://reactnavigation.org/) (based on “NavigationExperiemental”):*
 
-- *[An overview of Transitioner and CardStack](TODO)*
-- *[Simple transitions: cross fade and Android default](TODO)*
-- *Shared element transition (this post)*
+- *[An overview of Transitioner and CardStack](/2016/12/20/navigation-experimental-custom-transition-1.html)*
+- *[Simple transitions: cross fade and Android default](/2016/12/22/navigation-experimental-custom-transition-2.html)*
+- *[Shared element transition 1/2](/2017/01/23/react-navigation-shared-element-transition-1.html)*
+- *Shared element transition 2/2 (this post)*
 
 ---
 
@@ -54,7 +55,9 @@ The most interesting part is the No.3 above which creates an effect that the pho
 
 Do you really believe that there is a single image being shared between the grid and detail screens?
 
-Let's reveal the magic trick! The truth: nothing is shared and there is still a separate image on each scene. In fact it's very difficult, [if not impossible](TODO), to share a view across two view hierarchies in React. Most of the animation happens on an extra overlay visible only during the transition. It goes like this:
+Let's reveal the magic trick! The truth: nothing is shared and there is still a separate image on each scene. Most of the animation happens on an extra overlay visible only during the transition. BTW: It's in fact very difficult, [if not impossible](TODO), to share a view across two view hierarchies in React.
+
+It goes like this:
 
 - **When the transition is about to start:** We show the overlay and clone the shared views onto the overlay. The detail scene is rendered but invisible, allowing us to calculate the bounding boxes of the shared views.
 - **During the transition:** Using the aforementioned bounding boxes, we animate the cloned views on the overlay.
@@ -94,21 +97,52 @@ class SharedElementsTransitioner extends Component {
 
 The `_render` function is almost the same as that of `CardStack` except for the additional overlay where most of the animations take place.
 
-The `_renderOverlay` function should be straightforward too. We just render all the shared views there and define their animated style properties -- that's how we are supposed to use the Animated library.
+The `_renderOverlay` function should be straightforward too. We just render all the shared views there:
 
 {% highlight jsx %}
  // class SharedElementsTransitioner
  _renderOverlay(....) {
    const sharedViews = this.cloneAndAnimateSharedViews(....);
+   ....
    return (
-     <View>
+     <Animated.View style={overlayStyle}>
        {sharedViews}
-     </View>     
+     </Animated.View>     
    );
  }_
 {% endhighlight %}
 
-### The harder part: first attempt
+In order to ensure the overlay to be visible only during transition, we can use the "0.99-cliff" trick discussed in [the previous post](TODO):
+
+{% highlight javascript %}
+  // in _renderOverlay()    //_
+  const left = transitionProps.progress.interpolate({
+    inputRange:  [0, 0.99, 1],
+    outputRange: [0, 0,    100000], // move it off screen after transition is done
+  });
+  const overlayStyle = { left };
+{% endhighlight %}
+
+Here we chose to animate `left` instead of `opacity` to prevent the overlay from blocking touch events. Similarly, we apply the "0.99-cliff" treatment to scene opacity in `_renderScene` to make sure that the detail scene is initially invisible and only becomes fully opaque when the transition is about to finish.
+
+{% highlight jsx %}
+// class SharedElementsTransitioner
+_renderScene(props) {
+  ....
+  const opacity = position.interpolate({
+    inputRange: [index-1, index-0.01, index, index+0.99, index+1],
+    outputRange:[0,       0,          1,     1,          0],
+  });
+  const style = { opacity };
+  return (
+    <Animated.View style={[style, styles.scene]}>
+      ....
+    </Animated.View>
+  )
+}_
+{% endhighlight %}
+
+### The harder part
 
 Now here comes the question: What is this `cloneAndAnimateSharedViews` function supposed to look like?
 
@@ -119,9 +153,9 @@ Let's give it a try (pseudo code below):
 {% highlight jsx %}
 // class SharedElementsTransitioner
 cloneAndAnimateSharedViews(...) {
-  const shareViewPairs = this.collectActiveSharedViewsOnBothGridAndDetail(....);
+  const shareViewPairs = this.collectActiveSharedViews(....);
   return sharedViewPairs.map(pair => {
-    // Does this getBoundingBox() really exist?
+    // Does this getBoundingBox() really work?
     const bboxFrom = pair.fromItem.getBoundingBox();
     const bboxTo = pair.toItem.getBoundingBox();
     const animatedStyle = this.createAnimatedStyle(bboxFrom, bboxTo);
@@ -133,25 +167,14 @@ cloneAndAnimateSharedViews(...) {
     );
   });
 }
-
-collectActiveSharedViewsOnBothGridAndDetail(....) {
-  // Those shared views are scattered in other components,
-  // How can we visit them from here? By traversing the tree?
-}
 {% endhighlight %}
 
-Would the above work? We need to answer these questions:
+Would the above work? We need to answer this question:
 
-1. The shared views are scattered on different components (in our example, `PhotoGrid` and `PhotoDetail`). How can we visit and collect them from within our `SharedElementsTransitioner`? By traversing the tree?
-2. Even if we manage to collect the shared views, does that `getBoundingBox()` really work?
+- Does that `getBoundingBox()` really work?
 
-### Challenge 1: How to efficiently collect shared views?
-In other UI frameworks, such as native Android, we can easily traverse a view hierarchy as a tree. In React, this is in theory possible via the `children` prop.
-
-However, this sounds expensive especially when the render method
-
-### Challenge 2: No direct access to native widgets
-In other UI frameworks, we could easily obtain layout information, such as bounding boxes, by calling a few methods on the view object. But this does not work in React Native because we don't have direct access to native widgets.
+### Challenge 1: No direct access to native widgets
+In other UI frameworks, such as native Android, we could easily obtain layout information, such as bounding boxes, by calling a few methods on the view object. But this does not work in React Native because we don't have direct access to native widgets.
 
 To understand this, let's go a bit deeper on how React works. It's useful to view what's happening in React as a two-step process:
 
@@ -160,20 +183,23 @@ To understand this, let's go a bit deeper on how React works. It's useful to vie
 
 When our `collectAndAnimateSharedViews` is called, we are at the first step above and therefore only have access to React elements. React elements are plain objects and do not have a `getBoundingBox` method or anything remotely related!
 
-### Challenge 3: The late-coming information of bounding boxes
+### Challenge 2: The late-coming information of bounding boxes
 
 Why couldn't we have this much needed `getBoundingBox` method on React elements?
 
 This is by design. Layout information, such as bounding boxes, is only available when a native widget gets laid out on the screen. However, when we are at the step 1 of the React rendering process, the corresponding native widgets may have not been laid out or even created yet!
 
-This is why our first attempt of `collectAndAnimateSharedViews` won't work!
+This is why our first attempt of `cloneAndAnimateSharedViews` won't work!
 
 ## My solution
-So what else are on the table? Here's my approach in a nutshell:
+So what else are on the table? The solution is to wait. We'd wait until the native widgets are laid out before trying to obtain their layout information. Fortunately, `React.View` provides a `onLayout` prop that helps us do exactly that.
 
-- When a shared view is mounted, register it as part of the state of `SharedElementsTransitioner`. This should be much more efficient than traversing the entire virtual tree searching for shared views.
-- When the layout process of `SharedElementsTransitioner` is done, measure the bounding boxes of shared views and save them into the state.
-- Update the transitioner only when we have enough information to create the animation, such as the bounding boxes of shared views on both grid and detail scenes.
+Here's my complete approach in a nutshell:
+
+- Use the state of `SharedElementsTransitioner` to store the bounding boxes of shared views
+- When a shared view is mounted, register it as part of the state of `SharedElementsTransitioner`. This should be more efficient than traversing the entire virtual tree searching for shared views.
+- In `onLayout`, use `UIManager` to measure the bounding boxes of shared views and save them into the state.
+- To reduce the flickering due to frequent `setState` calls, update transitioner only when there is enough information required for creating the animation.
 
 ### API
 

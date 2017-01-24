@@ -13,6 +13,14 @@ author:
   bio: Freelance full-stack developer in BC Canada (GMT-8). Android, React Native, Node.js, MongoDB, PostgreSQL. <a href="mailto:linton@jimulabs.com">Hire me.</a>
   image: linton.jpg
 ---
+*This is a series of posts about how to create custom transition "views" using the `Transitioner` in [React Navigation](https://reactnavigation.org/) (based on “NavigationExperiemental”):*
+
+- *An overview of Transitioner and CardStack (this post)*
+- *[Simple transitions: cross fade and Android default](/2016/12/22/navigation-experimental-custom-transition-2.html)*
+- *[Shared element transition 1/2](/2017/01/23/react-navigation-shared-element-transition-1.html)*
+- *Shared element transition 2/2 (coming soon)*
+
+---
 
 [NavigationExperimental](https://facebook.github.io/react-native/docs/navigation.html#navigationexperimental) provides great support for custom transition animations. Do you want to create transitions like the following? This series of posts is for you!
 
