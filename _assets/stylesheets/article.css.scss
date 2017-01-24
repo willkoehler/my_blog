@@ -17,11 +17,11 @@ article {
   .social {
     height:40px;
     padding:10px 0;
-        
+
     > div {
       display:inline-block;
       width: 100px;
-            
+
       img { vertical-align: baseline; margin: 0; }
       &.reddit { position: relative; top: -1px; }
       &.google { width: 85px; }
@@ -58,7 +58,7 @@ article {
 
   footer {
     margin-top: 1.5em;
-        
+
     address {
       font-size: 0.9em;
       border-top:1px solid $border_color;
@@ -67,7 +67,7 @@ article {
       white-space: nowrap;
       overflow: hidden;
       margin-bottom:1.5em;
-        
+
       p {
         margin:0;
         white-space: normal;
@@ -82,7 +82,7 @@ article {
         height: 64px;
         margin: 0 20px 0 0;
         vertical-align: middle;
-      }       
+      }
     }
   }
 
@@ -103,23 +103,23 @@ article {
     font-weight:400;
     margin:0 0 1.5em;
   }
-    
+
   ol, ul {
     font-weight: 600;
     margin: 0 0 1.5em;
     padding: 0;
     list-style-position: outside;
     padding-left: 1.5em;
-        
+
     li {
       font-weight:400;
       margin-bottom:0.5em;
       p { margin-bottom: 0; }
     }
   }
-    
+
   blockquote {
-    border:0;
+    border-left: 1px solid #ccc;
     margin: 1.5em -3em 1.5em 0;
     padding:0;
 
@@ -140,7 +140,7 @@ article {
 
   .highlight {
     margin: 1.85em -3.5em 1.85em 0;
-      
+
     pre {
       border: 0;
       padding: 1.5em 1.5em;
@@ -148,10 +148,10 @@ article {
       border: 0;
       border: 1px solid #e0e0e0;
       width:100%;
-      font-size:0.8em;
+      font-size:0.9em;
       overflow-x: auto;
       display:block;
-        
+
       code {
         font-size:0.8em;
         border:0;

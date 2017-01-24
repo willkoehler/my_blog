@@ -12,8 +12,8 @@
   <link rel="alternate" type="application/atom+xml" title="{{ site.info.title }}" href="/atom.xml" />
   <meta name="title" content="{% if page.title %}{{ page.title }} {% else %}{{ site.info.title }}{% endif %}">
   <link rel="canonical" href="{{ site.url }}{{ page.url }}">
-  {% if page.site.gplus %}<link rel="publisher" href="https://plus.google.com/{{ site.info.gplus }}">{% endif %} 
-  {% if page.author.gplus %}<link rel="author" href="https://plus.google.com/{{ page.author.gplus }}">{% endif %}       
+  {% if page.site.gplus %}<link rel="publisher" href="https://plus.google.com/{{ site.info.gplus }}">{% endif %}
+  {% if page.author.gplus %}<link rel="author" href="https://plus.google.com/{{ page.author.gplus }}">{% endif %}
   <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.info.title }}{% endif %}"/>
   <meta property="og:url" content="{{ site.url }}{{ page.url }}"/>
   {% if page.cover_image %}<meta property="og:image" content="{{ site.url }}/images/{{ page.cover_image }}"/>{% endif %}
@@ -21,10 +21,10 @@
   <meta property="og:description" content="{{ page.excerpt }}"/>
   <meta name="description" content="{{ page.excerpt }}"/>
   {% endif %}
-  <meta property="og:site_name" content="{{ site.info.title }}">     
+  <meta property="og:site_name" content="{{ site.info.title }}">
 </head>
 <body>
-    
+
   <header class="site-header">
     <nav>
       <a class="brand" href="/">
@@ -39,13 +39,13 @@
 
   <footer class="site-footer">
     <div class="container">
-      &copy; {{ site.time | date: "%Y" }} Will Koehler
-        
+      &copy; {{ site.time | date: "%Y" }} Linton Ye
+
       <nav>
         <a href="/">Blog</a> &middot;
         <a href="/about.html">About</a>
       </nav>
-        
+
       <nav class="social">
         {% include social_links.html %}
       </nav>
