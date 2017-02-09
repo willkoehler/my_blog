@@ -1,0 +1,86 @@
+@import "globals.scss";
+
+article.resume {
+
+  p, ul {
+    font-size: 0.9em;     // smaller font size vs standard article
+    line-height: 1.3;
+  }
+
+  ol, ul {
+    margin-top: -0.5em;   // tighten spacing betwen <ul> and <p> text above
+  }
+  
+  h1 { font-size: 1.8em; margin: 0.5em 0 1em;}
+  h2 { font-size: 1.2em; margin: 0 0 0.8em; }
+  h3 { font-size: 1.2em; margin: 0 0 0.5em; }
+  
+  h1 {                    // add aborder above <h1>
+    margin-top: 1em;
+    padding-top: 1em;
+    border-top: 1px solid $border_color;
+    &:first-child {
+      margin-top: 0em;
+      padding-top: 0;
+      border: none;
+    }
+  }
+  
+  .time_span {
+    margin-bottom: 2em;
+    overflow: hidden;
+    
+    h2 {
+      float: left;
+      width: 30%;
+      margin-right: 4%;
+      .dates {
+        font-size: .8em;
+        margin-top: .4em;
+        font-weight: normal;
+      }
+      .tools {
+        color: $textmuted;
+        font-size: .6em;
+        line-height: 1.4em;
+        margin-top: .6em;
+        font-weight: normal;
+      }
+    }
+    
+    .details {
+      float: left;
+      width: 66%;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  article.resume {
+    .time_span {
+      overflow: visible;
+      margin-bottom: 1.5em;
+      padding-top: 1.5em;
+      border-top: 1px solid $border_color;
+      
+      h2 {
+        font-size: 1.3em;   // increase font size to differentiate from h3
+        margin: 0;
+        float: none;
+        width: 100%;
+      }
+      h3 {
+        font-size: 1.1em;   // reduce font size to differentiate from h2
+      }
+      .details {
+        float: none;
+        width: 100%;
+      }
+    }
+    
+    h1 + .time_span {       // first .time_span in section does not have top border
+      border: none;
+      padding-top: 0;
+    }
+  }
+}
