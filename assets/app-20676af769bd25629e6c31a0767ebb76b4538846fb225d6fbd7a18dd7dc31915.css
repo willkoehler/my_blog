@@ -586,13 +586,16 @@ article {
     padding: 10px 0; }
     article .social > div {
       display: inline-block;
-      width: 100px; }
+      width: 70px; }
       article .social > div img {
         vertical-align: baseline;
         margin: 0; }
       article .social > div.reddit {
-        position: relative;
-        top: -1px; }
+        width: 75px; }
+        article .social > div.reddit img {
+          height: 20px; }
+      article .social > div.facebook {
+        width: 75px; }
       article .social > div.google {
         width: 85px; }
       article .social > div .fb-like > span {

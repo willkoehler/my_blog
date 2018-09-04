@@ -6,23 +6,37 @@
   <title>Deploy a Rails App with AWS OpsWorks &mdash; Will Koehler</title>
   <!--[if lt IE 9]><script src='https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js'></script><![endif]-->
   
-  <link rel="stylesheet" type="text/css" integrity="sha256-1Oj6VtUrW1hV9mX6OHchQXEDdOKtlVVLTi9GVWXQ/2w=" crossorigin="anonymous" href="/assets/app-d4e8fa56d52b5b5855f665fa38772141710374e2ad95554b4e2f465565d0ff6c.css">
+  <link rel="stylesheet" type="text/css" integrity="sha256-NDu5+wPzXOyQE/O4/7/MwdeNjyDTBSE8GDLlvxRCkLs=" crossorigin="anonymous" href="/assets/app-343bb9fb03f35cec9013f3b8ffbfccc1d78d8f20d305213c1832e5bf144290bb.css">
   <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
 <script src="/assets/app-7e9344783dc057ae0ff8f92a6d0ba41337ab1d641808beb16dd7a342878e8f61.js" integrity="sha256-fpNEeD3AV64P+PkqbQukEzerHWQYCL6xbdejQoeOj2E=" crossorigin="anonymous" type="text/javascript"></script>
 
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+<script>window.twttr = (function(d, s, id) {
+   var js, fjs = d.getElementsByTagName(s)[0],
+     t = window.twttr || {};
+   if (d.getElementById(id)) return t;
+   js = d.createElement(s);
+   js.id = id;
+   js.src = "https://platform.twitter.com/widgets.js";
+   fjs.parentNode.insertBefore(js, fjs);
+   t._e = [];
+   t.ready = function(f) {
+     t._e.push(f);
+   };
+   return t;
+ }(document, "script", "twitter-wjs"));</script>
+
 
 
 <script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-
-
+   var js, fjs = d.getElementsByTagName(s)[0];
+   if (d.getElementById(id)) return;
+   js = d.createElement(s); js.id = id;
+   js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+   js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.1';
+   fjs.parentNode.insertBefore(js, fjs);
+ }(document, 'script', 'facebook-jssdk'));</script>
 
 
 
@@ -42,8 +56,6 @@
   <link rel="alternate" type="application/atom+xml" title="Will Koehler" href="/atom.xml" />
   <meta name="title" content="Deploy a Rails App with AWS OpsWorks ">
   <link rel="canonical" href="http://willkoehler.net/2014/10/15/deploy-a-rails-app-with-aws-opsworks.html">
-   
-         
   <meta property="og:title" content="Deploy a Rails App with AWS OpsWorks"/>
   <meta property="og:url" content="http://willkoehler.net/2014/10/15/deploy-a-rails-app-with-aws-opsworks.html"/>
   <meta property="og:image" content="http://willkoehler.net/images/olentangy-bike-trail-in-clintonville.jpg"/>
@@ -383,8 +395,6 @@ to cover. I have two more posts coming up:</p>
   </div>
   
 
-  
-    
   
 
   
