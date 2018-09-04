@@ -109,15 +109,13 @@ You don't need to know anything about pygments. Wrap your source code in `highli
 it "just works".
 
 {% highlight liquid %}
-{% raw %} 
-{% highlight ruby linenos %}
+{% raw %}{% highlight ruby linenos %}
 class User < ActiveRecord::Base
   # Wow this Ruby source code highlighting looks great!
   has_many :user_assignments, :dependent => :destroy
   has_many :hospitals, :through => :user_assignments
 end
-{% endhighlight %}
-{% endraw %} 
+{% endhighlight %}{% endraw %} 
 {% endhighlight %}
 
 Is rendered as
@@ -242,14 +240,18 @@ Mike Greiling has some great articles on Jekyll on his blog (PixelCog).
 
 <!-- styles to demo source-code highlighting before fixes -->
 <style>
-  .before_syntax_fixes .highlight .lineno {
-    color: #000;
-    display: inline;
-    padding: none;
-    border: none
-  }
-  .before_syntax_fixes .highlight pre code {
+  .before_syntax_fixes .highlight table td.gutter {
+    padding: 0;
+    color: #fff;
+    border-right: none;
+  } 
+
+  .before_syntax_fixes .highlight table td.code {
+    padding: 0;
+  } 
+
+  .before_syntax_fixes .highlight table pre {
+    margin: 1em 0;
     font-family: monospace, monospace;
-    white-space: pre-wrap;
-  }
+  } 
 </style>

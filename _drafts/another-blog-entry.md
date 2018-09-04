@@ -32,7 +32,7 @@ venenatis id est ut egestas. Nulla auctor fringilla tortor, a consectetur mauris
 molestie elit vitae pulvinar imperdiet. Quisque mauris sem, bibendum eget ornare at, blandit sit amet quam.
 Nulla faucibus sed nisl vitae fermentum.
 
-##Some awesome code
+## Some awesome code
 
 {% highlight ruby linenos %}
 def show
@@ -81,7 +81,7 @@ class User < ActiveRecord::Base
 end
 {% endhighlight %}
 
-##Zoomable images
+## Zoomable images
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque lectus elit, elementum aliquam erat non,
 aliquam sodales libero. In aliquet nec tortor sit amet mollis. Maecenas sodales at nulla vitae congue. Lorem

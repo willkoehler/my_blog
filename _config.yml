@@ -42,7 +42,8 @@ url:         http://willkoehler.net
 # host 0.0.0.0 allows us to access site via sapphire.local or localhost or 127.0.0.1
 host: 0.0.0.0
 
-paginate:             10
+plugins: [jekyll-paginate]
+paginate: 10
 
 # safe mode must be disabled to use jekyll-assets.
 safe:               false
@@ -53,13 +54,12 @@ safe:               false
 assets:
   dirname: assets
   baseurl: /assets/
+  gzip: [ text/css, application/javascript ]
   sources:
     - _assets/javascripts
     - _assets/stylesheets
     - _assets/images
-  js_compressor: uglifier
-  css_compressor: sass
-  cachebust: none
-  cache: false
-  gzip: [ text/css, application/javascript ]
-  debug: false
+  caching:
+    path: ".jekyll-cache/assets"
+    type: file
+    enabled: true

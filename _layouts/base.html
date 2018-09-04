@@ -6,7 +6,7 @@
   <title>{% if page.title %}{{ page.title }} &mdash; {{ site.info.title }}{% else %}{{ site.info.title }} &mdash; {{ site.info.subtitle }}{% endif %}</title>
   <!--[if lt IE 9]><script src='https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js'></script><![endif]-->
   {% if site.info.google_font %}<link href="https://fonts.googleapis.com/css?family={{ site.info.google_font }}" rel="stylesheet" type="text/css">{% endif %}
-  {% stylesheet app %}
+  {% asset app.css %}
   {% include scripts.html %}
   <link rel="shortcut icon" href="/favicon.ico?v2" type="image/x-icon" />
   <link rel="alternate" type="application/atom+xml" title="{{ site.info.title }}" href="/atom.xml" />

@@ -141,22 +141,14 @@ article {
   .highlight {
     margin: 1.85em -3.5em 1.85em 0;
       
-    pre {
-      border: 0;
-      padding: 1.5em 1.5em;
-      background: #F5F5F5;
-      border: 0;
+    > pre {
+      padding: 1.8em 1.8em;
       border: 1px solid #e0e0e0;
-      width:100%;
-      font-size:0.8em;
-      overflow-x: auto;
-      display:block;
-        
-      code {
-        font-size:0.8em;
-        border:0;
-        padding: 0;
-      }
+    }
+
+    pre, code {
+      font: 12px Menlo, Monaco, Consolas, "Courier New", monospace;
+      pre { overflow: hidden; }   // prevent block inside scrollable code block from also being scrollable
     }
   }
 
