@@ -12,8 +12,6 @@
   <link rel="alternate" type="application/atom+xml" title="{{ site.info.title }}" href="/atom.xml" />
   <meta name="title" content="{% if page.title %}{{ page.title }} {% else %}{{ site.info.title }}{% endif %}">
   <link rel="canonical" href="{{ site.url }}{{ page.url }}">
-  {% if page.site.gplus %}<link rel="publisher" href="https://plus.google.com/{{ site.info.gplus }}">{% endif %} 
-  {% if page.author.gplus %}<link rel="author" href="https://plus.google.com/{{ page.author.gplus }}">{% endif %}       
   <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.info.title }}{% endif %}"/>
   <meta property="og:url" content="{{ site.url }}{{ page.url }}"/>
   {% if page.cover_image %}<meta property="og:image" content="{{ site.url }}/images/{{ page.cover_image }}"/>{% endif %}

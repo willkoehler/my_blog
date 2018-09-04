@@ -20,10 +20,11 @@ article {
         
     > div {
       display:inline-block;
-      width: 100px;
+      width: 70px;
             
       img { vertical-align: baseline; margin: 0; }
-      &.reddit { position: relative; top: -1px; }
+      &.reddit { width: 75px; img { height: 20px } }
+      &.facebook { width: 75px; }
       &.google { width: 85px; }
       // vertically align facebook like button with other sharing icons
       .fb-like > span { vertical-align: baseline !important; }

@@ -10,7 +10,6 @@ excerpt: "Incorporated provides a great typography, responsive design, author de
 author:
   name: Karri Saarinen
   twitter: karrisaarinen
-  gplus: 100687498195339762535 
   bio: Co-founder, Design
   image: ks.png
 ---
@@ -50,7 +49,6 @@ excerpt: "Incorporated provides a great typography, responsive design, author de
 author:
   name: Karri Saarinen
   twitter: karrisaarinen
-  gplus: 100687498195339762535 
   bio: Co-founder, Design
   image: ks.jpg
   
@@ -104,7 +102,6 @@ inc:
   sharing:
     twitter:    false
     facebook:   false
-    gplus:      false
     hn:         false
     
   

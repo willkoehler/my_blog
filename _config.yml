@@ -12,7 +12,6 @@ info:
   # facebook:     sendtoinc
   twitter:      wckoehler
   github:       willkoehler
-  # gplus:        '101183822199340201470'
   
   # Comments
   disqus:
@@ -26,7 +25,6 @@ info:
   sharing:
     twitter:    true
     facebook:   true
-    gplus:      false
     hn:         false
     reddit:     true
     
