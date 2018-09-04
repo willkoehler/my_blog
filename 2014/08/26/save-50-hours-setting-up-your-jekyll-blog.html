@@ -6,10 +6,10 @@
   <title>Save 50 Hours Setting up Your Jekyll Blog &mdash; Will Koehler</title>
   <!--[if lt IE 9]><script src='https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js'></script><![endif]-->
   
-  <link rel="stylesheet" href="/assets/app.css">
+  <link rel="stylesheet" type="text/css" integrity="sha256-1Oj6VtUrW1hV9mX6OHchQXEDdOKtlVVLTi9GVWXQ/2w=" crossorigin="anonymous" href="/assets/app-d4e8fa56d52b5b5855f665fa38772141710374e2ad95554b4e2f465565d0ff6c.css">
   <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
-<script src="/assets/app.js"></script>
+<script src="/assets/app-7e9344783dc057ae0ff8f92a6d0ba41337ab1d641808beb16dd7a342878e8f61.js" integrity="sha256-fpNEeD3AV64P+PkqbQukEzerHWQYCL6xbdejQoeOj2E=" crossorigin="anonymous" type="text/javascript"></script>
 
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 
@@ -92,7 +92,7 @@ that, in order to get exactly what I wanted, I would need to have full control o
 
 <p>As a Ruby developer, <a href="http://jekyllrb.com">Jekyll</a> was a natural choice. Jekyll is a static site generator that’s
 “blogging aware”. “Blogging aware” means that Jekyll has conventions for managing your blog posts. You put all your
-posts in the <code>_posts/</code> folder. Jekyll generates pages for them and gives you template variables to index through
+posts in the <code class="highlighter-rouge">_posts/</code> folder. Jekyll generates pages for them and gives you template variables to index through
 the pages.</p>
 
 <p>In addition to supporting blogs out of the box, Jekyll had everything else I wanted:</p>
@@ -112,7 +112,7 @@ the pages.</p>
 It’s clean, simple, and very “Medium-like”. Thanks <a href="https://sendtoinc.com/">Kippt, Inc.</a> for sharing this awesome theme
 with the community.</p>
 
-<p>Jekyll Incorporated was built to be easily customized via <code>config.yml</code> and <code>main.css</code>. So I thought I would
+<p>Jekyll Incorporated was built to be easily customized via <code class="highlighter-rouge">config.yml</code> and <code class="highlighter-rouge">main.css</code>. So I thought I would
 just fork the theme and customize it for my needs. It would be easy, right?</p>
 
 <p>In theory that was probably right. But I noticed a few minor problems with the responsive design of the
@@ -131,8 +131,8 @@ foundation for me to build on. There’s no way I could have done this on my own
 
 <h3 id="remove-bootstrapcss">Remove Bootstrap.css</h3>
 
-<p>I noticed that the theme included <code>bootstrap.scss</code>, containing all of Twitter Bootstrap. But none of the
-Bootstrap features like the grid, forms, or typography were being used. <code>bootstrap.scss</code> was only
+<p>I noticed that the theme included <code class="highlighter-rouge">bootstrap.scss</code>, containing all of Twitter Bootstrap. But none of the
+Bootstrap features like the grid, forms, or typography were being used. <code class="highlighter-rouge">bootstrap.scss</code> was only
 providing a CSS reset (a cross-browser foundation to build the rest of the css on top of) and a few scattered,
 random styles.</p>
 
@@ -140,59 +140,64 @@ random styles.</p>
 then methodically went through bootstrap.scss, commenting out chunks, and looking for rules that were
 still being used by comparing the before and after pages in two browser tabs.</p>
 
-<p>When I was done, I removed <code>bootstrap.scss</code> and moved the rules that were still being using into into <code>base.scss</code>.
+<p>When I was done, I removed <code class="highlighter-rouge">bootstrap.scss</code> and moved the rules that were still being using into into <code class="highlighter-rouge">base.scss</code>.
 Below are the rules I needed to save</p>
 
-<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="o">//</span> <span class="nt">Use</span> <span class="nt">border-box</span> <span class="nt">sizing</span> <span class="nt">for</span> <span class="nt">everything</span><span class="o">.</span>
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="o">//</span> <span class="nt">Use</span> <span class="nt">border-box</span> <span class="nt">sizing</span> <span class="nt">for</span> <span class="nt">everything</span><span class="o">.</span>
 <span class="o">*,</span>
 <span class="o">*</span><span class="nd">:before</span><span class="o">,</span>
 <span class="o">*</span><span class="nd">:after</span> <span class="p">{</span>
-  <span class="o">-</span><span class="n">webkit</span><span class="o">-</span><span class="n">box</span><span class="o">-</span><span class="n">sizing</span><span class="o">:</span> <span class="k">border</span><span class="o">-</span><span class="n">box</span><span class="p">;</span>
-  <span class="o">-</span><span class="n">moz</span><span class="o">-</span><span class="n">box</span><span class="o">-</span><span class="n">sizing</span><span class="o">:</span> <span class="k">border</span><span class="o">-</span><span class="n">box</span><span class="p">;</span>
-  <span class="n">box</span><span class="o">-</span><span class="n">sizing</span><span class="o">:</span> <span class="k">border</span><span class="o">-</span><span class="n">box</span><span class="p">;</span>
+  <span class="nl">-webkit-box-sizing</span><span class="p">:</span> <span class="n">border-box</span><span class="p">;</span>
+  <span class="nl">-moz-box-sizing</span><span class="p">:</span> <span class="n">border-box</span><span class="p">;</span>
+  <span class="nl">box-sizing</span><span class="p">:</span> <span class="n">border-box</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="nt">body</span> <span class="p">{</span>
-  <span class="o">...</span> <span class="p">(</span><span class="n">other</span> <span class="n">stuff</span> <span class="n">that</span> <span class="n">was</span> <span class="n">already</span> <span class="n">in</span> <span class="n">base</span><span class="o">.</span><span class="n">scss</span><span class="p">)</span>
-  <span class="k">line-height</span><span class="o">:</span> <span class="m">1</span><span class="o">.</span><span class="m">428571429</span><span class="p">;</span>
+  <span class="err">...</span> <span class="err">(other</span> <span class="err">stuff</span> <span class="err">that</span> <span class="err">was</span> <span class="err">already</span> <span class="err">in</span> <span class="err">base.scss)</span>
+  <span class="nl">line-height</span><span class="p">:</span> <span class="m">1.428571429</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="nt">img</span> <span class="p">{</span>
-  <span class="k">vertical-align</span><span class="o">:</span> <span class="k">middle</span><span class="p">;</span>
+  <span class="nl">vertical-align</span><span class="p">:</span> <span class="nb">middle</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="nt">p</span> <span class="p">{</span>
-  <span class="k">margin</span><span class="o">:</span> <span class="m">0</span> <span class="m">0</span> <span class="m">10px</span><span class="p">;</span>
+  <span class="nl">margin</span><span class="p">:</span> <span class="m">0</span> <span class="m">0</span> <span class="m">10px</span><span class="p">;</span>
 <span class="p">}</span>
 
  <span class="nt">h1</span><span class="o">,</span> <span class="nt">h2</span><span class="o">,</span> <span class="nt">h3</span><span class="o">,</span> <span class="nt">h4</span><span class="o">,</span> <span class="nt">h5</span> <span class="p">{</span>
-  <span class="o">...</span> <span class="p">(</span><span class="n">other</span> <span class="n">stuff</span> <span class="n">that</span> <span class="n">was</span> <span class="n">already</span> <span class="n">in</span> <span class="n">base</span><span class="o">.</span><span class="n">scss</span><span class="p">)</span>
-  <span class="k">line-height</span><span class="o">:</span> <span class="m">1</span><span class="o">.</span><span class="m">1</span><span class="p">;</span>
-<span class="p">}</span></code></pre></div>
+  <span class="err">...</span> <span class="err">(other</span> <span class="err">stuff</span> <span class="err">that</span> <span class="err">was</span> <span class="err">already</span> <span class="err">in</span> <span class="err">base.scss)</span>
+  <span class="nl">line-height</span><span class="p">:</span> <span class="m">1.1</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
 
 <p>The net change was 1647 lines of css removed. Here’s <a href="https://github.com/willkoehler/my_blog/commit/460ca42a011c075d0fc2d63f86cc6940dac3d4ca#diff-1003e390ef395b0f33d4f1a90fb9e6c6R42">the commit</a></p>
 
 <h3 id="improve-source-code-highlighting">Improve source-code highlighting</h3>
 
 <p>Out of the box, Jekyll supports source-code highlighting using <a href="http://pygments.org">pygments</a>.
-You don’t need to know anything about pygments. Wrap your source code in <code>highlight</code> tags and
+You don’t need to know anything about pygments. Wrap your source code in <code class="highlighter-rouge">highlight</code> tags and
 it “just works”.</p>
 
-<div class="highlight"><pre><code class="language-liquid" data-lang="liquid"><span class="p">{%</span><span class="w"> </span><span class="nt">highlight</span><span class="w"> </span>ruby<span class="w"> </span>linenos<span class="w"> </span><span class="p">%}</span>
+<figure class="highlight"><pre><code class="language-liquid" data-lang="liquid"><span class="p">{%</span><span class="w"> </span><span class="nt">highlight</span><span class="w"> </span>ruby<span class="w"> </span>linenos<span class="w"> </span><span class="p">%}</span>
 class User &lt; ActiveRecord::Base
   # Wow this Ruby source code highlighting looks great!
   has_many :user_assignments, :dependent =&gt; :destroy
   has_many :hospitals, :through =&gt; :user_assignments
 end
-<span class="p">{%</span><span class="w"> </span><span class="nt">endhighlight</span><span class="w"> </span><span class="p">%}</span></code></pre></div>
+<span class="p">{%</span><span class="w"> </span><span class="nt">endhighlight</span><span class="w"> </span><span class="p">%}</span> </code></pre></figure>
 
 <p>Is rendered as</p>
 
-<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="lineno">1</span> <span class="k">class</span> <span class="nc">User</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span>
-<span class="lineno">2</span>   <span class="c1"># Wow this Ruby source code highlighting looks great!</span>
-<span class="lineno">3</span>   <span class="n">has_many</span> <span class="ss">:user_assignments</span><span class="p">,</span> <span class="ss">:dependent</span> <span class="o">=&gt;</span> <span class="ss">:destroy</span>
-<span class="lineno">4</span>   <span class="n">has_many</span> <span class="ss">:hospitals</span><span class="p">,</span> <span class="ss">:through</span> <span class="o">=&gt;</span> <span class="ss">:user_assignments</span>
-<span class="lineno">5</span> <span class="k">end</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="code"><pre><span class="k">class</span> <span class="nc">User</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span>
+  <span class="c1"># Wow this Ruby source code highlighting looks great!</span>
+  <span class="n">has_many</span> <span class="ss">:user_assignments</span><span class="p">,</span> <span class="ss">:dependent</span> <span class="o">=&gt;</span> <span class="ss">:destroy</span>
+  <span class="n">has_many</span> <span class="ss">:hospitals</span><span class="p">,</span> <span class="ss">:through</span> <span class="o">=&gt;</span> <span class="ss">:user_assignments</span>
+<span class="k">end</span></pre></td></tr></tbody></table></code></pre></figure>
 
 <p>The theme already included Github’s syntax highlighting stylesheet:
 <a href="http://jekyllrb.com/docs/templates/#stylesheets-for-syntax-highlighting">syntax.css</a>.
@@ -202,29 +207,47 @@ I added a few rules to clean up the look and prevent long lines from wrapping.</
 
 <div class="before_syntax_fixes">
 
-<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="lineno">1</span> <span class="k">class</span> <span class="nc">User</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span>
-<span class="lineno">2</span>   <span class="n">has_many</span> <span class="ss">:user_assignments</span><span class="p">,</span> <span class="ss">:dependent</span> <span class="o">=&gt;</span> <span class="ss">:destroy</span>
-<span class="lineno">3</span>   <span class="n">has_many</span> <span class="ss">:hospitals</span><span class="p">,</span> <span class="ss">:through</span> <span class="o">=&gt;</span> <span class="ss">:user_assignments</span>
-<span class="lineno">4</span>  
-<span class="lineno">5</span>   <span class="c1"># Ugly, but 5x faster than op2 and op3</span>
-<span class="lineno">6</span>   <span class="c1"># Takes 2ms</span>
-<span class="lineno">7</span>   <span class="n">scope</span> <span class="ss">:grid_fields</span><span class="p">,</span> <span class="o">-&gt;</span> <span class="p">{</span> <span class="n">joins</span><span class="p">(</span><span class="s1">&#39;LEFT JOIN user_assignments ON user_id = users.id LEFT JOIN hospitals ON hospitals.id = hospital_id&#39;</span><span class="p">)</span><span class="o">.</span>
-<span class="lineno">8</span>                            <span class="n">group</span><span class="p">(</span><span class="s1">&#39;users.id&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="o">[</span><span class="ss">:id</span><span class="p">,</span> <span class="ss">:name</span><span class="p">,</span> <span class="ss">:email</span><span class="p">,</span> <span class="ss">:role</span><span class="p">,</span> <span class="s1">&#39;min(hospitals.name) as first_hospital_name&#39;</span><span class="o">]</span><span class="p">)</span> <span class="p">}</span>
-<span class="lineno">9</span> <span class="k">end</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre></td><td class="code"><pre><span class="k">class</span> <span class="nc">User</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span>
+  <span class="n">has_many</span> <span class="ss">:user_assignments</span><span class="p">,</span> <span class="ss">:dependent</span> <span class="o">=&gt;</span> <span class="ss">:destroy</span>
+  <span class="n">has_many</span> <span class="ss">:hospitals</span><span class="p">,</span> <span class="ss">:through</span> <span class="o">=&gt;</span> <span class="ss">:user_assignments</span>
+ 
+  <span class="c1"># Ugly, but 5x faster than op2 and op3</span>
+  <span class="c1"># Takes 2ms</span>
+  <span class="n">scope</span> <span class="ss">:grid_fields</span><span class="p">,</span> <span class="o">-&gt;</span> <span class="p">{</span> <span class="n">joins</span><span class="p">(</span><span class="s1">'LEFT JOIN user_assignments ON user_id = users.id LEFT JOIN hospitals ON hospitals.id = hospital_id'</span><span class="p">).</span>
+                           <span class="nf">group</span><span class="p">(</span><span class="s1">'users.id'</span><span class="p">).</span><span class="nf">select</span><span class="p">([</span><span class="ss">:id</span><span class="p">,</span> <span class="ss">:name</span><span class="p">,</span> <span class="ss">:email</span><span class="p">,</span> <span class="ss">:role</span><span class="p">,</span> <span class="s1">'min(hospitals.name) as first_hospital_name'</span><span class="p">])</span> <span class="p">}</span>
+<span class="k">end</span></pre></td></tr></tbody></table></code></pre></figure>
 
 </div>
 
 <p>After improvements</p>
 
-<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="lineno">1</span> <span class="k">class</span> <span class="nc">User</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span>
-<span class="lineno">2</span>   <span class="n">has_many</span> <span class="ss">:user_assignments</span><span class="p">,</span> <span class="ss">:dependent</span> <span class="o">=&gt;</span> <span class="ss">:destroy</span>
-<span class="lineno">3</span>   <span class="n">has_many</span> <span class="ss">:hospitals</span><span class="p">,</span> <span class="ss">:through</span> <span class="o">=&gt;</span> <span class="ss">:user_assignments</span>
-<span class="lineno">4</span>  
-<span class="lineno">5</span>   <span class="c1"># Ugly, but 5x faster than op2 and op3</span>
-<span class="lineno">6</span>   <span class="c1"># Takes 2ms</span>
-<span class="lineno">7</span>   <span class="n">scope</span> <span class="ss">:grid_fields</span><span class="p">,</span> <span class="o">-&gt;</span> <span class="p">{</span> <span class="n">joins</span><span class="p">(</span><span class="s1">&#39;LEFT JOIN user_assignments ON user_id = users.id LEFT JOIN hospitals ON hospitals.id = hospital_id&#39;</span><span class="p">)</span><span class="o">.</span>
-<span class="lineno">8</span>                            <span class="n">group</span><span class="p">(</span><span class="s1">&#39;users.id&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="o">[</span><span class="ss">:id</span><span class="p">,</span> <span class="ss">:name</span><span class="p">,</span> <span class="ss">:email</span><span class="p">,</span> <span class="ss">:role</span><span class="p">,</span> <span class="s1">&#39;min(hospitals.name) as first_hospital_name&#39;</span><span class="o">]</span><span class="p">)</span> <span class="p">}</span>
-<span class="lineno">9</span> <span class="k">end</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre></td><td class="code"><pre><span class="k">class</span> <span class="nc">User</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span>
+  <span class="n">has_many</span> <span class="ss">:user_assignments</span><span class="p">,</span> <span class="ss">:dependent</span> <span class="o">=&gt;</span> <span class="ss">:destroy</span>
+  <span class="n">has_many</span> <span class="ss">:hospitals</span><span class="p">,</span> <span class="ss">:through</span> <span class="o">=&gt;</span> <span class="ss">:user_assignments</span>
+ 
+  <span class="c1"># Ugly, but 5x faster than op2 and op3</span>
+  <span class="c1"># Takes 2ms</span>
+  <span class="n">scope</span> <span class="ss">:grid_fields</span><span class="p">,</span> <span class="o">-&gt;</span> <span class="p">{</span> <span class="n">joins</span><span class="p">(</span><span class="s1">'LEFT JOIN user_assignments ON user_id = users.id LEFT JOIN hospitals ON hospitals.id = hospital_id'</span><span class="p">).</span>
+                           <span class="nf">group</span><span class="p">(</span><span class="s1">'users.id'</span><span class="p">).</span><span class="nf">select</span><span class="p">([</span><span class="ss">:id</span><span class="p">,</span> <span class="ss">:name</span><span class="p">,</span> <span class="ss">:email</span><span class="p">,</span> <span class="ss">:role</span><span class="p">,</span> <span class="s1">'min(hospitals.name) as first_hospital_name'</span><span class="p">])</span> <span class="p">}</span>
+<span class="k">end</span></pre></td></tr></tbody></table></code></pre></figure>
 
 <p>Thanks <a href="http://demisx.github.io/jekyll/2014/01/13/improve-code-highlighting-in-jekyll.html">Dmitri Moore</a>
 for the ideas. Here’s <a href="https://github.com/willkoehler/my_blog/commit/198b31ea605fdc959ba23114f9292bddc939b9a7">the commit</a></p>
@@ -304,16 +327,20 @@ feel free to fork the <a href="https://github.com/willkoehler/my_blog">master br
 
 <!-- styles to demo source-code highlighting before fixes -->
 <style>
-  .before_syntax_fixes .highlight .lineno {
-    color: #000;
-    display: inline;
-    padding: none;
-    border: none
-  }
-  .before_syntax_fixes .highlight pre code {
+  .before_syntax_fixes .highlight table td.gutter {
+    padding: 0;
+    color: #fff;
+    border-right: none;
+  } 
+
+  .before_syntax_fixes .highlight table td.code {
+    padding: 0;
+  } 
+
+  .before_syntax_fixes .highlight table pre {
+    margin: 1em 0;
     font-family: monospace, monospace;
-    white-space: pre-wrap;
-  }
+  } 
 </style>
 
 
@@ -381,7 +408,7 @@ feel free to fork the <a href="https://github.com/willkoehler/my_blog">master br
 
   <footer class="site-footer">
     <div class="container">
-      &copy; 2017 Will Koehler
+      &copy; 2018 Will Koehler
         
       <nav>
         <a href="/">Blog</a> &middot;

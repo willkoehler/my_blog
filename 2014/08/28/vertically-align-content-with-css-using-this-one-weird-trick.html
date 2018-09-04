@@ -6,10 +6,10 @@
   <title>Vertically Align Content With CSS Using This One Weird Trick &mdash; Will Koehler</title>
   <!--[if lt IE 9]><script src='https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js'></script><![endif]-->
   
-  <link rel="stylesheet" href="/assets/app.css">
+  <link rel="stylesheet" type="text/css" integrity="sha256-1Oj6VtUrW1hV9mX6OHchQXEDdOKtlVVLTi9GVWXQ/2w=" crossorigin="anonymous" href="/assets/app-d4e8fa56d52b5b5855f665fa38772141710374e2ad95554b4e2f465565d0ff6c.css">
   <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
-<script src="/assets/app.js"></script>
+<script src="/assets/app-7e9344783dc057ae0ff8f92a6d0ba41337ab1d641808beb16dd7a342878e8f61.js" integrity="sha256-fpNEeD3AV64P+PkqbQukEzerHWQYCL6xbdejQoeOj2E=" crossorigin="anonymous" type="text/javascript"></script>
 
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 
@@ -94,25 +94,25 @@ and naming things”. I would add a third: vertically aligning content with CSS.
 
 <p>We want to vertically align variable height content within a wrapper div.</p>
 
-<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.wrapper</span> <span class="p">{</span>
-  <span class="k">height</span><span class="o">:</span> <span class="m">150px</span><span class="p">;</span>
-  <span class="k">border</span><span class="o">:</span> <span class="m">1px</span> <span class="k">solid</span> <span class="m">#CCC</span><span class="p">;</span>
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.wrapper</span> <span class="p">{</span>
+  <span class="nl">height</span><span class="p">:</span> <span class="m">150px</span><span class="p">;</span>
+  <span class="nl">border</span><span class="p">:</span> <span class="m">1px</span> <span class="nb">solid</span> <span class="m">#CCC</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="nc">.content</span> <span class="p">{</span>
-  <span class="k">display</span><span class="o">:</span> <span class="k">inline</span><span class="o">-</span><span class="k">block</span><span class="p">;</span>
-  <span class="k">border</span><span class="o">:</span> <span class="m">1px</span> <span class="k">solid</span> <span class="m">#493ACC</span><span class="p">;</span>
-<span class="p">}</span></code></pre></div>
+  <span class="nl">display</span><span class="p">:</span> <span class="n">inline-block</span><span class="p">;</span>
+  <span class="nl">border</span><span class="p">:</span> <span class="m">1px</span> <span class="nb">solid</span> <span class="m">#493ACC</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
 
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&#39;wrapper&#39;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&#39;content&#39;</span><span class="nt">&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">'wrapper'</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">'content'</span><span class="nt">&gt;</span>
     This should be<span class="nt">&lt;br&gt;</span>
     vertically centered
   <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&#39;content&#39;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">'content'</span><span class="nt">&gt;</span>
     Also this
   <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></div>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
 <div class="wrapper">
   <div class="content">
@@ -126,40 +126,40 @@ and naming things”. I would add a third: vertically aligning content with CSS.
 
 <h2 id="just-use-vertical-alignmiddle">Just use vertical-align:middle?</h2>
 
-<p>Most people (myself included) expect that adding <code>vertical-align:middle</code> to the wrapper will
-do this trick. But <code>vertical-align</code> doesn’t set the alignment of content within a wrapper, it sets the
+<p>Most people (myself included) expect that adding <code class="highlighter-rouge">vertical-align:middle</code> to the wrapper will
+do this trick. But <code class="highlighter-rouge">vertical-align</code> doesn’t set the alignment of content within a wrapper, it sets the
 alignment of inline elements relative to each other.</p>
 
-<p>Let’s try some variations of <code>vertical-align</code> and see how it works.</p>
+<p>Let’s try some variations of <code class="highlighter-rouge">vertical-align</code> and see how it works.</p>
 
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&#39;text big&#39;</span><span class="nt">&gt;</span>BIG text<span class="nt">&lt;/span&gt;</span>
-<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&#39;text small&#39;</span><span class="nt">&gt;</span>SMALL text<span class="nt">&lt;/span&gt;</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">'text big'</span><span class="nt">&gt;</span>BIG text<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">'text small'</span><span class="nt">&gt;</span>SMALL text<span class="nt">&lt;/span&gt;</span></code></pre></figure>
 
-<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.text.big</span> <span class="p">{</span> <span class="k">font-size</span><span class="o">:</span> <span class="m">40px</span><span class="p">;</span> <span class="p">}</span>
-<span class="nc">.text.small</span> <span class="p">{</span> <span class="k">font-size</span><span class="o">:</span> <span class="m">18px</span><span class="p">;</span> <span class="p">}</span>
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.text.big</span> <span class="p">{</span> <span class="nl">font-size</span><span class="p">:</span> <span class="m">40px</span><span class="p">;</span> <span class="p">}</span>
+<span class="nc">.text.small</span> <span class="p">{</span> <span class="nl">font-size</span><span class="p">:</span> <span class="m">18px</span><span class="p">;</span> <span class="p">}</span>
 
-<span class="nc">.text</span> <span class="p">{</span> <span class="k">vertical-align</span><span class="o">:</span> <span class="k">baseline</span><span class="p">;</span> <span class="p">}</span>   <span class="c">/* this is the default */</span></code></pre></div>
+<span class="nc">.text</span> <span class="p">{</span> <span class="nl">vertical-align</span><span class="p">:</span> <span class="nb">baseline</span><span class="p">;</span> <span class="p">}</span>   <span class="c">/* this is the default */</span></code></pre></figure>
 
 <div class="boundary">
   <span class="text big">BIG text</span>
   <span class="text small">SMALL text</span>
 </div>
 
-<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.text</span> <span class="p">{</span> <span class="k">vertical-align</span><span class="o">:</span> <span class="k">top</span><span class="p">;</span> <span class="p">}</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.text</span> <span class="p">{</span> <span class="nl">vertical-align</span><span class="p">:</span> <span class="nb">top</span><span class="p">;</span> <span class="p">}</span></code></pre></figure>
 
 <div class="boundary">
   <span class="text big" style="vertical-align:top">BIG text</span>
   <span class="text small" style="vertical-align:top">SMALL text</span>
 </div>
 
-<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.text</span> <span class="p">{</span> <span class="k">vertical-align</span><span class="o">:</span> <span class="k">bottom</span><span class="p">;</span> <span class="p">}</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.text</span> <span class="p">{</span> <span class="nl">vertical-align</span><span class="p">:</span> <span class="nb">bottom</span><span class="p">;</span> <span class="p">}</span></code></pre></figure>
 
 <div class="boundary">
   <span class="text big" style="vertical-align:bottom">BIG text</span>
   <span class="text small" style="vertical-align:bottom">SMALL text</span>
 </div>
 
-<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.text</span> <span class="p">{</span> <span class="k">vertical-align</span><span class="o">:</span> <span class="k">middle</span><span class="p">;</span> <span class="p">}</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.text</span> <span class="p">{</span> <span class="nl">vertical-align</span><span class="p">:</span> <span class="nb">middle</span><span class="p">;</span> <span class="p">}</span></code></pre></figure>
 
 <div class="boundary">
   <span class="text big" style="vertical-align:middle">BIG text</span>
@@ -168,14 +168,14 @@ alignment of inline elements relative to each other.</p>
 
 <h2 id="making-vertical-alignmiddle-work-for-you">Making vertical-align:middle work for you</h2>
 
-<p>Going back to the original scenario, instead of applying <code>vertical-align:middle</code> to the wrapper,
-let’s apply <code>vertical-align:middle</code> to the content. Seems counter-intuitive, but bear with me.</p>
+<p>Going back to the original scenario, instead of applying <code class="highlighter-rouge">vertical-align:middle</code> to the wrapper,
+let’s apply <code class="highlighter-rouge">vertical-align:middle</code> to the content. Seems counter-intuitive, but bear with me.</p>
 
-<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.content</span> <span class="p">{</span>
-  <span class="k">display</span><span class="o">:</span> <span class="k">inline</span><span class="o">-</span><span class="k">block</span><span class="p">;</span>
-  <span class="k">border</span><span class="o">:</span> <span class="m">1px</span> <span class="k">solid</span> <span class="m">#493ACC</span><span class="p">;</span>
-  <span class="k">vertical-align</span><span class="o">:</span> <span class="k">middle</span><span class="p">;</span>
-<span class="p">}</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.content</span> <span class="p">{</span>
+  <span class="nl">display</span><span class="p">:</span> <span class="n">inline-block</span><span class="p">;</span>
+  <span class="nl">border</span><span class="p">:</span> <span class="m">1px</span> <span class="nb">solid</span> <span class="m">#493ACC</span><span class="p">;</span>
+  <span class="nl">vertical-align</span><span class="p">:</span> <span class="nb">middle</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
 
 <div class="wrapper">
   <div class="content" style="vertical-align:middle">
@@ -189,16 +189,16 @@ let’s apply <code>vertical-align:middle</code> to the content. Seems counter-i
 
 <p>We’re getting closer. Let’s add a third element with 100% height</p>
 
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&#39;wrapper&#39;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&#39;content&#39;</span> <span class="na">style=</span><span class="s">&#39;height:100%&#39;</span><span class="nt">&gt;</span><span class="ni">&amp;nbsp;</span><span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&#39;content&#39;</span><span class="nt">&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">'wrapper'</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">'content'</span> <span class="na">style=</span><span class="s">'height:100%'</span><span class="nt">&gt;</span><span class="ni">&amp;nbsp;</span><span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">'content'</span><span class="nt">&gt;</span>
     I would like this<span class="nt">&lt;br&gt;</span>
     to be vertically centered
   <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&#39;content&#39;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">'content'</span><span class="nt">&gt;</span>
     Also this
   <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></div>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
 <div class="wrapper">
   <div class="content" style="vertical-align:middle;height:100%">&nbsp;</div>
@@ -216,25 +216,25 @@ let’s apply <code>vertical-align:middle</code> to the content. Seems counter-i
 <h2 id="make-css-do-the-work-for-us">Make CSS do the work for us</h2>
 
 <p>Manually adding a third element to vertically align things is a burden. So let’s
-have css do that for us with a <code>:before</code> pseudo element.</p>
+have css do that for us with a <code class="highlighter-rouge">:before</code> pseudo element.</p>
 
-<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.wrapper</span><span class="nd">:before</span> <span class="p">{</span>
-  <span class="k">content</span><span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
-  <span class="k">display</span><span class="o">:</span> <span class="k">inline</span><span class="o">-</span><span class="k">block</span><span class="p">;</span>
-  <span class="k">height</span><span class="o">:</span> <span class="m">100%</span><span class="p">;</span>
-  <span class="k">vertical-align</span><span class="o">:</span> <span class="k">middle</span><span class="p">;</span>
-  <span class="k">border</span><span class="o">:</span> <span class="m">1px</span> <span class="k">solid</span> <span class="nb">red</span><span class="p">;</span> <span class="c">/* so we can see what&#39;s going on */</span>
-<span class="p">}</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.wrapper</span><span class="nd">:before</span> <span class="p">{</span>
+  <span class="nl">content</span><span class="p">:</span> <span class="s2">''</span><span class="p">;</span>
+  <span class="nl">display</span><span class="p">:</span> <span class="n">inline-block</span><span class="p">;</span>
+  <span class="nl">height</span><span class="p">:</span> <span class="m">100%</span><span class="p">;</span>
+  <span class="nl">vertical-align</span><span class="p">:</span> <span class="nb">middle</span><span class="p">;</span>
+  <span class="nl">border</span><span class="p">:</span> <span class="m">1px</span> <span class="nb">solid</span> <span class="no">red</span><span class="p">;</span> <span class="c">/* so we can see what's going on */</span>
+<span class="p">}</span>            </code></pre></figure>
 
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&#39;wrapper&#39;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&#39;content&#39;</span><span class="nt">&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">'wrapper'</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">'content'</span><span class="nt">&gt;</span>
     I would like this<span class="nt">&lt;br&gt;</span>
     to be vertically centered
   <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&#39;content&#39;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">'content'</span><span class="nt">&gt;</span>
     Also this
   <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></div>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
 <div class="wrapper with_centering visible_centering broken_wrapping">
   <div class="content" style="vertical-align:middle">
@@ -262,11 +262,11 @@ have css do that for us with a <code>:before</code> pseudo element.</p>
 
 <p>Well this is awesome. But you knew there would be edge cases right? Consider this scenario:</p>
 
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&#39;wrapper&#39;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&#39;content&#39;</span><span class="nt">&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">'wrapper'</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">'content'</span><span class="nt">&gt;</span>
     This text should wrap as needed
   <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></div>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
 <div class="wrapper with_centering">
   <div class="content" style="vertical-align:middle">
@@ -295,18 +295,18 @@ our before pseudo element visible again.</p>
   </div>
 </div>
 
-<p>Now we can see what happened. The <code>:before</code> pseudo element is an inline-block element. So
+<p>Now we can see what happened. The <code class="highlighter-rouge">:before</code> pseudo element is an inline-block element. So
 it’s getting wrapped as well. We can fix that with another trick. Add a negative right
-margin to the <code>:before</code> pseudo element so the pseudo element doesn’t take up any horizontal
+margin to the <code class="highlighter-rouge">:before</code> pseudo element so the pseudo element doesn’t take up any horizontal
 space.</p>
 
-<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.wrapper</span><span class="nd">:before</span> <span class="p">{</span>
-  <span class="k">content</span><span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
-  <span class="k">display</span><span class="o">:</span> <span class="k">inline</span><span class="o">-</span><span class="k">block</span><span class="p">;</span>
-  <span class="k">height</span><span class="o">:</span> <span class="m">100%</span><span class="p">;</span>
-  <span class="k">vertical-align</span><span class="o">:</span> <span class="k">middle</span><span class="p">;</span>
-  <span class="k">margin-right</span><span class="o">:</span> <span class="m">-.35em</span><span class="p">;</span>
-<span class="p">}</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.wrapper</span><span class="nd">:before</span> <span class="p">{</span>
+  <span class="nl">content</span><span class="p">:</span> <span class="s2">''</span><span class="p">;</span>
+  <span class="nl">display</span><span class="p">:</span> <span class="n">inline-block</span><span class="p">;</span>
+  <span class="nl">height</span><span class="p">:</span> <span class="m">100%</span><span class="p">;</span>
+  <span class="nl">vertical-align</span><span class="p">:</span> <span class="nb">middle</span><span class="p">;</span>
+  <span class="nl">margin-right</span><span class="p">:</span> <span class="m">-.35em</span><span class="p">;</span>
+<span class="p">}</span>            </code></pre></figure>
 
 <p>Now the text is wrapping like it should.</p>
 
@@ -318,38 +318,38 @@ space.</p>
 
 <h2 id="all-together-now">All together now</h2>
 
-<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.wrapper</span> <span class="p">{</span>
-  <span class="k">height</span><span class="o">:</span> <span class="m">150px</span><span class="p">;</span>
-  <span class="k">border</span><span class="o">:</span> <span class="m">1px</span> <span class="k">solid</span> <span class="m">#CCC</span><span class="p">;</span>
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.wrapper</span> <span class="p">{</span>
+  <span class="nl">height</span><span class="p">:</span> <span class="m">150px</span><span class="p">;</span>
+  <span class="nl">border</span><span class="p">:</span> <span class="m">1px</span> <span class="nb">solid</span> <span class="m">#CCC</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="nc">.wrapper</span><span class="nd">:before</span> <span class="p">{</span>
-  <span class="k">content</span><span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
-  <span class="k">display</span><span class="o">:</span> <span class="k">inline</span><span class="o">-</span><span class="k">block</span><span class="p">;</span>
-  <span class="k">height</span><span class="o">:</span> <span class="m">100%</span><span class="p">;</span>
-  <span class="k">vertical-align</span><span class="o">:</span> <span class="k">middle</span><span class="p">;</span>
-  <span class="k">margin-right</span><span class="o">:</span> <span class="m">-.35em</span><span class="p">;</span>
+  <span class="nl">content</span><span class="p">:</span> <span class="s2">''</span><span class="p">;</span>
+  <span class="nl">display</span><span class="p">:</span> <span class="n">inline-block</span><span class="p">;</span>
+  <span class="nl">height</span><span class="p">:</span> <span class="m">100%</span><span class="p">;</span>
+  <span class="nl">vertical-align</span><span class="p">:</span> <span class="nb">middle</span><span class="p">;</span>
+  <span class="nl">margin-right</span><span class="p">:</span> <span class="m">-.35em</span><span class="p">;</span>
 <span class="p">}</span>            
 
 <span class="nc">.content</span> <span class="p">{</span>
-  <span class="k">display</span><span class="o">:</span> <span class="k">inline</span><span class="o">-</span><span class="k">block</span><span class="p">;</span>
-  <span class="k">border</span><span class="o">:</span> <span class="m">1px</span> <span class="k">solid</span> <span class="m">#493ACC</span><span class="p">;</span>
-<span class="p">}</span></code></pre></div>
+  <span class="nl">display</span><span class="p">:</span> <span class="n">inline-block</span><span class="p">;</span>
+  <span class="nl">border</span><span class="p">:</span> <span class="m">1px</span> <span class="nb">solid</span> <span class="m">#493ACC</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
 
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&#39;wrapper&#39;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&#39;content&#39;</span><span class="nt">&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">'wrapper'</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">'content'</span><span class="nt">&gt;</span>
     This should be<span class="nt">&lt;br&gt;</span>
     vertically centered
   <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&#39;content&#39;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">'content'</span><span class="nt">&gt;</span>
     Also this
   <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></div>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
 <h2 id="conclusion">Conclusion</h2>
 
 <p>I’ve used many tricks over the years to vertically align content. They all have tradeoffs. Some
-add a lot of noise to the CSS. Others (like using <code>display:table-cell</code>) have side effects. I’ve just
+add a lot of noise to the CSS. Others (like using <code class="highlighter-rouge">display:table-cell</code>) have side effects. I’ve just
 recently discovered this trick, but I think it’s going to be my new go-to solution. In terms of
 compatibility, it works on all modern browsers + IE8.</p>
 
@@ -481,7 +481,7 @@ Gary Turner for the <a href="http://gtwebdev.com/workshop/vcenter/vcenter-inline
 
   <footer class="site-footer">
     <div class="container">
-      &copy; 2017 Will Koehler
+      &copy; 2018 Will Koehler
         
       <nav>
         <a href="/">Blog</a> &middot;

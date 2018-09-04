@@ -6,10 +6,10 @@
   <title>Deploy a Rails App with AWS OpsWorks &mdash; Will Koehler</title>
   <!--[if lt IE 9]><script src='https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js'></script><![endif]-->
   
-  <link rel="stylesheet" href="/assets/app.css">
+  <link rel="stylesheet" type="text/css" integrity="sha256-1Oj6VtUrW1hV9mX6OHchQXEDdOKtlVVLTi9GVWXQ/2w=" crossorigin="anonymous" href="/assets/app-d4e8fa56d52b5b5855f665fa38772141710374e2ad95554b4e2f465565d0ff6c.css">
   <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
-<script src="/assets/app.js"></script>
+<script src="/assets/app-7e9344783dc057ae0ff8f92a6d0ba41337ab1d641808beb16dd7a342878e8f61.js" integrity="sha256-fpNEeD3AV64P+PkqbQukEzerHWQYCL6xbdejQoeOj2E=" crossorigin="anonymous" type="text/javascript"></script>
 
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 
@@ -93,7 +93,7 @@ a single server. Although Amazon OpsWorks is capable of managing applications ru
 clusters, it is equally capable of setting up a single-server application. This post describes
 the steps I use to get a basic Rails app up and running on a single server.</p>
 
-<h2 id="prepare-your-app">1. Prepare your app</h2>
+<h2 id="1-prepare-your-app">1. Prepare your app</h2>
 
 <h4 id="add-unicorn-to-the-gemfile">Add “unicorn” to the Gemfile</h4>
 
@@ -101,9 +101,9 @@ the steps I use to get a basic Rails app up and running on a single server.</p>
 the simplicity and performance of Nginx. So for this project, we are using Nginx/Unicorn. Add
 “unicorn” to the project Gemfile.</p>
 
-<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">group</span> <span class="ss">:production</span> <span class="k">do</span>
-  <span class="n">gem</span> <span class="s1">&#39;unicorn&#39;</span>
-<span class="k">end</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">group</span> <span class="ss">:production</span> <span class="k">do</span>
+  <span class="n">gem</span> <span class="s1">'unicorn'</span>
+<span class="k">end</span></code></pre></figure>
 
 <h4 id="precompile-assets-on-deployment">Precompile assets on deployment</h4>
 
@@ -113,34 +113,34 @@ support for the Rails asset pipeline, leaving the solution up to you.</p>
 <p>For a single-server applications, I prefer to precompile the assets on the server during
 deployment and serve them with Nginx from public/assets. The precompile step can be run from a chef
 <a href="http://docs.aws.amazon.com/opsworks/latest/userguide/workingcookbook-extend-hooks.html">deploy hook</a>.
-Create <code>deploy/before_symlink.rb</code> in your app and add the contents below.</p>
+Create <code class="highlighter-rouge">deploy/before_symlink.rb</code> in your app and add the contents below.</p>
 
-<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="c1"># Precompile assets. Assets are compiled into shared/assets and shared between deploys.</span>
-<span class="n">rails_env</span> <span class="o">=</span> <span class="n">new_resource</span><span class="o">.</span><span class="n">environment</span><span class="o">[</span><span class="s2">&quot;RAILS_ENV&quot;</span><span class="o">]</span>
-<span class="n">shared_path</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="n">new_resource</span><span class="o">.</span><span class="n">deploy_to</span><span class="si">}</span><span class="s2">/shared&quot;</span>
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="c1"># Precompile assets. Assets are compiled into shared/assets and shared between deploys.</span>
+<span class="n">rails_env</span> <span class="o">=</span> <span class="n">new_resource</span><span class="p">.</span><span class="nf">environment</span><span class="p">[</span><span class="s2">"RAILS_ENV"</span><span class="p">]</span>
+<span class="n">shared_path</span> <span class="o">=</span> <span class="s2">"</span><span class="si">#{</span><span class="n">new_resource</span><span class="p">.</span><span class="nf">deploy_to</span><span class="si">}</span><span class="s2">/shared"</span>
 
-<span class="c1"># create shared directory for assets, if it doesn&#39;t exist</span>
-<span class="n">directory</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="n">shared_path</span><span class="si">}</span><span class="s2">/assets&quot;</span> <span class="k">do</span>
+<span class="c1"># create shared directory for assets, if it doesn't exist</span>
+<span class="n">directory</span> <span class="s2">"</span><span class="si">#{</span><span class="n">shared_path</span><span class="si">}</span><span class="s2">/assets"</span> <span class="k">do</span>
   <span class="n">mode</span> <span class="mo">0770</span>
   <span class="n">action</span> <span class="ss">:create</span>
   <span class="n">recursive</span> <span class="kp">true</span>
 <span class="k">end</span>
 
-<span class="c1"># symlink current deploy&#39;s asset folder to shared assets each deploy</span>
-<span class="n">link</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="n">release_path</span><span class="si">}</span><span class="s2">/public/assets&quot;</span> <span class="k">do</span>
-  <span class="n">to</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="n">shared_path</span><span class="si">}</span><span class="s2">/assets&quot;</span>
+<span class="c1"># symlink current deploy's asset folder to shared assets each deploy</span>
+<span class="n">link</span> <span class="s2">"</span><span class="si">#{</span><span class="n">release_path</span><span class="si">}</span><span class="s2">/public/assets"</span> <span class="k">do</span>
+  <span class="n">to</span> <span class="s2">"</span><span class="si">#{</span><span class="n">shared_path</span><span class="si">}</span><span class="s2">/assets"</span>
 <span class="k">end</span>
 
 <span class="c1"># precompile assets into public/assets (which is symlinked to shared assets folder)</span>
-<span class="n">execute</span> <span class="s2">&quot;rake assets:precompile&quot;</span> <span class="k">do</span>
+<span class="n">execute</span> <span class="s2">"rake assets:precompile"</span> <span class="k">do</span>
   <span class="n">cwd</span> <span class="n">release_path</span>
-  <span class="n">command</span> <span class="s2">&quot;bundle exec rake assets:precompile&quot;</span>
-  <span class="n">environment</span> <span class="s1">&#39;RAILS_ENV&#39;</span> <span class="o">=&gt;</span> <span class="n">rails_env</span>
-<span class="k">end</span></code></pre></div>
+  <span class="n">command</span> <span class="s2">"bundle exec rake assets:precompile"</span>
+  <span class="n">environment</span> <span class="s1">'RAILS_ENV'</span> <span class="o">=&gt;</span> <span class="n">rails_env</span>
+<span class="k">end</span></code></pre></figure>
 
 <p>Check in your changes and push them to the repo/branch you will deploy from.</p>
 
-<h2 id="create-a-stack">2. Create a stack</h2>
+<h2 id="2-create-a-stack">2. Create a stack</h2>
 
 <p>An AWS stack is the container that houses all the other components (layers, instances, and apps)
 and allows you to manage them as a unit.</p>
@@ -153,7 +153,7 @@ Services menu. Click “Add Your First Stack”. All settings can be left at the
     <p><strong>Name:</strong> Choose a name for your stack.</p>
   </li>
   <li>
-    <p><strong>Default operating system</strong>: Choose <code>Ubuntu 14.04 LTS</code> Rails needs a Javascript runtime to
+    <p><strong>Default operating system</strong>: Choose <code class="highlighter-rouge">Ubuntu 14.04 LTS</code> Rails needs a Javascript runtime to
 precompile assets on the server. The Ubuntu nodejs package is the easiest way to install a
 Javascript runtime.</p>
   </li>
@@ -168,14 +168,14 @@ to create a new keypair and then select that keypair here.</p>
 
 <p>Click “Add Stack” to create the stack.</p>
 
-<h2 id="create-a-rails-app-server-layer">3. Create a “Rails App Server” layer</h2>
+<h2 id="3-create-a-rails-app-server-layer">3. Create a “Rails App Server” layer</h2>
 
 <p>An OpsWorks layer is a collection of packages, scripts, and settings to configure an
 instance for a particular purpose (such as running a Rails app). In our case, we are going to
 create two layers: “Rails App Server” and “MySQL”. Both these layers will be assigned to the
 same instance, which creates a single server running the Rails app and a MySQL database.</p>
 
-<p>Click “Add a layer” and choose <code>Rails App Server</code> as the layer type. Choose <code>Nginx and Unicorn</code>
+<p>Click “Add a layer” and choose <code class="highlighter-rouge">Rails App Server</code> as the layer type. Choose <code class="highlighter-rouge">Nginx and Unicorn</code>
 as the rails stack. Leave all other settings at their default.</p>
 
 <div class="full shadow rounded"><img src="/images/ops-works/create_rails_app_layer.png" /></div>
@@ -183,7 +183,7 @@ as the rails stack. Leave all other settings at their default.</p>
 <p>Click “Add Layer” to create the layer.</p>
 
 <p>After creating the layer, we need to edit it to add the nodejs package. Click “Recipes” to
-show the layer’s recipes. Then click “Edit”. Add the <code>nodejs</code> package under “OS Packages”.</p>
+show the layer’s recipes. Then click “Edit”. Add the <code class="highlighter-rouge">nodejs</code> package under “OS Packages”.</p>
 
 <div class="full shadow rounded"><img src="/images/ops-works/edit_rails_app_layer.png" /></div>
 
@@ -197,18 +197,18 @@ Click “Network”, then click “Edit” and enable “Elastic IP addresses”
 
 <p>Click “Save” to save your changes.</p>
 
-<h2 id="create-a-mysql-layer">4. Create a MySQL layer</h2>
+<h2 id="4-create-a-mysql-layer">4. Create a MySQL layer</h2>
 
 <p>Use the Navigation menu to go back to the Layers page. Add a new layer by clicking “+ Layer”
-and choose <code>MySQL</code> as the layer type. Leave all settings as their default. You don’t need to
+and choose <code class="highlighter-rouge">MySQL</code> as the layer type. Leave all settings as their default. You don’t need to
 remember the MySQL root user password. OpsWorks will manage everything for you, including
-creating your <code>database.yml</code> file.</p>
+creating your <code class="highlighter-rouge">database.yml</code> file.</p>
 
 <div class="full shadow rounded"><img src="/images/ops-works/create_mysql_layer.png" /></div>
 
 <p>Click “Add Layer” to create the layer.</p>
 
-<h2 id="create-an-instance">5. Create an instance</h2>
+<h2 id="5-create-an-instance">5. Create an instance</h2>
 
 <p>We’ve configured the software that will run on the server. Next we create the instance
 itself, which is the server that will run our application. Use the Navigation menu to go to
@@ -221,14 +221,14 @@ at their defaults.</p>
 
 <p>We are now going to add the MySQL layer to the instance we just created, so both the
 Rails app and MySQL will run on the same instance. Click “Add an instance”
-under “MySQL”. Choose the “Existing” tab and check the box next to your instance (<code>rails-app1</code>
+under “MySQL”. Choose the “Existing” tab and check the box next to your instance (<code class="highlighter-rouge">rails-app1</code>
 in this case).</p>
 
 <div class="full shadow rounded"><img src="/images/ops-works/add_mysql_to_instance.png" /></div>
 
 <p>Click “Add Instance” to assign the MySQL layer to the Rails app instance.</p>
 
-<h2 id="add-an-application">6. Add an application</h2>
+<h2 id="6-add-an-application">6. Add an application</h2>
 
 <p>We’ve finished configuring our server, now it’s time to setup the application we are going
 to run on the server. Use the Navigation menu to go to the Apps page. Click “Add an app” to
@@ -262,51 +262,51 @@ variables are <a href="http://12factor.net/config">one solution</a> for managing
 
 <p>Click “Add App” to create the application.</p>
 
-<h2 id="adjust-innodbbufferpoolsize">7. Adjust innodb_buffer_pool_size</h2>
+<h2 id="7-adjust-innodb_buffer_pool_size">7. Adjust innodb_buffer_pool_size</h2>
 
 <p>The MySQL recipe in OpsWorks is optimized to run MySQL on a dedicated server. Out of the box a
 majority of the server memory will be allocated to MySQL. Depending on the instance size, the
 combination of Rails workers and MySQL may exhaust memory and the instance will fail to start.</p>
 
-<p>To fix this, we need to reduce <code>innodb_buffer_pool_size</code>. Use the Navigation menu to go to the
+<p>To fix this, we need to reduce <code class="highlighter-rouge">innodb_buffer_pool_size</code>. Use the Navigation menu to go to the
 Stack page. Click “Stack Settings” and then “Edit”. Under “Configuration Management” add the
 following Custom JSON</p>
 
-<div class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span>
-  <span class="nt">&quot;mysql&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&quot;tunable&quot;</span><span class="p">:</span> <span class="p">{</span>
-      <span class="nt">&quot;innodb_buffer_pool_size&quot;</span><span class="p">:</span> <span class="s2">&quot;100M&quot;</span>
-    <span class="p">}</span> 
-  <span class="p">}</span>
-<span class="p">}</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
+  </span><span class="s2">"mysql"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"tunable"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"innodb_buffer_pool_size"</span><span class="p">:</span><span class="w"> </span><span class="s2">"100M"</span><span class="w">
+    </span><span class="p">}</span><span class="w"> 
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span></code></pre></figure>
 
-<p>The specific size of <code>innodb_buffer_pool_size</code> depends on your application and instance size.
+<p>The specific size of <code class="highlighter-rouge">innodb_buffer_pool_size</code> depends on your application and instance size.
 For a small, single-server application 100 megabytes should be plenty.</p>
 
 <div class="full shadow rounded"><img src="/images/ops-works/stack_configuration_1.png" /></div>
 
 <p>Click “Save” to save your changes.</p>
 
-<h2 id="enable-far-future-cache-headers">8. Enable far-future cache headers</h2>
+<h2 id="8-enable-far-future-cache-headers">8. Enable far-future cache headers</h2>
 
 <p>For best performance, it’s recommended to set “far-future” headers on your assets, effectively
 instructing the browser to cache the assets forever. Unfortunately OpsWorks doesn’t do this out of the
 box and there’s no clean way to add it. The only solution I’ve found is to create a custom cookbook,
-copy <code>nginx_unicorn_web_app.erb</code> from the AWS cookbook and customize it to add the correct asset headers.</p>
+copy <code class="highlighter-rouge">nginx_unicorn_web_app.erb</code> from the AWS cookbook and customize it to add the correct asset headers.</p>
 
 <p>To incorporate this updated recipe into our application, we need to edit the stack settings and add
 a custom cookbook. Use the Navigation menu to go to the Stack page. Click “Stack Settings” and then
 “Edit”. Under “Configuration Management”, turn on “Use custom Chef cookbooks”
 and point it to my custom OpsWorks cookbook <a href="https://github.com/willkoehler/opsworks-cookbooks.git">https://github.com/willkoehler/opsworks-cookbooks.git</a></p>
 
-<p>This cookbook also disables <code>delete_cached_copy</code> so that a cached copy of the app code is kept
+<p>This cookbook also disables <code class="highlighter-rouge">delete_cached_copy</code> so that a cached copy of the app code is kept
 between deploys, speeding up deployment.</p>
 
 <div class="full shadow rounded"><img src="/images/ops-works/stack_configuration_2.png" /></div>
 
 <p>Click “Save” to save your changes.</p>
 
-<h2 id="start-the-instance">9. Start the instance</h2>
+<h2 id="9-start-the-instance">9. Start the instance</h2>
 
 <p>Now everything is ready to go. Let’s start our instance. This will provision the server, boot it,
 and install all the software needed to run our app.</p>
@@ -316,7 +316,7 @@ minutes to boot and configure the server.</p>
 
 <div class="full shadow rounded"><img src="/images/ops-works/start_instance.png" /></div>
 
-<h2 id="deploy-the-app">10. Deploy the app</h2>
+<h2 id="10-deploy-the-app">10. Deploy the app</h2>
 
 <p>Once the instance is online, we can deploy the app. Use the Navigation menu to go to the Apps
 page. Click “Deploy” under Actions for your app. Enable “Migrate database” so OpsWorks sets
@@ -326,7 +326,7 @@ up the database structure during the deployment.</p>
 
 <p>Click “Deploy” to start the deployment.</p>
 
-<h2 id="login-via-ssh">11. Login via SSH</h2>
+<h2 id="11-login-via-ssh">11. Login via SSH</h2>
 
 <p>We’re almost done. But, depending on your app, there may be a few steps that need to
 be done by hand via SSH after the first deploy.</p>
@@ -339,20 +339,20 @@ IP address of the instance, which you can get from the Instances page.</p>
 
 <p>SSH into the instance:</p>
 
-<div class="highlight"><pre><code class="language-text" data-lang="text">ssh -i your-private-key ubuntu@your_domain_or_ip_address</code></pre></div>
+<figure class="highlight"><pre><code class="language-text" data-lang="text">ssh -i your-private-key ubuntu@your_domain_or_ip_address</code></pre></figure>
 
-<p>OpsWorks creates a <code>deploy</code> user to deploy and manage the Rails application. Any application
-work you do on the server should be done as the <code>deploy</code> user. In this case I’m going to seed
+<p>OpsWorks creates a <code class="highlighter-rouge">deploy</code> user to deploy and manage the Rails application. Any application
+work you do on the server should be done as the <code class="highlighter-rouge">deploy</code> user. In this case I’m going to seed
 the database.</p>
 
-<div class="highlight"><pre><code class="language-text" data-lang="text">sudo su deploy
+<figure class="highlight"><pre><code class="language-text" data-lang="text">sudo su deploy
 cd /srv/www/your_app_name/current/
-RAILS_ENV=production bundle exec rake db:seed</code></pre></div>
+RAILS_ENV=production bundle exec rake db:seed</code></pre></figure>
 
 <h2 id="ready-to-go">Ready to go</h2>
 
 <p>That’s everything. Point your browser to the public IP and your app should be live. If you have
-problems, check the production log: <code>/srv/www/your_app_name/shared/log/production.log</code></p>
+problems, check the production log: <code class="highlighter-rouge">/srv/www/your_app_name/shared/log/production.log</code></p>
 
 <h2 id="future-deployments">Future deployments</h2>
 
@@ -440,7 +440,7 @@ to cover. I have two more posts coming up:</p>
 
   <footer class="site-footer">
     <div class="container">
-      &copy; 2017 Will Koehler
+      &copy; 2018 Will Koehler
         
       <nav>
         <a href="/">Blog</a> &middot;
