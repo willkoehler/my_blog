@@ -5,7 +5,7 @@ $ ->
 # instead of opening map in new window
 enable_map_when_clicked = ->
   $('.map_container .overlay').click activate_map
-    
+
 activate_map = ->
   $('.map_container .overlay').hide()
   $('body').one 'mousemove', deactivate_map

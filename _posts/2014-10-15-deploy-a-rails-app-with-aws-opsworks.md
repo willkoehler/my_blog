@@ -173,7 +173,7 @@ source code. I use GitHub with a [deploy key](https://developer.github.com/guide
 You can also use Subversion, HTTP, or S3.
 
 - **Environment Variables:** Add any environment variables needed by your app here. Environment
-variables are [one solution](http://12factor.net/config) for managing Rails app secrets. 
+variables are [one solution](http://12factor.net/config) for managing Rails app secrets.
 
 - **Domain name:** You can leave this blank since we only have one app in the stack.
 
@@ -196,7 +196,7 @@ following Custom JSON
   "mysql": {
     "tunable": {
       "innodb_buffer_pool_size": "100M"
-    } 
+    }
   }
 }
 {% endhighlight %}
@@ -277,7 +277,7 @@ RAILS_ENV=production bundle exec rake db:seed
 ## Ready to go
 
 That's everything. Point your browser to the public IP and your app should be live. If you have
-problems, check the production log: `/srv/www/your_app_name/shared/log/production.log` 
+problems, check the production log: `/srv/www/your_app_name/shared/log/production.log`
 
 ## Future deployments
 

@@ -10,11 +10,11 @@ article.resume {
   ol, ul {
     margin-top: -0.5em;   // tighten spacing betwen <ul> and <p> text above
   }
-  
+
   h1 { font-size: 1.8em; margin: 0.5em 0 1em;}
   h2 { font-size: 1.2em; margin: 0 0 0.8em; }
   h3 { font-size: 1.2em; margin: 0 0 0.5em; }
-  
+
   h1 {                    // add aborder above <h1>
     margin-top: 1em;
     padding-top: 1em;
@@ -25,11 +25,11 @@ article.resume {
       border: none;
     }
   }
-  
+
   .time_span {
     margin-bottom: 2em;
     overflow: hidden;
-    
+
     h2 {
       float: left;
       width: 30%;
@@ -47,7 +47,7 @@ article.resume {
         font-weight: normal;
       }
     }
-    
+
     .details {
       float: left;
       width: 66%;
@@ -62,7 +62,7 @@ article.resume {
       margin-bottom: 1.5em;
       padding-top: 1.5em;
       border-top: 1px solid $border_color;
-      
+
       h2 {
         font-size: 1.3em;   // increase font size to differentiate from h3
         margin: 0;
@@ -77,7 +77,7 @@ article.resume {
         width: 100%;
       }
     }
-    
+
     h1 + .time_span {       // first .time_span in section does not have top border
       border: none;
       padding-top: 0;

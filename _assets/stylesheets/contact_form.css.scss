@@ -13,13 +13,13 @@ form.contact {
     outline: none;
     border: 1px solid #ccc;
     -webkit-appearance: none;
-        
+
     &:focus {
       border-color: $accent;
       background-color: #F8FCFE;
     };
   }
-    
+
   input[type=submit] {
     background-color: $accent;
     color: #fff;

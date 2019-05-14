@@ -115,7 +115,7 @@ class User < ActiveRecord::Base
   has_many :user_assignments, :dependent => :destroy
   has_many :hospitals, :through => :user_assignments
 end
-{% endhighlight %}{% endraw %} 
+{% endhighlight %}{% endraw %}
 {% endhighlight %}
 
 Is rendered as
@@ -139,7 +139,7 @@ Before improvements
 class User < ActiveRecord::Base
   has_many :user_assignments, :dependent => :destroy
   has_many :hospitals, :through => :user_assignments
- 
+
   # Ugly, but 5x faster than op2 and op3
   # Takes 2ms
   scope :grid_fields, -> { joins('LEFT JOIN user_assignments ON user_id = users.id LEFT JOIN hospitals ON hospitals.id = hospital_id').
@@ -154,7 +154,7 @@ After improvements
 class User < ActiveRecord::Base
   has_many :user_assignments, :dependent => :destroy
   has_many :hospitals, :through => :user_assignments
- 
+
   # Ugly, but 5x faster than op2 and op3
   # Takes 2ms
   scope :grid_fields, -> { joins('LEFT JOIN user_assignments ON user_id = users.id LEFT JOIN hospitals ON hospitals.id = hospital_id').
@@ -244,14 +244,14 @@ Mike Greiling has some great articles on Jekyll on his blog (PixelCog).
     padding: 0;
     color: #fff;
     border-right: none;
-  } 
+  }
 
   .before_syntax_fixes .highlight table td.code {
     padding: 0;
-  } 
+  }
 
   .before_syntax_fixes .highlight table pre {
     margin: 1em 0;
     font-family: monospace, monospace;
-  } 
+  }
 </style>

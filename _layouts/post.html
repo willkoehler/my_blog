@@ -40,7 +40,7 @@ layout: base
         <p>{{ post.excerpt }}</p>
         <hr>
       </section>
-      {% endif %} 
+      {% endif %}
       {% if page.previous.url %}
       {% assign post = page.previous %}
       <section class="post_summary">
@@ -48,7 +48,7 @@ layout: base
         <p>{{ post.excerpt }}</p>
         <hr>
       </section>
-      {% endif %} 
+      {% endif %}
       {% if site.info.disqus.shortname %}
       <section>
         {% include disqus.html %}

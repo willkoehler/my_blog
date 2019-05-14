@@ -218,12 +218,12 @@ Chris Fischer <span class='muted'>- Cycling advocate</span><br>
 Paul Dorothy <span class='muted'>- Worthington Bike/Ped Committee</span><br>
 Rachael Dorothy <span class='muted'>- Worthington City Council</span><br>
 Rick Jordon <span class='muted'>- Photographer</span><br>
-Kris Anderson <span class='muted'>- RIDEHome Bike Shop</span> 
+Kris Anderson <span class='muted'>- RIDEHome Bike Shop</span>
 
 ## Feedback
 
 ODOT is accepting public feedback on the trail closure through January 9th. If you like the
-recommendations in this document, or you have ideas of your own, contact Brian Davidson at ODOT: 
+recommendations in this document, or you have ideas of your own, contact Brian Davidson at ODOT:
 <a href='mailto:brian.davidson@dot.state.oh.us?subject=Olentangy Trail Closure'>brian.davidson@dot.state.oh.us</a>
 
 You can read more about the Olentangy Trail closure and the North Side Fix on

@@ -173,7 +173,7 @@ have css do that for us with a `:before` pseudo element.
   height: 100%;
   vertical-align: middle;
   border: 1px solid red; /* so we can see what's going on */
-}            
+}
 {% endhighlight %}
 
 
@@ -262,7 +262,7 @@ space.
   height: 100%;
   vertical-align: middle;
   margin-right: -.35em;
-}            
+}
 {% endhighlight %}
 
 Now the text is wrapping like it should.
@@ -287,7 +287,7 @@ Now the text is wrapping like it should.
   height: 100%;
   vertical-align: middle;
   margin-right: -.35em;
-}            
+}
 
 .content {
   display: inline-block;
@@ -333,15 +333,15 @@ Gary Turner for the [original work](http://gtwebdev.com/workshop/vcenter/vcenter
     height: 100%;
     vertical-align: middle;
     margin-right: -.35em;
-  }            
+  }
 
   .vaswc .wrapper.with_centering.visible_centering:before {
     border: 1px solid red;
-  }            
+  }
 
   .vaswc .wrapper.with_centering.broken_wrapping:before {
     margin-right: 0em;
-  }            
+  }
 
   .vaswc .content {
     display: inline-block;
@@ -355,12 +355,12 @@ Gary Turner for the [original work](http://gtwebdev.com/workshop/vcenter/vcenter
     padding: 0 15px;
     margin-bottom: 2em;
   }
-  
+
   .vaswc .text {
     color: #666;
     vertical-align: baseline;
   }
-  
+
   .vaswc .text.big {
     font-size: 2.3em;
     margin-right: 10px;
