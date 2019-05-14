@@ -896,13 +896,13 @@ form.contact {
   padding: 0 5px 0 0;
   color: #555;
   border-right: 1px solid #555;
-} 
+}
 
 .highlight table td.code {
   padding: 0 0 0 7px;
-} 
+}
 
-.highlight table pre { margin: 0; } 
+.highlight table pre { margin: 0; }
 .map_container {
   position: relative;
   padding-bottom: 89%;

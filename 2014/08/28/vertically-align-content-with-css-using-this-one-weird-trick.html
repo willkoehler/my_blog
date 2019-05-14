@@ -52,6 +52,7 @@
 </script>
 
 
+
   <link rel="shortcut icon" href="/favicon.ico?v2" type="image/x-icon" />
   <link rel="alternate" type="application/atom+xml" title="Will Koehler" href="/atom.xml" />
   <meta name="title" content="Vertically Align Content With CSS Using This One Weird Trick ">
@@ -63,10 +64,10 @@
   <meta property="og:description" content="There are three hard things in computer science: cache invalidation, naming things, and vertically aligning content with CSS."/>
   <meta name="description" content="There are three hard things in computer science: cache invalidation, naming things, and vertically aligning content with CSS."/>
   
-  <meta property="og:site_name" content="Will Koehler">     
+  <meta property="og:site_name" content="Will Koehler">
 </head>
 <body>
-    
+
   <header class="site-header">
     <nav>
       <a class="brand" href="/">
@@ -74,6 +75,7 @@
       </a>
       <a href="/">Blog</a>
       <a href="/about.html">About</a>
+      <a href="/resume.html">Resume</a>
     </nav>
   </header>
 
@@ -93,6 +95,7 @@
         <time pubdate datetime="2014-28-August" title="Aug 28, 2014">Aug 28, 2014</time> &mdash;
         
 7 min read
+
       </div>
       <h1 class="title">Vertically Align Content With CSS Using This One Weird Trick</h1>
       <h2 class="subtitle">Front-end devs will hate me for revealing the secret.</h2>
@@ -236,7 +239,7 @@ have css do that for us with a <code class="highlighter-rouge">:before</code> ps
   <span class="nl">height</span><span class="p">:</span> <span class="m">100%</span><span class="p">;</span>
   <span class="nl">vertical-align</span><span class="p">:</span> <span class="nb">middle</span><span class="p">;</span>
   <span class="nl">border</span><span class="p">:</span> <span class="m">1px</span> <span class="nb">solid</span> <span class="no">red</span><span class="p">;</span> <span class="c">/* so we can see what's going on */</span>
-<span class="p">}</span>            </code></pre></figure>
+<span class="p">}</span></code></pre></figure>
 
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">'wrapper'</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">'content'</span><span class="nt">&gt;</span>
@@ -318,7 +321,7 @@ space.</p>
   <span class="nl">height</span><span class="p">:</span> <span class="m">100%</span><span class="p">;</span>
   <span class="nl">vertical-align</span><span class="p">:</span> <span class="nb">middle</span><span class="p">;</span>
   <span class="nl">margin-right</span><span class="p">:</span> <span class="m">-.35em</span><span class="p">;</span>
-<span class="p">}</span>            </code></pre></figure>
+<span class="p">}</span></code></pre></figure>
 
 <p>Now the text is wrapping like it should.</p>
 
@@ -341,7 +344,7 @@ space.</p>
   <span class="nl">height</span><span class="p">:</span> <span class="m">100%</span><span class="p">;</span>
   <span class="nl">vertical-align</span><span class="p">:</span> <span class="nb">middle</span><span class="p">;</span>
   <span class="nl">margin-right</span><span class="p">:</span> <span class="m">-.35em</span><span class="p">;</span>
-<span class="p">}</span>            
+<span class="p">}</span>
 
 <span class="nc">.content</span> <span class="p">{</span>
   <span class="nl">display</span><span class="p">:</span> <span class="n">inline-block</span><span class="p">;</span>
@@ -383,15 +386,15 @@ Gary Turner for the <a href="http://gtwebdev.com/workshop/vcenter/vcenter-inline
     height: 100%;
     vertical-align: middle;
     margin-right: -.35em;
-  }            
+  }
 
   .vaswc .wrapper.with_centering.visible_centering:before {
     border: 1px solid red;
-  }            
+  }
 
   .vaswc .wrapper.with_centering.broken_wrapping:before {
     margin-right: 0em;
-  }            
+  }
 
   .vaswc .content {
     display: inline-block;
@@ -405,12 +408,12 @@ Gary Turner for the <a href="http://gtwebdev.com/workshop/vcenter/vcenter-inline
     padding: 0 15px;
     margin-bottom: 2em;
   }
-  
+
   .vaswc .text {
     color: #666;
     vertical-align: baseline;
   }
-  
+
   .vaswc .text.big {
     font-size: 2.3em;
     margin-right: 10px;
@@ -445,6 +448,7 @@ Gary Turner for the <a href="http://gtwebdev.com/workshop/vcenter/vcenter-inline
   
 </div>
 
+
     </section>
 
     <footer>
@@ -461,7 +465,7 @@ Gary Turner for the <a href="http://gtwebdev.com/workshop/vcenter/vcenter-inline
         <p>AWS OpsWorks hits a sweet spot, providing a turnkey deployment solution, almost as simple as Heroku, while allowing unlimited customization to your production stack with the power and flexibility of Chef.</p>
         <hr>
       </section>
-       
+      
       
       
       <section class="post_summary">
@@ -469,7 +473,7 @@ Gary Turner for the <a href="http://gtwebdev.com/workshop/vcenter/vcenter-inline
         <p>Being a perfectionist I knew that I wouldn't be able to resist tinkering with every detail of my new Jekyll blog. I spent 50 hours perfecting my blog, so you don't have to.</p>
         <hr>
       </section>
-       
+      
       
       <section>
         <div id="disqus_thread"></div>
@@ -482,6 +486,7 @@ Gary Turner for the <a href="http://gtwebdev.com/workshop/vcenter/vcenter-inline
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
   })();
 </script>
+
       </section>
       
     </footer>
@@ -492,12 +497,12 @@ Gary Turner for the <a href="http://gtwebdev.com/workshop/vcenter/vcenter-inline
   <footer class="site-footer">
     <div class="container">
       &copy; 2019 Will Koehler
-        
+
       <nav>
         <a href="/">Blog</a> &middot;
         <a href="/about.html">About</a>
       </nav>
-        
+
       <nav class="social">
         
 <a href="https://twitter.com/wckoehler" title="Follow on Twitter" target="_blank"><i class="icon icon-twitter"></i></a>

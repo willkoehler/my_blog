@@ -52,6 +52,7 @@
 </script>
 
 
+
   <link rel="shortcut icon" href="/favicon.ico?v2" type="image/x-icon" />
   <link rel="alternate" type="application/atom+xml" title="Will Koehler" href="/atom.xml" />
   <meta name="title" content="Save 50 Hours Setting up Your Jekyll Blog ">
@@ -63,10 +64,10 @@
   <meta property="og:description" content="Being a perfectionist I knew that I wouldn't be able to resist tinkering with every detail of my new Jekyll blog. I spent 50 hours perfecting my blog, so you don't have to."/>
   <meta name="description" content="Being a perfectionist I knew that I wouldn't be able to resist tinkering with every detail of my new Jekyll blog. I spent 50 hours perfecting my blog, so you don't have to."/>
   
-  <meta property="og:site_name" content="Will Koehler">     
+  <meta property="og:site_name" content="Will Koehler">
 </head>
 <body>
-    
+
   <header class="site-header">
     <nav>
       <a class="brand" href="/">
@@ -74,6 +75,7 @@
       </a>
       <a href="/">Blog</a>
       <a href="/about.html">About</a>
+      <a href="/resume.html">Resume</a>
     </nav>
   </header>
 
@@ -93,6 +95,7 @@
         <time pubdate datetime="2014-26-August" title="Aug 26, 2014">Aug 26, 2014</time> &mdash;
         
 9 min read
+
       </div>
       <h1 class="title">Save 50 Hours Setting up Your Jekyll Blog</h1>
       <h2 class="subtitle">Spoiler: Just fork mine.</h2>
@@ -196,7 +199,7 @@ class User &lt; ActiveRecord::Base
   has_many :user_assignments, :dependent =&gt; :destroy
   has_many :hospitals, :through =&gt; :user_assignments
 end
-<span class="p">{%</span><span class="w"> </span><span class="nt">endhighlight</span><span class="w"> </span><span class="p">%}</span> </code></pre></figure>
+<span class="p">{%</span><span class="w"> </span><span class="nt">endhighlight</span><span class="w"> </span><span class="p">%}</span></code></pre></figure>
 
 <p>Is rendered as</p>
 
@@ -231,7 +234,7 @@ I added a few rules to clean up the look and prevent long lines from wrapping.</
 </pre></td><td class="code"><pre><span class="k">class</span> <span class="nc">User</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span>
   <span class="n">has_many</span> <span class="ss">:user_assignments</span><span class="p">,</span> <span class="ss">:dependent</span> <span class="o">=&gt;</span> <span class="ss">:destroy</span>
   <span class="n">has_many</span> <span class="ss">:hospitals</span><span class="p">,</span> <span class="ss">:through</span> <span class="o">=&gt;</span> <span class="ss">:user_assignments</span>
- 
+
   <span class="c1"># Ugly, but 5x faster than op2 and op3</span>
   <span class="c1"># Takes 2ms</span>
   <span class="n">scope</span> <span class="ss">:grid_fields</span><span class="p">,</span> <span class="o">-&gt;</span> <span class="p">{</span> <span class="n">joins</span><span class="p">(</span><span class="s1">'LEFT JOIN user_assignments ON user_id = users.id LEFT JOIN hospitals ON hospitals.id = hospital_id'</span><span class="p">).</span>
@@ -254,7 +257,7 @@ I added a few rules to clean up the look and prevent long lines from wrapping.</
 </pre></td><td class="code"><pre><span class="k">class</span> <span class="nc">User</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span>
   <span class="n">has_many</span> <span class="ss">:user_assignments</span><span class="p">,</span> <span class="ss">:dependent</span> <span class="o">=&gt;</span> <span class="ss">:destroy</span>
   <span class="n">has_many</span> <span class="ss">:hospitals</span><span class="p">,</span> <span class="ss">:through</span> <span class="o">=&gt;</span> <span class="ss">:user_assignments</span>
- 
+
   <span class="c1"># Ugly, but 5x faster than op2 and op3</span>
   <span class="c1"># Takes 2ms</span>
   <span class="n">scope</span> <span class="ss">:grid_fields</span><span class="p">,</span> <span class="o">-&gt;</span> <span class="p">{</span> <span class="n">joins</span><span class="p">(</span><span class="s1">'LEFT JOIN user_assignments ON user_id = users.id LEFT JOIN hospitals ON hospitals.id = hospital_id'</span><span class="p">).</span>
@@ -343,16 +346,16 @@ feel free to fork the <a href="https://github.com/willkoehler/my_blog">master br
     padding: 0;
     color: #fff;
     border-right: none;
-  } 
+  }
 
   .before_syntax_fixes .highlight table td.code {
     padding: 0;
-  } 
+  }
 
   .before_syntax_fixes .highlight table pre {
     margin: 1em 0;
     font-family: monospace, monospace;
-  } 
+  }
 </style>
 
 
@@ -379,6 +382,7 @@ feel free to fork the <a href="https://github.com/willkoehler/my_blog">master br
   
 </div>
 
+
     </section>
 
     <footer>
@@ -395,8 +399,8 @@ feel free to fork the <a href="https://github.com/willkoehler/my_blog">master br
         <p>There are three hard things in computer science: cache invalidation, naming things, and vertically aligning content with CSS.</p>
         <hr>
       </section>
-       
-       
+      
+      
       
       <section>
         <div id="disqus_thread"></div>
@@ -409,6 +413,7 @@ feel free to fork the <a href="https://github.com/willkoehler/my_blog">master br
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
   })();
 </script>
+
       </section>
       
     </footer>
@@ -419,12 +424,12 @@ feel free to fork the <a href="https://github.com/willkoehler/my_blog">master br
   <footer class="site-footer">
     <div class="container">
       &copy; 2019 Will Koehler
-        
+
       <nav>
         <a href="/">Blog</a> &middot;
         <a href="/about.html">About</a>
       </nav>
-        
+
       <nav class="social">
         
 <a href="https://twitter.com/wckoehler" title="Follow on Twitter" target="_blank"><i class="icon icon-twitter"></i></a>
