@@ -26,6 +26,25 @@ article.resume {
     }
   }
 
+  h3 {
+    img.logo {
+      margin-right: 5px;
+      height: 35px;
+    }
+  }
+
+  a.client_logo {
+    display: block;
+    color: #000;
+    .logo {
+      display: inline-block;
+      width: 60px;
+      text-align: center;
+      padding: 4px 0;
+      img { height: 35px }
+    }
+  }
+
   .time_span {
     margin-bottom: 2em;
     overflow: hidden;
