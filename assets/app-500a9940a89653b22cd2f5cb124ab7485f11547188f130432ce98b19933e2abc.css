@@ -742,6 +742,19 @@ article.resume h1 {
     margin-top: 0em;
     padding-top: 0;
     border: none; }
+article.resume h3 img.logo {
+  margin-right: 5px;
+  height: 35px; }
+article.resume a.client_logo {
+  display: block;
+  color: #000; }
+  article.resume a.client_logo .logo {
+    display: inline-block;
+    width: 60px;
+    text-align: center;
+    padding: 4px 0; }
+    article.resume a.client_logo .logo img {
+      height: 35px; }
 article.resume .time_span {
   margin-bottom: 2em;
   overflow: hidden; }
